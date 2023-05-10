@@ -1,0 +1,240 @@
+@use "./common" as *;
+.trial-wrapper {
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+}
+
+.trial-form {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  &__inner {
+    width: 80%;
+    margin: 0 auto;
+    padding: 80px 40px;
+    background: #fff;
+    border-radius: 30px;
+  }
+  &__title {
+    text-align: center;
+    line-height: 1.4;
+    padding-bottom: 60px;
+    h3 {
+      color: #419438;
+      font-weight: 900;
+      font-size: 48px;
+    }
+    b {
+      font-weight: 900;
+      font-size: 32px;
+      color: #3a3e40;
+      letter-spacing: 4px;
+    }
+  }
+  &__check {
+    width: 92%;
+    margin: 0 auto;
+    background: #f9f9f9;
+    b {
+      padding-top: 28px;
+      font-weight: 900;
+      font-size: 24px;
+      color: #419438;
+      padding-left: 60px;
+      display: block;
+    }
+    ul {
+      width: 900px;
+      margin: 0 auto;
+      padding-top: 12px;
+      padding-bottom: 48px;
+      font-weight: 700;
+      color: #3a3e40;
+      line-height: 1.6;
+    }
+  }
+  &__card {
+    width: 400px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    margin-top: 40px;
+    border-radius: 30px;
+
+    &_inner {
+      padding: 40px 40px 20px 40px;
+      text-align: center;
+      p {
+        padding-bottom: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #3a3e40;
+      }
+      .tel {
+        font-size: 48px;
+        font-weight: 700;
+      }
+    }
+  }
+  &__contact {
+    color: #6bb42d;
+    font-weight: 900;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 56px;
+  }
+  &__wrapper{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 60px;
+    label {
+      font-weight: bold;
+      color: #3a3e40;
+    }
+    .required {
+      color: red;
+    }
+    input {
+      &::placeholder {
+        color: #777777;
+      }
+      padding: 10px 15px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      font-weight: 400;
+      width: 100%;
+      height: 50px;
+      border: 2px solid #000;
+      &:focus{
+border: #1e88ff 1px solid;
+      }
+    }
+    textarea {
+      &::placeholder {
+        color: #777777;
+      }
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      font-weight: 400;
+      width: 100%;
+      height: 160px;
+      border: 2px solid #000;
+    }
+    .border {
+      border-top: 1px solid #b0b0b0;
+      margin-bottom: 20px;
+    }
+    .radio-first{
+      padding-top: 16px;
+    }
+    .radio-other{
+      padding-bottom: 16px;
+    }
+    .wpcf7-radio {
+      display: block;
+      margin-left: 16px;
+      .wpcf7-list-item {
+        margin: 0;
+        label {
+          margin: 0;
+          margin-right: auto;
+          font-size: 14px;
+          font-family: "Lato";
+          font-weight: normal;
+          color: #3a3e40;
+        }
+      }
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+      width: 15px;
+      height: 15px;
+    }
+    .submit {
+      position: relative;
+      margin: 0 auto;
+      margin-top: 24px;
+      width: 210px;
+      &:hover .arrow {
+        transform: translateX(-5px);
+      }
+      .arrow {
+        transition: transform 0.2s ease-in-out;
+        position: absolute;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        top: 2px;
+        right: 30px;
+      }
+    }
+
+.use{
+  width: 50%;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16px;
+    p{
+      color: #3A3E40;
+      font-family: 'Lato';
+      font-size: 16px;
+    }
+    input{
+      margin: 0;
+      width: 350px;
+      margin-left: auto;
+    }
+  }
+}
+
+
+    input[type="submit"] {
+      font-size: 14px;
+      color: #fff;
+      background: #419438;
+      border-radius: 30px;
+      padding: 20px 20px 35px 40px;
+      border: none;
+    }
+
+    .wpcf7-list-item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      .checkbox {
+        width: 15px;
+        margin-right: 15px;
+      }
+      label {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #3a3e40;
+      }
+      .wpcf7-list-item-label {
+        padding-bottom: 12px;
+        font-weight: 500;
+        font-size: 15px;
+        a {
+          color: #419438;
+          border-bottom: 1px solid #419438;
+          &:hover{
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}

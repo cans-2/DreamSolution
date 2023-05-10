@@ -1,0 +1,155 @@
+.contact__wrapper {
+  background: #f6f6f6;
+  width: 100%;
+  position: relative;
+  padding-bottom: 120px;
+}
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 60px;
+  .required {
+    color: red;
+  }
+  label{
+    font-weight: bold;
+  }
+  input {
+    &::placeholder {
+      color: #777777;
+    }
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-weight: 400;
+    width: 100%;
+    height: 50px;
+    border: 2px solid #000;
+  }
+  textarea {
+    &::placeholder {
+      color: #777777;
+    }
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-weight: 400;
+    width: 100%;
+    height: 160px;
+    border: 2px solid #000;
+  }
+  .submit {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 24px;
+    width: 210px;
+    &:hover{
+      opacity: 0.9;
+    }
+    &:hover .arrow {
+      transform: translateX(5px);
+    }
+    .arrow {
+      transition: transform 0.2s ease-in-out;
+      position: absolute;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      top: 2px;
+      right: 30px;
+      cursor: pointer;
+
+    }
+  }
+  input[type="submit"] {
+    font-size: 14px;
+    color: #fff;
+    background: #419438;
+    border-radius: 30px;
+    padding: 20px 20px 35px 40px;
+    border: none;
+  }
+
+  .wpcf7-list-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    .checkbox {
+      width: 15px;
+      margin-right: 15px;
+    }
+    label {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wpcf7-list-item-label {
+      padding-bottom: 12px;
+      font-weight: 500;
+      font-size: 15px;
+      a {
+        color: #419438;
+        border-bottom: 2px solid #419438;
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  &__wrapper {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 80px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    border-radius: 30px;
+  }
+  &__inner {
+    padding: 80px 40px;
+  }
+  &__title {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+  }
+
+  &__card {
+    width: 400px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    margin-top: 40px;
+    border-radius: 30px;
+
+    &_inner {
+      padding: 40px 40px 20px 40px;
+      text-align: center;
+      p {
+        padding-bottom: 20px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #3a3e40;
+      }
+      .tel {
+        font-size: 48px;
+        font-weight: 700;
+      }
+    }
+  }
+  &__content {
+    margin: 0 auto;
+    width: 75%;
+    margin-top: 70px;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+  }
+}

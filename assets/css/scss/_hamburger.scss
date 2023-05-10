@@ -1,0 +1,191 @@
+@use "./mixin" as *;
+// ハンバーガーアイコン
+
+.menu-icon {
+  position: absolute;
+  right: 40px;
+  top: 24px;
+  height: 40px;
+  z-index: 9999;
+  cursor: pointer;
+  display: none;
+  @include w900 {
+    display: block;
+  }
+  &__line {
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    right: 0;
+    background-color: #000;
+    transition: all 0.5s;
+    z-index: 9999;
+    @include w599 {
+      width: 30px;
+      height: 2px;
+    }
+    &-1 {
+      top: 4px;
+      @include w599 {
+        top: 8px;
+      }
+    }
+    &-2 {
+      top: 18px;
+    }
+    &-3 {
+      top: 32px;
+      @include w599 {
+        top: 28px;
+      }
+    }
+  }
+}
+
+/*ハンバーガーがクリックされたら*/
+.active .menu-icon__line-1 {
+  transform: rotate(-45deg);
+  top: 18px;
+}
+
+.active .menu-icon__line-2 {
+  opacity: 0;
+}
+
+.active .menu-icon__line-3 {
+  transform: rotate(45deg);
+  top: 18px;
+}
+
+// メニュー
+.active.menu {
+  transition: all 0.5s;
+  z-index: 9998;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+
+  opacity: 0;
+  z-index: -1;
+  color: #333;
+  overflow-y: scroll;
+  &__inner {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    width: 80%;
+    margin: 0 auto;
+    @include w599 {
+      width: 90%;
+    }
+  }
+  nav {
+    .nav-title {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      font-weight: bold;
+      @include w500 {
+        font-size: 24px;
+      }
+      span {
+        font-size: 48px;
+        @include w500 {
+          font-size: 40px;
+        }
+      }
+    }
+    ul {
+      font-size: 20px;
+      padding-left: 60px;
+      padding-top: 20px;
+      font-weight: 400;
+      @include w500 {
+        font-size: 18px;
+      }
+      li {
+        padding: 16px;
+        position: relative;
+        @include w500 {
+          font-size: 14px;
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          width: 12px;
+          height: 1.5px;
+          background: #000;
+          top: 50%;
+          left: -24px;
+        }
+      }
+    }
+  }
+  &__about {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+    &:first-child {
+      margin-top: 14px;
+    }
+    p {
+      font-size: 28px;
+      font-weight: bold;
+      @include w500 {
+        font-size: 22px;
+      }
+    }
+    span {
+      color: #6bb42d;
+      font-size: 40px;
+      @include w500 {
+        font-size: 32px;
+      }
+    }
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    row-gap: 40px;
+    padding-top: 40px;
+    font-size: 18px;
+    &_simu {
+      padding: 25px 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #3a3e40;
+      border-radius: 30px;
+      font-weight: bold;
+      @include w500 {
+        padding: 25px 90px;
+        font-size: 16px;
+      }
+    }
+    &_contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px 160px;
+      background: #6bb42d;
+      border-radius: 30px;
+      color: #fff;
+      font-weight: bold;
+      @include w500 {
+        padding: 25px 110px;
+        font-size: 16px;
+      }
+    }
+  }
+}
