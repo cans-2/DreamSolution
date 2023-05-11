@@ -187,7 +187,13 @@ img {
 }
 @media screen and (max-width: 1440px) {
   .page-title {
-    padding-top: 80px;
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .page-title {
+    text-align: center;
+    padding-left: 0;
   }
 }
 .page-title h2 {
@@ -200,6 +206,21 @@ img {
     font-size: 64px;
   }
 }
+@media screen and (max-width: 900px) {
+  .page-title h2 {
+    font-size: 56px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .page-title h2 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .page-title h2 {
+    font-size: 42px;
+  }
+}
 .page-title p {
   font-weight: 700;
   font-size: 24px;
@@ -208,6 +229,11 @@ img {
 @media screen and (max-width: 1440px) {
   .page-title p {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .page-title p {
+    font-size: 18px;
   }
 }
 
@@ -1780,19 +1806,39 @@ footer {
   padding: 80px 14% 80px;
   text-align: left;
 }
+@media screen and (max-width: 768px) {
+  .privacy__content_wrapper {
+    padding: 64px 8% 64px;
+  }
+}
 .privacy__content_item {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 60px;
 }
+@media screen and (max-width: 660px) {
+  .privacy__content_item {
+    font-size: 14px;
+  }
+}
 .privacy__content_item:first-child .privacy__content_item_title {
   font-size: 28px;
   font-weight: 700;
 }
+@media screen and (max-width: 660px) {
+  .privacy__content_item:first-child .privacy__content_item_title {
+    font-size: 24px;
+  }
+}
 .privacy__content_item_title {
   font-size: 24px;
   margin-bottom: 28px;
+}
+@media screen and (max-width: 660px) {
+  .privacy__content_item_title {
+    font-size: 20px;
+  }
 }
 
 .about-page__wrapper {
@@ -2173,6 +2219,11 @@ footer {
   width: 60%;
   margin: 0 auto;
   margin-top: 60px;
+}
+@media screen and (max-width: 900px) {
+  .contact-form {
+    width: 80%;
+  }
 }
 .contact-form .required {
   color: red;
@@ -3600,6 +3651,23 @@ footer {
   line-height: 1.6;
 }
 
+.right-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.right-title img {
+  width: 24px;
+  margin-right: 6px;
+}
+.right-title h5 {
+  line-height: 1.4;
+  font-size: 20px;
+  font-weight: 900;
+  color: #1E88FF;
+}
+
 .pbx-function {
   background: #1e88ff;
 }
@@ -3651,7 +3719,7 @@ footer {
 }
 .pbx-function__item_title img {
   width: 36px;
-  margin-right: 6px;
+  margin-right: 12px;
 }
 .pbx-function__item .item1__flex {
   display: flex;
@@ -3780,7 +3848,7 @@ footer {
   margin-left: 40px;
 }
 .pbx-function__item .item2-flex__right04_right {
-  width: 64%;
+  width: 100%;
   padding-left: 50px;
   line-height: 1.4;
   position: relative;

@@ -59,12 +59,12 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         <span class="material-symbols-sharp"> arrow_drop_down </span>SERVICE
                     </p>
                     <ul>
-                        <li><a href="<?php echo get_home_url() ?>#">秒課金『ドリームコールスーパー』</a></li>
-                        <li><a href="<?php echo get_home_url() ?>#">IP電話サービス</a></li>
+                        <li><a href="<?php echo get_home_url() ?>/dreamcall-super">秒課金『ドリームコールスーパー』</a></li>
+                        <li><a href="<?php echo get_home_url() ?>/dream-cloud-pbx">IP電話サービス</a></li>
                         <li><a href="<?php echo get_home_url() ?>/dreamcall">クラウドCTI『DREAM CALL』</a></li>
-                        <li><a href="<?php echo get_home_url() ?>#">クラウドCTI『DREAM CALL NEXT』</a></li>
+                        <li><a href="<?php echo get_home_url() ?>/dream-call-next">クラウドCTI『DREAM CALL NEXT』</a></li>
                         <li><a href="<?php echo get_home_url() ?>/ashura">File Marker専用CTI</a></li>
-                        <li><a href="<?php echo get_home_url() ?>#">Web制作</a></li>
+                        <li><a href="<?php echo get_home_url() ?>/site-design">Web制作</a></li>
                     </ul>
                 </nav>
                 <a href="/about">

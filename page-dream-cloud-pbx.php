@@ -203,7 +203,7 @@
                             <img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx-8.svg" alt="">
                         </div>
                         <div class="item1__flex_right">
-                            <h5>内線グループ作成</h5>
+                            <h5>〈内線グループ作成</h5>
                             <div class="item1__flex_right_content">
                                 <p>各内線のグループ分けが可能であり、
                                     グループごとに着信させる電話番号等を
@@ -223,6 +223,7 @@
                             <div class="item2-flex__right02">
                                 <div class="item2-flex__right02_left"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx-10.svg" alt=""></div>
                                 <div class="item2-flex__right02_right">
+                                    <div class="right-title"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx12-2.png" alt="title"><h5>転送機能</h5></div>
                                     <ul>
                                         <li>・無条件転送</li>
                                         <li>・無応答時転送に対応</li>
@@ -230,12 +231,14 @@
                                 </div>
                             </div>
                             <div class="item2-flex__right03">
+                            <div class="right-title"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx12-3.png" alt="title"><h5>各種ガイダンス設定</h5></div>
+
                                 <p>営業時間アナウンスなど任意のガイダンスを流すことが可能。</p>
                                 <p>留守電を流すことも可能。</p>
                             </div>
                             <div class="item2-flex__right04">
-                                <div class="item2-flex__right04_left"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx-11.svg" alt=""></div>
                                 <div class="item2-flex__right04_right">
+                                <div class="right-title"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx12-4.png" alt="title"><h5>不在着信時メールお知らせ機能</h5></div>
                                     <p>いつどこから着信があったかメールでリアルタイム通知。取りこぼしの防止。</p>
                                 </div>
                             </div>
@@ -245,7 +248,7 @@
                 </div>
                 <!-- 3 -->
                 <div class="pbx-function__item">
-                    <h5 class="pbx-function__item_title">モニタリング・ウィスパリング</h5>
+                <div class="pbx-function__item_title"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx12-5.png" alt="title"><h5>モニタリング・ウィスパリング</h5></div>
                     <div class="item3-content">
                         <p>モニタリング&ウィスパリング機能では、対応中の担当とお客様との通話内容を他のスタッフが確認し、アドバイスをすることができます。（ウィスパリングではお客様にはアドバイスの内容は聞こえません）</p>
 
@@ -256,7 +259,7 @@
                 </div>
                 <!-- 4 -->
                 <div class="pbx-function__item">
-                    <h5 class="pbx-function__item_title">番号名称登録</h5>
+                <div class="pbx-function__item_title"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx12-6.png" alt="title"><h5>番号名称登録</h5></div>
                     <p class="item4-p">どこに/誰にかかってきたのかを表示</p>
                     <div class="item4-content">
                         <p>電話番号は複数利用が可能ですが、着信時は、どこの電話番号宛てに、誰からかかってきたかが一目でわかるように表示されます。</p>
@@ -264,22 +267,22 @@
                 </div>
                 <!-- 5 -->
                 <div class="pbx-function__item">
-                    <h5 class="pbx-function__item_title">着信拒否登録</h5>
+                <div class="pbx-function__item_title"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx12-7.png" alt="title"><h5>着信拒否登録</h5></div>
                     <div class="item5-p">
                         <p>着信を拒否したい番号を登録することができます。</p>
                     </div>
                 </div>
                 <!-- 6 -->
                 <div class="pbx-function__item">
-                    <h5 class="pbx-function__item_title">発着信履歴参照及び<br>
-                        検索、CSVエクスポート</h5>
+                <div class="pbx-function__item_title"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx12-8.png" alt="title"><h5>発着信履歴参照及び<br>
+                        検索、CSVエクスポート</h5></div>
                     <div class="item6-p">
                         <p>誰と誰が、いつ、何秒通話したかなどの通話履歴をウェブでスマートフォン・PCでいつでも確認、検索することができます。受け取れなかった電話も確認できるので、電話のかけ直しも行いやすくなります。履歴をCSVでエクスポート可能です。</p>
                     </div>
                 </div>
                 <!-- 7 -->
                 <div class="pbx-function__item">
-                    <h5 class="pbx-function__item_title">代替返信機能</h5>
+                <div class="pbx-function__item_title"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx12-9.png" alt="title"><h5>代替返信機能</h5></div>
                     <div class="item7-p">
                         <p>相手先番号の頭に“90X”を付与してダイヤルする事により複数番号を使い分けることが可能となります。</p>
                     </div>
@@ -287,7 +290,7 @@
                 </div>
                 <!-- 8 -->
                 <div class="pbx-function__item">
-                    <h5 class="pbx-function__item_title">録音機能</h5>
+                <div class="pbx-function__item_title"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx12-10.png" alt="title"><h5>録音機能</h5></div>
                     <div class="item8-content">
                         <p>発信内線、着信番号ごとに設定可能です。</p>
                         <ul>
@@ -306,7 +309,7 @@
                 </div>
                 <!-- 9 -->
                 <div class="pbx-function__item">
-                    <h5 class="pbx-function__item_title">IVR機能（キューイング）</h5>
+                <div class="pbx-function__item_title"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-cloud-pbx/pbx12-11.png" alt="title"><h5>IVR機能（キューイング）</h5></div>
                     <div class="item9__content">
                         <div class="item9__content_item bg-11">
                             <p>電話着信時のガイダンスで「商品Aについては[1]、商品Bについては[2]、それ以外は[9]を押してください。」等の要件別設定を行えば、より効率的な電話業務となります。</p>

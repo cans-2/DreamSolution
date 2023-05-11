@@ -1,24 +1,37 @@
 @use "./common" as *;
+@use "./mixin" as *;
 
 .privacy__content {
   &_wrapper {
     padding: 80px 14% 80px;
     text-align: left;
+    @include w768{
+      padding: 64px 8% 64px;
+    }
   }
   &_item {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
     margin-bottom: 60px;
+    @include w660{
+      font-size: 14px;
+    }
     &:first-child {
       .privacy__content_item_title {
         font-size: 28px;
         font-weight: 700;
+        @include w660{
+          font-size: 24px;
+        }
       }
     }
     &_title {
       font-size: 24px;
       margin-bottom: 28px;
+      @include w660{
+        font-size: 20px;
+      }
     }
   }
 }

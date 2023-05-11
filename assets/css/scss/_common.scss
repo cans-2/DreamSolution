@@ -37,7 +37,11 @@ img {
   padding-top: 140px;
   padding-left: 80px;
   @include w1440{
-    padding-top: 80px;
+    padding-top: 100px;
+  }
+  @include w599{
+    text-align: center;
+    padding-left: 0;
   }
   h2{
     font-size: 72px;
@@ -46,6 +50,15 @@ img {
     @include w1440{
       font-size: 64px;
     }
+    @include w900{
+      font-size: 56px;
+    }
+    @include w660{
+      font-size: 48px;
+    }
+    @include w500{
+      font-size: 42px;
+    }
   }
   p{
     font-weight: 700;
@@ -53,6 +66,9 @@ img {
     color: #333;
     @include w1440{
       font-size: 20px;
+    }
+    @include w660{
+      font-size: 18px;
     }
   }
 }

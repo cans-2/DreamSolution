@@ -202,6 +202,23 @@
   }
 }
 
+.right-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+padding-bottom: 10px;
+  img{
+    width: 24px;
+    margin-right: 6px;
+  }
+  h5{
+    line-height: 1.4;
+    font-size: 20px;
+    font-weight: 900;
+    color: #1E88FF;
+  }
+}
+
 .pbx-function {
   background: #1e88ff;
   &__inner {
@@ -250,7 +267,7 @@
       justify-content: center;
       img{
         width: 36px;
-        margin-right: 6px;
+        margin-right: 12px;
       }
     }
     .item1__flex {
@@ -380,7 +397,7 @@
             margin-left: 40px;
           }
           &_right {
-            width: 64%;
+            width: 100%;
             padding-left: 50px;
             line-height: 1.4;
             position: relative;
