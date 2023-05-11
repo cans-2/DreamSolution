@@ -23,7 +23,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <div class="header__left_titlelogo">
                         <img src="<?php echo get_template_directory_uri() ?>/assets/image/titleLogo.png" alt="" />
                     </div>
-                    <h1>株式会社ドリームソリューション</h1>
+                    <h1>株式会社<br>ドリームソリューション</h1>
                 </div>
             </a>
             <div class="header__right">

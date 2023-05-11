@@ -21,10 +21,11 @@
     <?php endwhile;
     endif; ?>
 
-    <ul class="post-link">
-      <li><?php previous_post_link('%link', '< 前の記事へ'); ?></li>
-      <li><?php next_post_link('%link', '次の記事へ >'); ?></li>
-    </ul>
+<ul class="post-link">
+  <li><?php previous_post_link('%link', '< 前の記事へ', true); ?></li>
+  <li><?php next_post_link('%link', '次の記事へ >', true); ?></li>
+</ul>
+
   </main>
 </div>
 <?php get_footer() ?>

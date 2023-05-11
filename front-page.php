@@ -82,7 +82,7 @@
           <p class="service__item_card_p">
             インターネット環境があれば、どこでもご利用いただける電話サービスです。当社から発行するID・パスワード・・ドメインを設定していただくだけで、インターネット経由で工事不要にて電話をご利用いただけます。
           </p>
-          <a href="/dream-call-next" class="detail hvr-glow">
+          <a href="/dream-call-pbx" class="detail hvr-glow">
             <p>詳細はこちら</p>
             <span class="material-symbols-outlined"> open_in_new </span>
           </a>
@@ -201,7 +201,7 @@
             <?php wp_reset_postdata(); ?>
           <?php endif; ?>
         </div>
-        <a href="#" class="news__btn">
+        <a href="/news" class="news__btn">
           <p>もっと見る</p>
           <span class="material-symbols-outlined"> trending_flat </span>
         </a>
@@ -281,7 +281,7 @@
         </div>
 
       </div>
-      <a href="" class="news__btn">
+      <a href="/column" class="news__btn">
         <p>もっと見る</p>
         <span class="material-symbols-outlined"> trending_flat </span>
       </a>
