@@ -22,12 +22,14 @@ add_action('after_setup_theme', 'setup_theme');
 $news = array(
   'post_type' => 'post',
   'category_name' => 'news',
-  'posts_per_page' => 3
+  'posts_per_page' => 3,
+  'post_status' => 'publish',
 );
 $news_query = new WP_Query( $news );
 
 $column = array(
   'post_type' => 'post',
+  'post_status' => 'publish',
   'category_name' => 'column',
   'posts_per_page' => 15
 );
