@@ -198,10 +198,14 @@ img {
     padding-top: 100px;
   }
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 768px) {
   .page-title {
-    text-align: center;
-    padding-left: 0;
+    padding-top: 80px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .page-title {
+    padding-left: 40px;
   }
 }
 .page-title h2 {
@@ -2022,6 +2026,11 @@ footer {
   background: #f6f6f6;
   padding-bottom: 120px;
 }
+@media screen and (max-width: 500px) {
+  .about-page__wrapper {
+    padding-bottom: 80px;
+  }
+}
 
 .about__sec-title {
   text-align: center;
@@ -2070,6 +2079,7 @@ footer {
 @media screen and (max-width: 768px) {
   .philosophy {
     width: 90%;
+    margin-top: 48px;
   }
 }
 .philosophy__catch {
@@ -2092,9 +2102,30 @@ footer {
     top: -260px;
   }
 }
+@media screen and (max-width: 768px) {
+  .philosophy__catch {
+    font-size: 26px;
+    top: -200px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .philosophy__catch {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .philosophy__catch {
+    font-size: 20px;
+  }
+}
 .philosophy__inner {
   position: relative;
   padding-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .philosophy__inner {
+    padding-bottom: 56px;
+  }
 }
 .philosophy__content {
   width: 50%;
@@ -2108,6 +2139,12 @@ footer {
 @media screen and (max-width: 1440px) {
   .philosophy__content {
     width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .philosophy__content {
+    width: 90%;
+    font-size: 14px;
   }
 }
 .philosophy__video {
@@ -2124,6 +2161,11 @@ footer {
     width: 75%;
   }
 }
+@media screen and (max-width: 599px) {
+  .philosophy__video {
+    width: 85%;
+  }
+}
 .philosophy__video video {
   width: 100%;
 }
@@ -2135,6 +2177,17 @@ footer {
   margin: 0 auto;
   margin-top: 80px;
 }
+@media screen and (max-width: 900px) {
+  .message {
+    margin-top: 64px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .message {
+    width: 90%;
+    margin-top: 48px;
+  }
+}
 .message__content {
   width: 50%;
   text-align: left;
@@ -2144,11 +2197,32 @@ footer {
   line-height: 1.4;
   color: #333;
 }
+@media screen and (max-width: 1440px) {
+  .message__content {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .message__content {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .message__content {
+    width: 85%;
+    font-size: 14px;
+  }
+}
 .message__content .greeting {
   padding-top: 40px;
   padding-bottom: 80px;
   margin-left: auto;
   width: 25%;
+}
+@media screen and (max-width: 768px) {
+  .message__content .greeting {
+    padding-bottom: 56px;
+  }
 }
 
 .information {
@@ -2158,8 +2232,25 @@ footer {
   margin-top: 80px;
   width: 80%;
 }
+@media screen and (max-width: 768px) {
+  .information {
+    width: 90%;
+    margin-top: 56px;
+  }
+}
 .information__inner {
   padding: 80px;
+}
+@media screen and (max-width: 768px) {
+  .information__inner {
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .information__inner {
+    padding: 0;
+    padding-bottom: 40px;
+  }
 }
 .information__title {
   width: 100%;
@@ -2167,12 +2258,40 @@ footer {
 .information__title img {
   height: 400px;
 }
+@media screen and (max-width: 660px) {
+  .information__title img {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .information__title img {
+    height: 280px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .information__title img {
+    height: 240px;
+  }
+}
 .information__title p {
   color: #419438;
   font-weight: 900;
   font-size: 40px;
   margin-top: 20px;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 599px) {
+  .information__title p {
+    padding-left: 16px;
+    margin-bottom: 12px;
+    margin-top: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .information__title p {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
 }
 .information__content dl {
   display: flex;
@@ -2190,6 +2309,11 @@ footer {
   padding-bottom: 20px;
   padding-left: 2%;
 }
+@media screen and (max-width: 599px) {
+  .information__content dl dt {
+    margin-top: 0;
+  }
+}
 .information__content dl dd {
   color: #333;
   margin-top: 20px;
@@ -2201,6 +2325,11 @@ footer {
   border-bottom: 1px solid #7e8387;
   font-family: "Lato";
 }
+@media screen and (max-width: 599px) {
+  .information__content dl dd {
+    margin-top: 0;
+  }
+}
 
 .history {
   background: #fff;
@@ -2209,13 +2338,32 @@ footer {
   margin-top: 80px;
   width: 80%;
 }
+@media screen and (max-width: 768px) {
+  .history {
+    width: 90%;
+    margin-top: 56px;
+  }
+}
 .history__inner {
   padding-left: 8%;
   padding-right: 8%;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .history__inner {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 40px;
+  }
+}
 .history .about__sec-title {
   text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .history .about__sec-title {
+    text-align: center;
+    padding-top: 48px;
+  }
 }
 .history .about__sec-title h3 {
   font-size: 70px;
@@ -2225,14 +2373,35 @@ footer {
     font-size: 56px;
   }
 }
+@media screen and (max-width: 768px) {
+  .history .about__sec-title h3 {
+    font-size: 46px;
+  }
+}
 .history__content {
   padding-left: 100px;
+}
+@media screen and (max-width: 1024px) {
+  .history__content {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .history__content {
+    padding-left: 0;
+  }
 }
 .history__content .year {
   color: #3a3e40;
   font-size: 28px;
   font-weight: 900;
   padding: 4px;
+}
+@media screen and (max-width: 500px) {
+  .history__content .year {
+    font-size: 24px;
+    padding: 6px;
+  }
 }
 .history__content dl {
   display: flex;
@@ -2242,21 +2411,51 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+@media screen and (max-width: 500px) {
+  .history__content dl {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
 .history__content dl dt {
   padding-left: 4%;
   font-size: 18px;
   font-weight: 900;
   color: #3a3e40;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+@media screen and (max-width: 500px) {
+  .history__content dl dt {
+    font-size: 16px;
+  }
 }
 .history__content dl dd {
   color: #333;
   padding-left: 2%;
   font-weight: 400;
   font-size: 18px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 500px) {
+  .history__content dl dd {
+    font-size: 16px;
+  }
 }
 .history__img {
   margin-top: 80px;
   height: 400px;
+}
+@media screen and (max-width: 660px) {
+  .history__img {
+    margin-top: 56px;
+    height: 320px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .history__img {
+    height: 260px;
+  }
 }
 
 .simulation__wrapper {

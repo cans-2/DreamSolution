@@ -4,6 +4,9 @@
 .about-page__wrapper {
   background: #f6f6f6;
   padding-bottom: 120px;
+  @include w500{
+    padding-bottom: 80px;
+  }
 }
 
 .about__sec-title {
@@ -44,6 +47,7 @@
   }
   @include w768{
     width: 90%;
+    margin-top: 48px;
   }
 
   &__catch {
@@ -61,10 +65,23 @@
       font-size: 32px;
       top: -260px;
     }
+    @include w768{
+      font-size: 26px;
+      top: -200px;
+    }
+    @include w599{
+      font-size: 22px;
+    }
+    @include w450{
+      font-size: 20px;
+    }
   }
   &__inner {
     position: relative;
     padding-bottom: 80px;
+    @include w768{
+      padding-bottom: 56px;
+    }
   }
   &__content {
     width: 50%;
@@ -77,6 +94,10 @@
     @include w1440{
       width: 80%;
     }
+    @include w599{
+      width: 90%;
+      font-size: 14px;
+    }
   }
   &__video {
     width: 40%;
@@ -86,6 +107,9 @@
     }
     @include w900{
       width: 75%;
+    }
+    @include w599{
+      width: 85%;
     }
     video {
       width: 100%;
@@ -99,6 +123,14 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 80px;
+  @include w900{
+    margin-top: 64px;
+  }
+  @include w768{
+    width: 90%;
+    margin-top: 48px;
+  }
+
   &__content {
     width: 50%;
     text-align: left;
@@ -107,11 +139,24 @@
     font-size: 16px;
     line-height: 1.4;
     color: #333;
+    @include w1440{
+      width: 60%;
+    }
+    @include w900{
+      width: 80%;
+    }
+    @include w599{
+      width: 85%;
+      font-size: 14px;
+    }
     .greeting {
       padding-top: 40px;
       padding-bottom: 80px;
       margin-left: auto;
       width: 25%;
+      @include w768{
+        padding-bottom: 56px;
+      }
     }
   }
 }
@@ -122,13 +167,33 @@
   margin: 0 auto;
   margin-top: 80px;
   width: 80%;
+  @include w768{
+    width: 90%;
+    margin-top: 56px;
+  }
   &__inner {
     padding: 80px;
+    @include w768{
+      padding: 40px;
+    }
+    @include w599{
+      padding: 0;
+      padding-bottom: 40px;
+    }
   }
   &__title {
     width: 100%;
     img {
       height: 400px;
+      @include w660{
+        height: 320px;
+      }
+      @include w500{
+        height: 280px;
+      }
+      @include w450{
+        height: 240px;
+      }
     }
     p {
       color: #419438;
@@ -136,6 +201,15 @@
       font-size: 40px;
       margin-top: 20px;
       margin-bottom: 40px;
+      @include w599{
+        padding-left: 16px;
+        margin-bottom: 12px;
+        margin-top: 16px;
+      }
+      @include w500{
+        font-size: 32px;
+        margin-bottom: 24px;
+      }
     }
   }
   &__content {
@@ -153,6 +227,9 @@
         padding-top: 20px;
         padding-bottom: 20px;
         padding-left: 2%;
+        @include w599{
+          margin-top: 0;
+        }
       }
       dd {
         color: #333;
@@ -164,6 +241,9 @@
         flex-basis: 70%;
         border-bottom: 1px solid #7e8387;
         font-family: 'Lato';
+        @include w599{
+          margin-top: 0;
+        }
       }
     }
   }
@@ -175,27 +255,53 @@
   margin: 0 auto;
   margin-top: 80px;
   width: 80%;
+  @include w768{
+    width: 90%;
+    margin-top: 56px;
+  }
   &__inner {
     padding-left: 8%;
     padding-right: 8%;
     padding-bottom: 80px;
+    @include w599{
+      padding-left: 4%;
+      padding-right: 4%;
+      padding-bottom: 40px;
+    }
   }
   .about__sec-title {
     text-align: left;
+    @include w768{
+      text-align: center;
+      padding-top: 48px;
+    }
     h3 {
       font-size: 70px;
       @include w1440{
         font-size: 56px;
       }
+      @include w768{
+        font-size: 46px;
+      }
     }
   }
   &__content {
     padding-left: 100px;
+    @include w1024{
+      padding-left: 40px;
+    }
+    @include w660{
+      padding-left: 0;
+    }
     .year {
       color: #3a3e40;
       font-size: 28px;
       font-weight: 900;
       padding: 4px;
+      @include w500{
+        font-size: 24px;
+        padding: 6px;
+      }
     }
 
     dl {
@@ -205,22 +311,42 @@
       border-left: 1px solid #333;
       padding-top: 20px;
       padding-bottom: 20px;
+      @include w500{
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
       dt {
         padding-left: 4%;
         font-size: 18px;
         font-weight: 900;
         color: #3a3e40;
+        white-space: nowrap;
+        line-height: 1.4;
+        @include w500{
+          font-size: 16px;
+        }
       }
       dd {
         color: #333;
         padding-left: 2%;
         font-weight: 400;
         font-size: 18px;
+        line-height: 1.4;
+        @include w500{
+          font-size: 16px;
+        }
       }
     }
   }
   &__img {
     margin-top: 80px;
     height: 400px;
+    @include w660{
+      margin-top: 56px;
+      height: 320px;
+    }
+    @include w450{
+      height: 260px;
+    }
   }
 }
