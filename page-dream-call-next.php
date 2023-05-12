@@ -1,7 +1,8 @@
 <?php get_header() ?>
 <main>
     <div class="next-mainbg">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-call-next/top-background-pc.jpg" alt="next">
+        <img class="next-main-pc" src="<?php echo get_template_directory_uri() ?>/assets/image/dream-call-next/top-background-pc.jpg" alt="next">
+        <img class="next-main-sp" src="<?php echo get_template_directory_uri() ?>/assets/image/dream-call-next/top-background-phone.jpg" alt="next">
     </div>
     <section class="next-step">
         <div class="next-step__inner">
@@ -290,8 +291,8 @@
             <div class="next-form__contact">
                 <h5>メールでのお問い合わせ</h5>
                 <p>内容を確認次第、メールまたはお電話にてご連絡致します。尚、お問い合わせ内容によりましては、ご回答に時間がかかる場合がございます。また、お客様からいただいたEメールアドレスが違っている場合や、システム障害などによりお返事できない場合がございます。大変お手数ですが返答のない場合は、お電話でその旨お問い合わせください。</p>
-                <a href="/trial" >
-                    <div class="next-form__contact_btn hvr-glow">
+                <a href="/trial" class="hvr-glow">
+                    <div class="next-form__contact_btn">
                         <p>無料トライアルアカウント
                             <br>のお申し込みはこちら
                         </p>
