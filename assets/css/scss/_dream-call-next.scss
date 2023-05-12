@@ -5,6 +5,9 @@
   text-align: center;
   position: relative;
   padding-bottom: 60px;
+  @include w599{
+    padding-bottom: 40px;
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -15,11 +18,23 @@
       color: #6bb42d;
       font-weight: 900;
       letter-spacing: 11px;
+      @include w768{
+        font-size: 16px;
+      }
+      @include w599{
+        font-size: 12px;
+      }
     }
     h2 {
       font-weight: 900;
       font-size: 48px;
       color: #3a3e40;
+      @include w768{
+        font-size: 42px;
+      }
+      @include w599{
+        font-size: 32px;
+      }
     }
   }
   &__img {
@@ -28,11 +43,31 @@
     top: -50px;
     right: 32%;
     width: 200px;
+    @include w768{
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include w599{
+      width: 150px;
+    }
   }
 }
 
 .next-mainbg {
   width: 100%;
+  .next-main-pc {
+    display: block;
+    @include w599 {
+      display: none;
+    }
+  }
+  .next-main-sp {
+    display: none;
+    @include w599 {
+      display: block;
+    }
+  }
 }
 .next-step {
   &__inner {
@@ -42,23 +77,48 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @include w1024 {
+      flex-direction: column;
+    }
     &_left {
       width: 45%;
       height: 100%;
       background: #f9f9f9;
       border-radius: 30px;
+      @include w1024 {
+        width: 540px;
+        margin-bottom: 28px;
+      }
+      @include w768 {
+        width: 85%;
+      }
+      @include w599 {
+        width: 100%;
+      }
       &_inner {
         padding: 60px;
+        @include w1024 {
+          padding: 40px 60px;
+        }
+        @include w599 {
+          padding: 28px 20px;
+        }
       }
       &_title {
         text-align: center;
         padding-bottom: 36px;
+        @include w599 {
+          padding-bottom: 24px;
+        }
         h3 {
           display: inline;
           font-size: 36px;
           font-weight: 900;
           color: #3a3e40;
           background: linear-gradient(transparent 50%, rgb(255, 238, 0) 50%);
+          @include w599 {
+            font-size: 24px;
+          }
         }
       }
       &_content {
@@ -77,17 +137,36 @@
             color: #fff;
             font-weight: 900;
             font-size: 24px;
+            @include w599 {
+              padding: 4px 10px 5px 10px;
+              font-size: 18px;
+            }
           }
         }
         .step-p {
           font-weight: 900;
           font-size: 28px;
           color: #6bb42d;
+          @include w1440 {
+            font-size: 24px;
+          }
+          @include w599 {
+            font-size: 18px;
+          }
         }
       }
     }
     &_right {
       width: 45%;
+      @include w1024 {
+        width: 540px;
+      }
+      @include w768 {
+        width: 85%;
+      }
+      @include w599{
+        width: 100%;
+      }
       video {
         width: 100%;
         object-fit: cover;
@@ -106,21 +185,34 @@
     margin: 0 auto;
     background: #fff;
     border-radius: 30px;
+    @include w1440{
+      max-width: 90%;
+    }
     &_inner {
       padding: 60px 40px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      @include w768{
+        flex-direction: column;
+      }
     }
     &_item {
       width: 45%;
       padding: 0 10px 40px;
+      @include w768{
+        width: 80%;
+        margin: 0 auto
+      }
 
       .img {
         border: #6bb42d 1px solid;
         border-radius: 20px;
         height: 250px;
         overflow: hidden;
+        @include w1024{
+          height: 200px;
+        }
       }
       h4 {
         font-weight: 700;
@@ -129,6 +221,9 @@
         color: #419438;
         padding-top: 20px;
         padding-bottom: 20px;
+        @include w768{
+          font-size: 20px
+        }
       }
       p {
         line-height: 1.6;
@@ -155,6 +250,12 @@
     justify-content: center;
     border-radius: 30px;
     margin-bottom: 40px;
+    @include w1024{
+      max-width: 85%;
+    }
+    @include w768{
+      padding: 40px 60px;
+    }
     h4 {
       font-size: 36px;
       font-weight: 900;
@@ -298,21 +399,39 @@
   background: #419438;
   padding-top: 140px;
   padding-bottom: 120px;
+  @include w768 {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  @include w599 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   &__inner {
     width: 80%;
     margin: 0 auto;
     background: #fff;
     border-radius: 30px;
     padding: 80px 40px;
+    @include w599 {
+      width: 90%;
+      padding: 40px 20px;
+    }
   }
   &__title {
     text-align: center;
     line-height: 1.2;
     padding-bottom: 40px;
+    @include w599 {
+      padding-bottom: 20px;
+    }
     h4 {
       color: #419438;
       font-weight: 900;
       font-size: 48px;
+      @include w599 {
+        font-size: 38px;
+      }
     }
     b {
       letter-spacing: 4px;
@@ -321,12 +440,18 @@
       color: #3a3e40;
       padding-bottom: 60px;
       display: block;
+      @include w599 {
+        font-size: 24px;
+      }
     }
     p {
       display: block;
       font-size: 28px;
       font-weight: 900;
       color: #6bb42d;
+      @include w599 {
+        font-size: 20px;
+      }
     }
   }
   &__cards {
@@ -336,6 +461,15 @@
     width: 75%;
     margin: 0 auto;
     padding-bottom: 72px;
+    @include w1700 {
+      width: 90%;
+    }
+    @include w1440 {
+      width: 100%;
+    }
+    @include w1200 {
+      flex-direction: column;
+    }
   }
   &__card {
     width: 45%;
@@ -347,14 +481,39 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include w1200 {
+      width: 60%;
+      height: auto;
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+    @include w1024 {
+      width: 80%;
+    }
+    @include w768 {
+      width: 100%;
+    }
+    @include w599 {
+      padding: 28px 20px;
+    }
     b {
       font-size: 48px;
       font-weight: 900;
       color: #3a3e40;
       margin-bottom: 12px;
+      @include w1440 {
+        font-size: 42px;
+      }
+      @include w599 {
+        font-size: 32px;
+      }
     }
     p {
       color: #3a3e40;
+      @include w599 {
+        font-size: 12px;
+      }
     }
     &_badge {
       border-radius: 30px;
@@ -365,6 +524,9 @@
         padding: 10px 20px;
         font-weight: 500;
         color: #fff;
+        @include w599 {
+          font-size: 14px;
+        }
       }
     }
     .right {
@@ -384,28 +546,44 @@
   &__contact {
     width: 75%;
     margin: 0 auto;
+    @include w768 {
+      width: 95%;
+    }
     h5 {
       color: #6bb42d;
       font-weight: 900;
       font-size: 28px;
       text-align: center;
       padding-bottom: 40px;
+      @include w599 {
+        font-size: 20px;
+        width: 100%;
+        padding-bottom: 20px;
+      }
     }
     p {
       line-height: 1.6;
       font-weight: 400;
       color: #333;
+      @include w599 {
+        font-size: 14px;
+      }
     }
-    .hvr-glow{
+    .hvr-glow {
       display: block;
-    }
-    &_btn {
       width: 75%;
       margin: 0 auto;
       margin-top: 40px;
       background: #419438;
       border-radius: 50px;
-      
+      @include w1024 {
+        width: 90%;
+      }
+      @include w900 {
+        width: 100%;
+      }
+    }
+    &_btn {
       p {
         color: #fff;
         padding: 14px 40px;
@@ -413,6 +591,10 @@
         font-size: 20px;
         font-weight: 900;
         letter-spacing: 5px;
+        @include w599 {
+          padding: 14px 20px;
+          font-size: 14px;
+        }
       }
     }
   }
@@ -420,9 +602,18 @@
     width: 60%;
     margin: 0 auto;
     margin-top: 60px;
+    @include w768 {
+      width: 80%;
+    }
+    @include w599 {
+      width: 95%;
+    }
     label {
       font-weight: bold;
       color: #3a3e40;
+      @include w599 {
+        font-size: 14px;
+      }
     }
     .required {
       color: red;
@@ -491,7 +682,10 @@
       margin: 0 auto;
       margin-top: 24px;
       width: 210px;
-      &:hover{
+      @include w599 {
+        margin-top: 10px;
+      }
+      &:hover {
         opacity: 0.9;
       }
       &:hover .arrow {
@@ -506,7 +700,6 @@
         top: 2px;
         right: 30px;
         cursor: pointer;
-
       }
     }
 
@@ -563,8 +756,11 @@
       }
       .wpcf7-list-item-label {
         padding-bottom: 12px;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 15px;
+        @include w599 {
+          font-size: 14px;
+        }
         a {
           color: #419438;
           border-bottom: 1px solid #419438;
