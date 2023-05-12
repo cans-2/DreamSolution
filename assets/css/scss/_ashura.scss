@@ -7,13 +7,52 @@
     margin-top: 120px;
     display: flex;
     justify-content: space-between;
+    @include w1440 {
+      padding: 40px 80px;
+    }
+    @include w900 {
+      padding: 32px 64px;
+    }
+    @include w768 {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      margin-top: 80px;
+    }
+    @include w660 {
+      padding: 32px 24px;
+    }
   }
   &_right {
     width: 660px;
-    
+    @include w1440 {
+      width: 50%;
+      img {
+        object-fit: contain;
+      }
+    }
+    @include w768 {
+      width: 85%;
+      padding-bottom: 28px;
+    }
+    @include w660 {
+      width: 95%;
+    }
   }
   &_left {
     font-weight: 900;
+    @include w1440 {
+      width: 40%;
+    }
+    @include w900 {
+      width: 45%;
+    }
+    @include w768 {
+      width: 85%;
+    }
+    @include w660 {
+      width: 95%;
+    }
     h3 {
       color: #e1002d;
       border-bottom: 2px solid #e1002d;
@@ -21,6 +60,9 @@
       padding-bottom: 8px;
       margin-bottom: 20px;
       text-shadow: 2px 2px 0 rgb(0, 0, 0, 0.2);
+      @include w1024 {
+        font-size: 26px;
+      }
     }
     li {
       margin-bottom: 20px;
@@ -28,6 +70,9 @@
       color: #3a3e40;
       display: flex;
       align-items: center;
+      @include w1024 {
+        font-size: 16px;
+      }
       .material-symbols-outlined {
         font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
         color: #000;
@@ -49,16 +94,43 @@
   &_inner {
     padding: 40px 120px;
     color: #fff;
+    @include w900 {
+      padding: 40px 64px;
+    }
+    @include w660 {
+      padding: 28px 48px;
+    }
+    @include w450 {
+      padding: 24px 32px;
+    }
     p {
       font-weight: 700;
       font-size: 28px;
       text-shadow: 2px 2px 0 rgb(0, 0, 0, 0.2);
+      @include w900 {
+        font-size: 24px;
+      }
+      @include w660 {
+        font-size: 20px;
+      }
+      @include w450 {
+        font-size: 18px;
+      }
     }
     h2 {
       font-weight: 900;
       font-size: 72px;
       text-shadow: 3px 3px 0 rgb(0, 0, 0, 0.2);
       margin-bottom: 20px;
+      @include w900 {
+        font-size: 56px;
+      }
+      @include w660 {
+        font-size: 42px;
+      }
+      @include w450 {
+        font-size: 32px;
+      }
     }
   }
   &_badge {
@@ -71,6 +143,12 @@
       font-weight: 700;
       font-size: 24px;
       text-shadow: none;
+      @include w660 {
+        font-size: 20px;
+      }
+      @include w450 {
+        font-size: 18px;
+      }
     }
   }
 }
@@ -80,6 +158,16 @@
   font-weight: 700;
   color: #3a3e40;
   font-size: 16px;
+  @include w900 {
+    padding: 20px 64px 28px;
+  }
+  @include w660 {
+    padding: 20px 48px;
+  }
+  @include w450 {
+    padding: 20px 32px;
+    font-size: 14px;
+  }
 }
 
 .ashura__sec_title {
@@ -89,31 +177,76 @@
   margin: 0 auto;
   margin-bottom: 40px;
   h3 {
+    margin: 0 auto;
+    text-align: center;
+  }
+  @include w599 {
+    width: 400px;
+  }
+  @include w500 {
+    width: 320px;
+    padding: 12px 28px;
+    text-align: center;
+  }
+  h3 {
     color: #fff;
     font-size: 28px;
     font-weight: 900;
+    @include w599 {
+      font-size: 24px;
+    }
+    @include w500 {
+      font-size: 20px;
+    }
   }
 }
 .ashura__point {
   padding-top: 80px;
   padding-bottom: 80px;
   background: #f9f9f9;
+  @include w660 {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  @include w500 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   &_content {
     display: flex;
     justify-content: center;
     align-items: center;
     &_left {
       width: 15%;
+      @include w900 {
+        width: 12%;
+      }
+      @include w599 {
+        display: none;
+      }
     }
     &_right {
       width: 60%;
       padding-left: 80px;
+      @include w900 {
+        width: 75%;
+        padding-left: 48px;
+      }
+      @include w599 {
+        width: 85%;
+        padding-left: 0;
+      }
+      @include w500 {
+        width: 90%;
+        font-size: 14px;
+      }
       &_item {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
         color: #3a3e40;
         font-weight: 700;
+
         .material-symbols-outlined {
           font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
           background: #fff;
@@ -130,12 +263,27 @@
 .ashura__function {
   padding-top: 80px;
   padding-bottom: 80px;
-  .ashura__sec_title{
+  @include w768 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .ashura__sec_title {
     width: 390px;
+    @include w500 {
+      width: 320px;
+      padding: 12px 28px;
+      text-align: center;
+    }
   }
   &_inner {
     width: 60%;
     margin: 0 auto;
+    @include w768 {
+      width: 75%;
+    }
+    @include w599 {
+      width: 85%;
+    }
   }
   &_item {
     width: 100%;
@@ -166,6 +314,10 @@
   &_inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w768 {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
     .ashura__sec_title {
       width: 250px;
     }
@@ -184,11 +336,31 @@
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid #eeeeee;
+    @include w1440 {
+      width: 75%;
+      justify-content: space-between;
+      padding: 28px 64px;
+    }
+    @include w1024 {
+      padding: 24px 40px;
+      width: 80%;
+    }
+    @include w900 {
+      width: 94%;
+    }
+    @include w768 {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     &_left {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-right: auto;
+      @include w768 {
+        margin-right: 0;
+      }
       p {
         font-weight: 700;
         color: #7e8387;
@@ -196,6 +368,9 @@
     }
     &_right {
       margin-right: auto;
+      @include w768 {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -205,6 +380,10 @@
   &_inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w768 {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
     .ashura__sec_title {
       width: 200px;
     }
@@ -216,6 +395,12 @@
       flex-wrap: wrap;
       width: 60%;
       margin: 0 auto;
+      @include w1200 {
+        width: 75%;
+      }
+      @include w768 {
+        width: 85%;
+      }
       &:last-child {
         dt {
           border-bottom: 1px solid #eeeeee;
@@ -233,6 +418,13 @@
         font-weight: 700;
         color: #7e8387;
         padding: 28px 80px 20px;
+        white-space: nowrap;
+        @include w900 {
+          padding: 28px 56px 20px;
+        }
+        @include w660 {
+          padding: 20px 40px 16px;
+        }
       }
 
       dd {
@@ -241,6 +433,15 @@
         width: 70%;
         font-weight: 400;
         color: #333;
+        @include w900 {
+          padding: 28px 56px 20px;
+        }
+        @include w660 {
+          padding: 20px 40px 16px;
+        }
+        @include w599 {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -255,6 +456,12 @@
   line-height: 1.8;
   color: #333;
   margin-top: 6px;
+  @include w1024 {
+    width: 75%;
+  }
+  @include w768 {
+    width: 85%;
+  }
 }
 .ashura__plan {
   padding-top: 80px;
@@ -266,9 +473,26 @@
     display: flex;
     padding: 40px 60px;
     color: #fff;
-    &:nth-child(2){
-        color: #3a3e40;
-        background: #FFF209;
+    @include w1024 {
+      width: 75%;
+    }
+    @include w768 {
+      width: 85%;
+      padding: 28px 40px;
+    }
+    @include w599 {
+      height: 250px;
+      padding: 20px;
+    }
+    @include w450 {
+      height: 300px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &:nth-child(2) {
+      color: #3a3e40;
+      background: #fff209;
     }
     &_left {
       width: 50%;
@@ -277,38 +501,75 @@
       font-weight: 900;
       font-size: 48px;
       padding-left: 40px;
+      @include w1200 {
+        padding-left: 0;
+      }
+      @include w768 {
+        font-size: 36px;
+      }
+      @include w450 {
+        padding-bottom: 14px;
+        white-space: nowrap;
+      }
     }
     &_right {
       width: 50%;
       display: flex;
       flex-direction: column;
-justify-content: center;
+      justify-content: center;
       line-height: 1.4;
-      &_top{
+      @include w450 {
+        width: 80%;
+      }
+      &_top {
         font-size: 24px;
         font-weight: bold;
-      }
-      b{
-        font-size: 32px;
-        span{
-            font-size: 16px;
-            padding-left: 6px;
+        @include w768 {
+          font-size: 20px;
         }
       }
-      ul{
+      b {
+        font-size: 32px;
+        @include w768 {
+          font-size: 26px;
+        }
+        span {
+          font-size: 16px;
+          padding-left: 6px;
+        }
+      }
+      ul {
         margin-top: 12px;
         margin-bottom: 8px;
         padding-left: 16px;
         font-weight: 400;
 
-        p{
-            margin-left: -16px;
+        p {
+          margin-left: -16px;
         }
-        li{
-            list-style: disc;
-
+        li {
+          list-style: disc;
         }
       }
+    }
+  }
+}
+
+.ashura-trial {
+  padding-left: 14px;
+  padding-right: 14px;
+  @include w599 {
+    p {
+      font-size: 28px;
+    }
+    span{
+      font-size: 100px;
+    }
+  }
+  br {
+    display: none;
+    @include w599 {
+      display: block;
     }
   }
 }

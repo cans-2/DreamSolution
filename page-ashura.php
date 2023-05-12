@@ -215,8 +215,8 @@
             <p>※「阿修羅ダイヤラー」は株式会社オプトエスピーの登録商標となります。</p>
         </div>
     </section>
-    <div class="trial">
-        <p>詳しくはお問い合わせください。</p>
+    <div class="trial ashura-trial">
+        <p>詳しくは<br>お問い合わせください。</p>
         <span class="material-symbols-outlined">
             fast_rewind
         </span>
