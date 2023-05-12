@@ -80,10 +80,9 @@ new Splide("#splide1", {
       perPage: 3,
       gap: 10,
     },
-    576: {
+    599: {
       perPage: 2,
-      gap: 5,
-
+      gap: 10,
     },
   },
 }).mount();
@@ -103,14 +102,9 @@ new Splide("#splide2", {
       perPage: 3,
       gap: 15,
     },
-    768: {
-      perPage: 3,
-      gap: 10,
-    },
-    576: {
-      perPage: 2,
-      gap: 5,
-    },
+   950:{
+    destroy:true
+   },
   },
 }).mount();
 

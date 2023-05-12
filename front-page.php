@@ -1,7 +1,7 @@
 <?php get_header() ?>
 <main>
   <div class="main-bg">
-    <img id="mainBg" src="<?php echo get_template_directory_uri() ?>/assets/image/mainvisual1.jpeg" alt="">
+    <img id="mainBg" src="<?php echo get_template_directory_uri() ?>/assets/image/mainvisual1.jpeg" alt="main">
     <div class="main-bg__catch">
       <div id="catch1">
         <p class="left">お客様と共に作る</p>
@@ -21,23 +21,24 @@
       <div class="splide__track">
         <ul class="splide__list">
           <li class="banner__item splide__slide">
-            <a href="<?php echo get_template_directory_uri() ?>#"> ここにサービスのバナーリンクが入ります。 </a>
+            <a href="/dreamcall-super"><img src="<?php echo get_template_directory_uri() ?>/assets/image/banner/1.jpg" alt="banner"></a>
           </li>
           <li class="banner__item splide__slide">
-            <a href="<?php echo get_template_directory_uri() ?>#"> ここにサービスのバナーリンクが入ります。 </a>
+            <a href="/dream-cloud-pbx"><img src="<?php echo get_template_directory_uri() ?>/assets/image/banner/2.jpg" alt="banner"></a>
           </li>
           <li class="banner__item splide__slide">
-            <a href="<?php echo get_template_directory_uri() ?>#"> ここにサービスのバナーリンクが入ります。 </a>
+            <a href="/dreamcall"><img src="<?php echo get_template_directory_uri() ?>/assets/image/banner/3.jpg" alt="banner"></a>
           </li>
           <li class="banner__item splide__slide">
-            <a href="<?php echo get_template_directory_uri() ?>#"> ここにサービスのバナーリンクが入ります。 </a>
+            <a href="/dream-call-next"><img src="<?php echo get_template_directory_uri() ?>/assets/image/banner/4.jpg" alt="banner"></a>
           </li>
           <li class="banner__item splide__slide">
-            <a href="<?php echo get_template_directory_uri() ?>#"> ここにサービスのバナーリンクが入ります。 </a>
+            <a href="/ashura"><img src="<?php echo get_template_directory_uri() ?>/assets/image/banner/5.jpg" alt="banner"></a>
           </li>
           <li class="banner__item splide__slide">
-            <a href="<?php echo get_template_directory_uri() ?>#"> ここにサービスのバナーリンクが入ります。 </a>
+            <a href="/site-design"><img src="<?php echo get_template_directory_uri() ?>/assets/image/banner/6.jpg" alt="banner"></a>
           </li>
+
         </ul>
       </div>
     </div>
@@ -81,7 +82,7 @@
           <p class="service__item_card_p">
             インターネット環境があれば、どこでもご利用いただける電話サービスです。当社から発行するID・パスワード・・ドメインを設定していただくだけで、インターネット経由で工事不要にて電話をご利用いただけます。
           </p>
-          <a href="/dream-call-next" class="detail hvr-glow">
+          <a href="/dream-call-pbx" class="detail hvr-glow">
             <p>詳細はこちら</p>
             <span class="material-symbols-outlined"> open_in_new </span>
           </a>
@@ -200,7 +201,7 @@
             <?php wp_reset_postdata(); ?>
           <?php endif; ?>
         </div>
-        <a href="#" class="news__btn">
+        <a href="/news" class="news__btn">
           <p>もっと見る</p>
           <span class="material-symbols-outlined"> trending_flat </span>
         </a>
@@ -249,26 +250,30 @@
       <div class="column__item_wrapper">
         <div id="splide2" class="splide">
           <div class="splide__track">
-            <ul class="splide__list">
+            <ul class="splide__list column__items">
               <?php if ($column_query->have_posts()) : ?>
                 <?php while ($column_query->have_posts()) : $column_query->the_post(); ?>
                   <?php
                   // 投稿の最初の画像をアイキャッチ画像として取得する
                   $image = get_the_post_thumbnail_url(get_the_ID(), 'large');
+                  // 画像が存在しない場合に、デフォルトの画像を使用する
+                  if (!$image) {
+                    $image = get_template_directory_uri() . '/assets/image/dammy.jpg';
+                  }
+
+                  // タイトルの文字数が20文字以上の場合は省略記号をつけて表示する
+                  $title = get_the_title();
+                  if (mb_strlen($title) > 30) {
+                    $title = mb_substr($title, 0, 30) . '…';
+                  }
                   ?>
                   <li class="splide__slide column__item">
                     <a href="<?php the_permalink(); ?>">
                       <div class="column__item_img">
-                        <img src="<?php echo $image; ?>" alt="<?php
-                                                              the_title();
-                                                              ?>">
+                        <img src="<?php echo $image; ?>" alt="<?php the_title(); ?>">
                       </div>
                       <div class="column__item_content">
-                        <p>
-                          <?php
-                          the_title();
-                          ?>
-                        </p>
+                        <p><?php echo $title; ?></p>
                       </div>
                     </a>
                   </li>
@@ -281,7 +286,7 @@
         </div>
 
       </div>
-      <a href="" class="news__btn">
+      <a href="/column" class="news__btn">
         <p>もっと見る</p>
         <span class="material-symbols-outlined"> trending_flat </span>
       </a>

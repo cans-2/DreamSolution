@@ -171,13 +171,28 @@
     width: 40px;
     height: 40px;
     background: #fbfbfb;
-
+@include w768{
+  top: 188px;
+}
+@include w599{
+  top: 220px;
+}
+@include w500{
+  top: 200px;
+}
+@include w450{
+  top: 180px;
+}
     svg {
       fill: #000;
     }
     &--prev {
       position: absolute;
       left: 46%;
+      @include w599{
+        left: 44%;
+      }
+
     }
   }
 }
@@ -186,20 +201,40 @@
   width: 100%;
   background: #fbfbfb;
   height: 260px;
+  @include w768{
+    height: 220px;
+  }
+  @include w599{
+    height: 260px;
+  }
+  @include w500{
+    height: 240px;
+  }
+  @include w450{
+    height: 210px;
+  }
+
   &__inner {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px 20px 60px;
+    @include w768{
+      padding: 40px 20px 40px;
+    }
   }
   &__item {
     width: 19%;
-    height: 160px;
+    height: auto;
     background: rgb(216, 214, 214);
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 20px;
+    transition: all 0.1s;
+    &:hover {
+      opacity: 0.7;
+    }
     a {
       display: inline-block;
       width: 100%;
@@ -335,6 +370,9 @@
 .service {
   padding-top: 160px;
   position: relative;
+  @include w768{
+    padding-top: 120px;
+  }
   &__title {
     position: absolute;
     top: 120px;
@@ -438,13 +476,13 @@
     }
     &_img {
       height: 320px;
-      @include w768{
+      @include w768 {
         height: 280px;
       }
     }
-    &:nth-child(6){
-      .service__item_img{
-        img{
+    &:nth-child(6) {
+      .service__item_img {
+        img {
           object-position: 30%;
         }
       }
@@ -560,8 +598,14 @@
   width: 100%;
   height: 640px;
   margin-top: 360px;
+  @include w768{
+    height: 400px;
+  }
   @include w1200 {
     margin-top: 160px;
+  }
+  @include w768{
+    margin-top: 80px;
   }
   &-bg {
     position: absolute;
@@ -570,7 +614,7 @@
     width: 100%;
     z-index: 0;
     background: #000;
-    @include w768{
+    @include w768 {
       height: 400px;
     }
     video {
@@ -594,28 +638,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    br{
+    br {
       display: none;
     }
-    @include w768{
-      top: 32%;
+    @include w768 {
+      top: 50%;
     }
-    @include w599{
+    @include w599 {
       line-height: 1.4;
-      br{
+      br {
         display: block;
       }
     }
     h2 {
       font-size: 80px;
       font-weight: bold;
-      @include w1200{
+      @include w1200 {
         font-size: 64px;
       }
-      @include w768{
+      @include w768 {
         font-size: 48px;
       }
-      @include w599{
+      @include w599 {
         font-size: 42px;
       }
     }
@@ -623,10 +667,10 @@
       padding-top: 40px;
       font-size: 20px;
       font-family: "Lato";
-      @include w1200{
+      @include w1200 {
         font-size: 18px;
       }
-      @include w599{
+      @include w599 {
         padding-top: 28px;
       }
     }
@@ -646,7 +690,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      @include w599{
+      @include w599 {
         width: 280px;
       }
 
@@ -664,7 +708,7 @@
           background: rgba(58, 62, 64, 0.65);
           top: 10px;
           left: 240px;
-          @include w599{
+          @include w599 {
             left: 200px;
           }
         }
@@ -684,15 +728,15 @@
 
 .news {
   padding-top: 90px;
-@include w768{
-  padding-top: 0;
-}
+  @include w768 {
+    padding-top: 0;
+  }
   &__bg {
     position: relative;
     width: 100%;
     background: linear-gradient(to right, #f9f9f9 70%, #fff 30%);
     height: 670px;
-    @include w768{
+    @include w768 {
       background: #f9f9f9;
     }
   }
@@ -702,19 +746,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include w768{
+      padding-top: 64px;
+    }
     &_item_wrapper {
       margin-top: 40px;
     }
     &_item {
       min-width: 500px;
+      padding-left: 12px;
+      padding-right: 12px;
       text-align: left;
       color: #7e8387;
       font-weight: bold;
       line-height: 1.4;
       margin-bottom: 24px;
-      @include w768{
+      @include w768 {
         text-align: center;
-        min-width:0;
+        min-width: 0;
       }
       .date {
         font-size: 14px;
@@ -757,28 +806,29 @@
 .about {
   margin-top: 80px;
   background: #f9f9f9;
-  @include w768{
+  @include w768 {
     margin-top: 64px;
   }
   &__wrapper {
     padding-top: 120px;
-    @include w768{
+    @include w768 {
       padding-top: 80px;
-padding-bottom: 60px;
+      padding-bottom: 60px;
     }
   }
   &__video {
     height: 570px;
     width: 60%;
     margin: 0 auto;
-@include w768{
-  width: 80%;
-  height: 450px;
-}
-@include w599{
-  width: 96%;
-  height: 320px;
-}
+    margin-top: 24px;
+    @include w768 {
+      width: 80%;
+      height: 450px;
+    }
+    @include w599 {
+      width: 96%;
+      height: 320px;
+    }
     video {
       width: 100%;
       height: 100%;
@@ -791,7 +841,8 @@ padding-bottom: 60px;
   background: #f9f9f9;
   padding-top: 120px;
   padding-bottom: 120px;
-  @include w599{
+ 
+  @include w768 {
     padding-top: 72px;
     padding-bottom: 72px;
   }
@@ -800,21 +851,21 @@ padding-bottom: 60px;
     padding-right: 48px;
     display: flex;
     height: 500px;
-    @include w900{
+    @include w900 {
       flex-direction: column;
       align-items: center;
       height: auto;
     }
-    @include w599{
+    @include w599 {
       padding: 0;
     }
   }
   &__img {
     width: 50%;
-    @include w900{
-display: none;
+    @include w900 {
+      display: none;
     }
-   
+
     img {
       width: 100%;
       height: 100%;
@@ -825,23 +876,29 @@ display: none;
     width: 50%;
     padding-left: 5%;
     padding-top: 40px;
-    @include w900{
+    @include w900 {
       width: 80%;
     }
-    @include w599{
+    @include w599 {
       width: 92%;
       padding-left: 0;
     }
     &_inner {
       text-align-last: left;
+      @include w768{
+        text-align-last: center;
+      }
     }
     &_p {
       padding-top: 64px;
       font-size: 18px;
       line-height: 1.8;
       color: #333;
-      @include w900{
+      @include w900 {
         padding-top: 32px;
+      }
+      @include w768{
+        text-align-last: left;
       }
     }
     .detail {
@@ -856,8 +913,7 @@ display: none;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      @include w768{
-
+      @include w768 {
         margin: 0 auto;
         margin-top: 40px;
       }
@@ -908,7 +964,7 @@ display: none;
     position: absolute;
     left: auto;
     right: 8%;
-    @include w1200{
+    @include w1200 {
       right: 10%;
     }
   }
@@ -918,10 +974,14 @@ display: none;
   padding-top: 120px;
   margin-bottom: 120px;
   overflow: hidden;
+  @include w599{
+    padding-top: 80px;
+margin-bottom: 64px;
+  }
   &__inner {
     padding-left: 6%;
     padding-right: 6%;
-    @include w1440{
+    @include w1440 {
       padding-left: 4%;
       padding-right: 4%;
     }
@@ -941,13 +1001,41 @@ display: none;
   &__title {
     text-align-last: left;
     padding-left: 16px;
+    @include w768{
+      text-align-last: center;
+      text-align: center;
+    }
   }
   &__item {
-    width: 18%;
+    width: 30%;
+    height: 370px;
+    @include w950{
+      width: 46%;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    @include w599{
+      width: 80%;
+      height: auto;
+    }
+    @include w500{
+      width: 85%;
+    }
+    &:nth-child(n+4){
+      display: block;
+      @include w599{
+        display: none;
+      }
+    }
+  &:nth-child(n+5){
+    display: block;
+    @include w950{
+      display: none;
+    }
+  }
     &:hover {
       opacity: 0.9;
     }
-    &_img{
+    &_img {
       width: 100%;
       height: 240px;
     }
@@ -955,10 +1043,21 @@ display: none;
       width: 100%;
       font-size: 24px;
       font-weight: 700;
-      line-height: 1.2;
-      color: #000;
+      line-height: 1.3;
+      color: #333;
       padding-top: 24px;
-      p{
+      @include w1440 {
+        font-size: 20px;
+      }
+      @include w950{
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      @include w599{
+        padding-bottom: 14px;
+        padding-top: 12px;
+      }
+      p {
         display: inline-block;
       }
       &:hover {
@@ -970,6 +1069,21 @@ display: none;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      .column__items {
+        @include w950{
+
+          display: flex !important;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-around;
+          row-gap: 24px;
+          padding-bottom: 12px !important;
+        }
+        @include w599{
+          flex-wrap: nowrap;
+          flex-direction: column;
+        }
+      }
     }
   }
 }

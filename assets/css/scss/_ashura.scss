@@ -1,3 +1,6 @@
+@use "./common" as *;
+@use "./mixin" as *;
+
 .ashura__title {
   &_inner {
     padding: 40px 120px;
@@ -7,6 +10,7 @@
   }
   &_right {
     width: 660px;
+    
   }
   &_left {
     font-weight: 900;

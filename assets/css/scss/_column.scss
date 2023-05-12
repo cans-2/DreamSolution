@@ -1,0 +1,137 @@
+@use "./common" as *;
+@use "./mixin" as *;
+
+.column-page {
+  width: 100%;
+  height: 100%;
+  background: #f9f9f9;
+  &__inner {
+    padding: 120px 10% 60px;
+    @include w1200{
+        padding: 120px 6% 60px;
+    }
+    @include w768{
+        padding: 120px 2% 60px;
+    }
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      color: #333;
+      padding-bottom: 64px;
+      @include w1200{
+        padding-left: 64px;
+      }
+      @include w768{
+        font-size: 46px;
+      }
+      @include w599{
+        font-size: 40px;
+      }
+    }
+
+    .column__items {
+      padding-left: 16px;
+      padding-right: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      @include w1024{
+        justify-content: space-between;
+      }
+      @include w660{
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        row-gap: 32px;
+      }
+      .column__item {
+        width: 31%;
+        height: auto;
+        background: #fff;
+    box-shadow: 0 2px 4px rgb(0, 0, 0,.4);
+       @include w1024{
+        width: 45%;
+       }
+       @include w768{
+        width: 48%;
+       }
+       @include w660{
+        width: 85%;
+       }
+       @include w599{
+        width: 95%;
+       }
+        &_inner {
+          padding: 40px;
+        }
+        &_title {
+          padding-top: 16px;
+          color: #333;
+          a {
+            display: inline;
+            line-height: 1.5;
+            font-size: 18px;
+            border-bottom: 1px solid #333;
+            @include w660{
+                font-size: 15px;
+            }
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+        .datecate {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          .date {
+            font-size: 12px;
+            font-weight: bold;
+            color: #419438;
+            padding-left: 8px;
+            padding-right: 12px;
+            border-right: 1px solid #333;
+          }
+          .cate {
+            color: #333;
+            font-size: 12px;
+            padding-left: 12px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  .prev{
+    display: none;
+  }
+  .next{
+    display: none;
+  }
+}
+
+.pagenation{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+    padding-top: 32px;
+    .page-numbers{
+        padding: 10px 15px;
+        border-radius: 50%;
+        border: #333 1px solid;
+        transition: all .1s;
+        &:hover{
+            background: #333;
+            color: #fff;
+        }
+    }
+    .dots{
+        border: none;
+        pointer-events: none;
+    }
+    .current{
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}
