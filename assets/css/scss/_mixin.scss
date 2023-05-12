@@ -29,6 +29,11 @@
       @content;
     }
   }
+  @mixin w950 {
+    @media screen and (max-width: 950px) {
+      @content;
+    }
+  }
   @mixin w900 {
     @media screen and (max-width: 900px) {
       @content;
@@ -52,6 +57,11 @@
   }
   @mixin w500 {
     @media screen and (max-width: 500px) {
+      @content;
+    }
+  }
+  @mixin w450 {
+    @media screen and (max-width: 450px) {
       @content;
     }
   }

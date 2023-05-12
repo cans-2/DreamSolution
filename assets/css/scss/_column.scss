@@ -46,6 +46,7 @@
       }
       .column__item {
         width: 31%;
+        height: auto;
         background: #fff;
     box-shadow: 0 2px 4px rgb(0, 0, 0,.4);
        @include w1024{

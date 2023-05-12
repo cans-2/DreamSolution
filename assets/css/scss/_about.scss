@@ -12,13 +12,24 @@
   padding-bottom: 40px;
   font-weight: 900;
   line-height: 1.2;
+  @include w1440{
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+ 
   h3 {
     color: #3a3e40;
     font-size: 48px;
+    @include w900{
+      font-size: 40px;
+    }
   }
   p {
     font-size: 24px;
     color: #419438;
+    @include w900{
+      font-size: 20px;
+    }
   }
 }
 
@@ -28,6 +39,12 @@
   margin-top: 80px;
   background: #fff;
   border-radius: 30px;
+  @include w900{
+    margin-top: 64px;
+  }
+  @include w768{
+    width: 90%;
+  }
 
   &__catch {
     position: absolute;
@@ -39,6 +56,10 @@
     @include w1440{
       font-size: 40px;
       top: -240px;
+    }
+    @include w900{
+      font-size: 32px;
+      top: -260px;
     }
   }
   &__inner {
@@ -53,10 +74,19 @@
     font-weight: 400;
     color: #333;
     padding-bottom: 40px;
+    @include w1440{
+      width: 80%;
+    }
   }
   &__video {
     width: 40%;
     margin: 0 auto;
+    @include w1700{
+      width: 60%;
+    }
+    @include w900{
+      width: 75%;
+    }
     video {
       width: 100%;
     }

@@ -250,7 +250,7 @@
       <div class="column__item_wrapper">
         <div id="splide2" class="splide">
           <div class="splide__track">
-            <ul class="splide__list">
+            <ul class="splide__list column__items">
               <?php if ($column_query->have_posts()) : ?>
                 <?php while ($column_query->have_posts()) : $column_query->the_post(); ?>
                   <?php
@@ -260,6 +260,12 @@
                   if (!$image) {
                     $image = get_template_directory_uri() . '/assets/image/dammy.jpg';
                   }
+
+                  // タイトルの文字数が20文字以上の場合は省略記号をつけて表示する
+                  $title = get_the_title();
+                  if (mb_strlen($title) > 30) {
+                    $title = mb_substr($title, 0, 30) . '…';
+                  }
                   ?>
                   <li class="splide__slide column__item">
                     <a href="<?php the_permalink(); ?>">
@@ -267,14 +273,13 @@
                         <img src="<?php echo $image; ?>" alt="<?php the_title(); ?>">
                       </div>
                       <div class="column__item_content">
-                        <p><?php the_title(); ?></p>
+                        <p><?php echo $title; ?></p>
                       </div>
                     </a>
                   </li>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
               <?php endif; ?>
-
 
             </ul>
           </div>

@@ -113,6 +113,9 @@
       li {
         padding: 16px;
         position: relative;
+        &:hover{
+          opacity: 0.8;
+        }
         @include w500 {
           font-size: 14px;
         }
@@ -134,6 +137,9 @@
     width: 80%;
     margin: 0 auto;
     padding: 16px;
+    &:hover{
+      opacity: 0.8;
+    }
     &:first-child {
       margin-top: 14px;
     }
