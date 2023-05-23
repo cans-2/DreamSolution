@@ -5,13 +5,13 @@
           <h2>ABOUT</h2>
           <p>会社情報</p>
         </div>
-        <section class="philosophy">
+        <section class="philosophy wow fade-up2">
           <div class="about__sec-title">
             <h3>経営理念</h3>
             <p>PHILOSOPHY</p>
           </div>
           <div class="philosophy__inner">
-            <div class="philosophy__catch">
+            <div class="philosophy__catch wow fade-in-about">
               <p>一期一会をモットーに</p>
               <p>一度の出会いを大切に</p>
             </div>
@@ -26,16 +26,16 @@
                 また、会社とお客様・お客様と従業員・従業員同士・従業員と会社が、お互いに信頼し合える関係を築くことを目指します。
               </p>
               <p>
-                そして、お客様自身が、ドリームソリューションの最高のセールスマンになってもらうなってもらえる会社を目指し、従業員全員が、毎日、会社の一員であることを誇りに思う会社を目指します。
+                そして、お客様自身が、ドリームソリューションの最高のセールスマンになっていただける会社を目指し、従業員全員が、毎日、会社の一員であることを誇りに思う会社を目指します。
               </p>
             </div>
             <div class="philosophy__video">
-              <video controls src="<?php echo get_template_directory_uri()?>/assets/video/simulation-movie.mp4"></video>
+              <video controls src="<?php echo get_template_directory_uri()?>/assets/video/dream_solution_movie.mp4"></video>
             </div>
           </div>
         </section>
 
-        <section class="message">
+        <section class="message wow fade-up2">
           <div class="about__sec-title">
             <h3>代表挨拶</h3>
             <p>MESSAGE</p>
@@ -55,7 +55,7 @@
           </div>
         </section>
 
-        <section class="information">
+        <section class="information wow fade-up2">
           <div class="information__inner">
             <div class="information__title">
               <img src="<?php echo get_template_directory_uri()?>/assets/image/about/company-image1.jpg" alt="information">
@@ -80,7 +80,7 @@
 
         </section>
 
-        <section class="history">
+        <section class="history wow fade-up2">
           <div class="history__inner">
 
             <div class="history__title">

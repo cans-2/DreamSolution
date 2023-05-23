@@ -1,21 +1,37 @@
 @use "./common" as *;
+@use "./mixin" as *;
+
 .pbx-title {
   width: 100%;
-  height: 680px;
+  height: 640px;
   background-image: url(/wp-content/themes/DreamSolution/assets/image/dream-cloud-pbx/pbx-1.png);
   position: relative;
+  background-position: 66%;
+  @include w1024{
+    background-position: 80%;
+  }
   &__content {
     position: absolute;
     top: 50%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    left: 5%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     -ms-transform: translate(-50%, -50%);
     text-shadow: 3px 3px 0 rgb(0, 0, 0, 0.2);
+    @include w768{
+      top: auto;
+      bottom: -40px;
+    }
     h1 {
       font-weight: 900;
       font-size: 120px;
       color: #1e88ff;
+      @include w768{
+        font-size: 60px;
+      }
+      @include w599{
+        font-size: 54px;
+      }
     }
     p {
       padding-top: 40px;
@@ -25,6 +41,17 @@
       display: flex;
       align-items: flex-end;
       line-height: 1.4;
+      @include w768{
+        font-size: 24px;
+        padding-top: 20px;
+        color: #fff;
+        font-weight: 500;
+      }
+      @include w599{
+        font-size: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
       span {
         background: #1e88ff;
         padding: 2px 10px;
@@ -32,6 +59,13 @@
         font-weight: 900;
         color: #fff;
         margin-left: 4px;
+        @include w768{
+          font-size: 32px;
+        }
+        @include w599{
+          font-size: 28px;
+          margin-top: 6px;
+        }
       }
     }
   }
@@ -41,7 +75,6 @@
   padding-top: 40px;
   padding-bottom: 40px;
   span{
-
     color: rgb(255, 255, 255,.6);
   }
 }
@@ -52,18 +85,52 @@
   margin: 0 auto;
   outline: #0078ff solid 8px;
   padding: 40px;
+  @include w1700{
+    width: 80%;
+  }
+  @include w1440{
+    width: 90%;
+  }
+  @include w1200{
+    width: 800px;
+  }
+  @include w900{
+    width: 700px;
+    padding: 40px 32px;
+  }
+  @include w768{
+    width: 450px;
+    padding: 40px 50px;
+  }
+  @include w599{
+    width: 380px;
+    padding: 40px 18px;
+  }
+  @include w375{
+    width: 340px;
+    padding: 40px 14px;
+  }
   &_title {
     width: 70%;
     margin: 0 auto;
     background: #1e88ff;
     border-radius: 30px;
     margin-bottom: 40px;
+    @include w1200{
+      width: fit-content;
+    }
+    @include w768{
+      text-align: center;
+    }
     p {
       padding: 5px 24px;
       color: #fff;
       line-height: 1.4;
       font-size: 18px;
       font-weight: 700;
+      @include w375{
+      font-size: 16px;
+      }
     }
   }
   &_items {
@@ -71,6 +138,10 @@
     flex-wrap: wrap;
     padding-left: 24px;
     padding-right: 24px;
+    @include w900{
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   &_item {
     width: 33%;
@@ -78,6 +149,19 @@
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    @include w1200{
+      width: 50%;
+    }
+    @include w768{
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    @include w599{
+      padding-left: 20px;
+    }
+    @include w375{
+      padding-left: 0px;
+    }
     p {
       font-size: 14px;
       font-weight: 900;
@@ -87,6 +171,7 @@
       background: #1e88ff;
       border-radius: 50%;
       margin-right: 10px;
+      padding-bottom: 2px;
       p {
         padding: 6px;
         color: #fff;
@@ -108,14 +193,25 @@
   &__items {
     max-width: 1280px;
     margin: 0 auto;
+    @include w1440{
+      max-width: 100%;
+    }
   }
   &__item {
     padding-top: 60px;
     padding-bottom: 60px;
     width: 100%;
     display: flex;
+    @include w768{
+      flex-direction: column-reverse;
+      padding-top: 40px;
+    padding-bottom: 40px;
+    }
     &:nth-child(2) {
       flex-direction: row-reverse;
+      @include w768{
+        flex-direction: column-reverse;
+      }
     }
     &_left {
       width: 50%;
@@ -125,25 +221,60 @@
       color: #3a3e40;
       padding-right: 60px;
       padding-left: 30px;
+      @include w1024{
+        padding-right: 30px;
+      }
+      @include w768{
+        width: 85%;
+        margin: 0 auto;
+      }
+      @include w599{
+        width: 100%;
+      }
       span {
         font-weight: 700;
         font-size: 18px;
         color: #1e88ff;
+        @include w599{
+          font-size: 16px;
+        }
       }
       b {
         font-weight: 900;
         font-size: 48px;
         margin-bottom: 20px;
+        @include w1440{
+          font-size: 42px;
+        }
+        @include w900{
+          font-size: 34px;
+        }
+        @include w599{
+          font-size: 32px;
+        }
       }
       p {
         font-size: 18px;
         font-weight: 400;
         line-height: 1.6;
+        @include w599{
+          font-size: 16px;
+        }
       }
     }
     &_right {
       width: 50%;
       padding-right: 30px;
+      padding-left: 30px;
+      @include w768{
+        width: 85%;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include w599{
+        width: 100%;
+      }
     }
   }
 }
@@ -152,6 +283,10 @@
   &__inner {
     padding-top: 60px;
     padding-bottom: 60px;
+    @include w599{
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
     span {
       display: block;
       text-align: center;
@@ -159,6 +294,9 @@
       font-size: 18px;
       color: #1e88ff;
       margin-bottom: 6px;
+      @include w599{
+        font-size: 16px;
+      }
     }
     h3 {
       text-align: center;
@@ -166,6 +304,12 @@
       font-size: 48px;
       color: #3a3e40;
       margin-bottom: 60px;
+      @include w768{
+        font-size: 42px;
+      }
+      @include w599{
+        font-size: 34px;
+      }
     }
   }
   &__items {
@@ -175,14 +319,41 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @include w768{
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__item {
     width: 31%;
     padding: 0 10px 40px;
     box-shadow: 2px 2px 2px 1px rgb(0, 0, 0, 0.2);
+    @include w768{
+      width: 60%;
+      margin-bottom: 40px;
+      padding: 30px;
+    }
+    @include w599{
+      width: 90%;
+      padding: 24px;
+    }
     &_img {
       height: 250px;
       margin-bottom: 30px;
+      @include w1024{
+        height: 200px;
+      }
+      @include w900{
+        height: 140px;
+      }
+      @include w768{
+        height: auto;
+        padding: 10px 20px;
+        margin-bottom: 0;
+      }
+      @include w599{
+        padding: 10px;
+      }
       img {
         object-fit: contain;
       }
@@ -193,10 +364,20 @@
         font-weight: 700;
         font-size: 24px;
         margin-bottom: 16px;
+        @include w768{
+          margin-bottom: 12px;
+        }
+        @include w599{
+          font-size: 22px;
+          margin-bottom: 8px;
+        }
       }
       p {
         font-size: 16px;
         line-height: 1.6;
+        @include w599{
+          font-size: 14px;
+        }
       }
     }
   }
@@ -206,7 +387,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-padding-bottom: 10px;
+  padding-bottom: 10px;
   img{
     width: 24px;
     margin-right: 6px;
@@ -232,6 +413,9 @@ padding-bottom: 10px;
     p {
       font-size: 18px;
       font-weight: 700;
+      @include w599{
+        font-size: 16px;
+      }
       &:last-child {
         padding-top: 20px;
       }
@@ -239,6 +423,12 @@ padding-bottom: 10px;
     b {
       font-weight: 900;
       font-size: 48px;
+      @include w768{
+        font-size: 42px;
+      }
+      @include w599{
+        font-size: 34px;
+      }
     }
   }
   &__items {
@@ -249,12 +439,19 @@ padding-bottom: 10px;
     justify-content: center;
     row-gap: 40px;
     margin: 0 auto;
+    @include w1024{
+      max-width: 90%;
+    }
   }
   &__item {
     width: 100%;
     height: auto;
     border-radius: 30px;
     background: #fff;
+    @include w599{
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
     &_title {
       padding-top: 40px;
       padding-bottom: 20px;
@@ -265,9 +462,16 @@ padding-bottom: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
+      @include w599{
+        font-size: 18px;
+      }
       img{
         width: 36px;
         margin-right: 12px;
+        @include w599{
+          width: 24px;
+          margin-right: 8px;
+        }
       }
     }
     .item1__flex {
@@ -275,17 +479,33 @@ padding-bottom: 10px;
       justify-content: center;
       align-items: center;
       padding: 50px 60px 20px;
+      @include w768{
+        flex-direction: column-reverse;
+      }
+      @include w599{
+        padding: 40px 40px;
+      }
       &:last-child {
         flex-direction: row-reverse;
         padding-bottom: 40px;
+        @include w768{
+          flex-direction: column-reverse;
+        }
         .item1__flex_right {
           width: 43%;
           padding-left: 0;
           padding-right: 40px;
+          @include w768{
+            width: 100%;
+          }
         }
       }
       &_left {
         width: 40%;
+        @include w768{
+          width: 100%;
+          margin-top: 40px;
+        }
       }
       &_right {
         width: 55%;
@@ -293,6 +513,10 @@ padding-bottom: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include w768{
+          width: 100%;
+          padding-left: 0;
+        }
 
         h5 {
           color: #1e88ff;
@@ -308,6 +532,9 @@ padding-bottom: 10px;
           font-size: 16px;
           letter-spacing: 1.1px;
           font-family: "Lato";
+          @include w599{
+            font-size: 14px;
+          }
         }
         .bg-01 {
           z-index: 1;
@@ -330,24 +557,81 @@ padding-bottom: 10px;
       padding: 40px;
       display: flex;
       align-items: start;
+      @include w900{
+        padding: 40px 30px;
+      }
+      @include w768{
+        flex-direction: column;
+        align-items: center;
+      }
+      @include w599{
+        padding: 40px 30px 20px 30px;
+      }
       &__left {
         width: 40%;
+        @include w900{
+          width: 45%;
+        }
+        @include w768{
+          width: 80%;
+        }
+        @include w599{
+          width: 100%;
+        }
       }
       &__right {
         width: 50%;
         color: #333;
+        @include w768{
+          width: 80%;
+        }
+        @include w599{
+          width: 100%;
+        }
         &02 {
           display: flex;
           align-items: center;
           padding-bottom: 30px;
+          @include w1024{
+            flex-direction: column;
+            align-items: flex-start;
+          }
           &_left {
             width: 45%;
+            @include w1024{
+              width: 50%;
+              margin-left: 40px;
+              margin-bottom: 20px;
+            }
+            @include w900{
+              margin-left: 0;
+            }
+            @include w768{
+              width: 60%;
+              margin-top: 30px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            @include w599{
+              width: 60%;
+            }
           }
           &_right {
             padding-left: 40px;
             width: 55%;
             position: relative;
             z-index: 1;
+            @include w900{
+              padding-left: 0;
+            }
+            @include w768{
+              width: 60%;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            @include w599{
+              width: 65%;
+            }
             &::after {
               z-index: -1;
               content: "02";
@@ -357,12 +641,18 @@ padding-bottom: 10px;
               position: absolute;
               top: -32px;
               right: 4px;
+              @include w768{
+                top: 0;
+              }
             }
             ul {
               font-size: 16px;
               font-weight: 400;
               line-height: 1.4;
               letter-spacing: 1.1px;
+              @include w599{
+                font-size: 14px;
+              }
             }
           }
         }
@@ -376,6 +666,9 @@ padding-bottom: 10px;
           z-index: 1;
           padding-top: 30px;
           padding-bottom: 30px;
+          @include w599{
+            font-size: 14px;
+          }
           &::after {
             z-index: -1;
             content: "03";
@@ -385,6 +678,9 @@ padding-bottom: 10px;
             position: absolute;
             top: 8px;
             right: 4px;
+            @include w768{
+              top: 46px;
+            }
           }
         }
         // ---------------------------------------------
@@ -402,6 +698,12 @@ padding-bottom: 10px;
             line-height: 1.4;
             position: relative;
             z-index: 1;
+            @include w900{
+              padding-left: 0;
+            }
+            @include w599{
+              font-size: 14px;
+            }
             &::after {
               z-index: -1;
               content: "04";
@@ -411,6 +713,9 @@ padding-bottom: 10px;
               position: absolute;
               top: -16px;
               right: 4px;
+              @include w768{
+                top: 0;
+              }
             }
           }
         }
@@ -420,6 +725,9 @@ padding-bottom: 10px;
     .item3-content {
       width: 80%;
       margin: 0 auto;
+      @include w599{
+        width: 90%;
+      }
       p {
         padding: 40px;
         font-weight: 400;
@@ -428,6 +736,13 @@ padding-bottom: 10px;
         line-height: 1.4;
         position: relative;
         z-index: 1;
+        @include w768{
+          padding: 10px 40px 40px 40px;
+        }
+        @include w599{
+          font-size: 14px;
+          padding: 10px 20px 40px;
+        }
         &::after {
           z-index: -1;
           content: "05";
@@ -444,6 +759,9 @@ padding-bottom: 10px;
         width: 100%;
         margin: 0 auto;
         padding-bottom: 60px;
+        @include w599{
+          padding-bottom: 40px;
+        }
       }
     }
 
@@ -454,6 +772,10 @@ padding-bottom: 10px;
       color: #1e88ff;
       padding: 20px 0;
       text-align: center;
+      @include w599{
+        font-size: 18px;
+        padding: 10px 0 20px;
+      }
     }
     .item4-content {
       width: 70%;
@@ -464,6 +786,14 @@ padding-bottom: 10px;
       position: relative;
       z-index: 1;
       color: #333;
+      @include w768{
+        width: 80%;
+      }
+      @include w599{
+        width: 90%;
+        font-size: 14px;
+        padding-bottom: 40px;
+      }
       &::after {
         z-index: -1;
         content: "06";
@@ -484,6 +814,16 @@ padding-bottom: 10px;
       color: #333;
       position: relative;
       z-index: 1;
+      text-align: center;
+      @include w900{
+        width: 60%;
+      }
+      @include w599{
+        width: 80%;
+        font-size: 14px;
+        text-align: left;
+        padding-bottom: 30px;
+      }
       &::after {
         z-index: -1;
         content: "07";
@@ -505,6 +845,14 @@ padding-bottom: 10px;
       padding-bottom: 40px;
       position: relative;
       z-index: 1;
+      @include w900{
+        width: 80%;
+      }
+      @include w599{
+        width: 85%;
+        font-size: 14px;
+        padding-bottom: 30px;
+      }
       &::after {
         z-index: -1;
         content: "08";
@@ -515,6 +863,9 @@ padding-bottom: 10px;
         top: -32px;
         right: 16px;
       }
+    }
+    .item6-h6{
+      text-align: left;
     }
     // -------------------------------
     .item7-p {
@@ -527,6 +878,15 @@ padding-bottom: 10px;
       padding-bottom: 40px;
       position: relative;
       z-index: 1;
+      @include w900{
+        width: 80%;
+      }
+      @include w599{
+        width: 85%;
+        font-size: 14px;
+        padding-bottom: 30px;
+        padding-top: 0;
+      }
       &::after {
         z-index: -1;
         content: "09";
@@ -539,8 +899,11 @@ padding-bottom: 10px;
       }
     }
     .item7-img {
-      padding: 40px;
+      padding: 0 40px 60px;
       width: 100%;
+      @include w599{
+        padding: 0 20px 30px;
+      }
     }
     // -----------------------------------
     .item8-content {
@@ -550,6 +913,14 @@ padding-bottom: 10px;
       font-weight: 400;
       color: #333;
       line-height: 1.4;
+      @include w768{
+        width: 92%;
+        font-size: 16px;
+      }
+      @include w599{
+        width: 90%;
+        font-size: 14px;
+      }
       p {
         display: flex;
         align-items: center;
@@ -557,13 +928,36 @@ padding-bottom: 10px;
       ul {
         padding-top: 40px;
         padding-bottom: 40px;
+        li{
+          position: relative;
+          z-index: 1;
+          &:first-of-type{
+            display: flex;
+            @include w599{
+              flex-direction: column;
+            }
+          }
+        }
+        @include w768{
+          padding-top: 24px;
+          padding-bottom: 24px;
+        }
+      }
+      .item8-span{
+        @include w599{
+        display: flex;
+        width: 100%;
+        }
       }
       span {
         padding-left: 36px;
+        @include w599{
+          padding-left: 10px;
+        }
       }
       .bg-10 {
         position: relative;
-        z-index: 1;
+        z-index: 0;
         &::after {
           z-index: -1;
           content: "10";
@@ -596,6 +990,19 @@ padding-bottom: 10px;
       padding-left: 64px;
       padding-right: 64px;
       padding-bottom: 40px;
+      @include w900{
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      @include w768{
+        flex-direction: column;
+      }
+      @include w599{
+        font-size: 14px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
       .bg-11 {
         position: relative;
         z-index: 1;
@@ -630,13 +1037,20 @@ padding-bottom: 10px;
         font-weight: 400;
         line-height: 1.4;
         letter-spacing: 1.2px;
+        @include w768{
+          width: 100%;
+        }
         &_img {
           margin-top: 20px;
+          margin-bottom: 60px;
         }
         .option {
           text-align: right;
           padding-top: 16px;
           font-size: 12px;
+          @include w768{
+            padding-top: 0;
+          }
           p {
             display: inline-block;
           }
@@ -651,6 +1065,10 @@ padding-bottom: 10px;
   &__inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w599{
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
   }
   &__title {
     text-align: center;
@@ -659,16 +1077,34 @@ padding-bottom: 10px;
       font-size: 18px;
       font-weight: 700;
       color: #1e88ff;
+      @include w599{
+        font-size: 16px;
+      }
     }
     b {
       font-size: 48px;
       font-weight: 900;
       color: #3a3e40;
+      @include w768{
+        font-size: 42px;
+      }
+      @include w599{
+        font-size: 34px;
+      }
     }
   }
   &__content {
     width: 56%;
     margin: 0 auto;
+    @include w1200{
+      width: 75%;
+    }
+    @include w1024{
+      width: 85%;
+    }
+    @include w599{
+      width: 90%;
+    }
     &_title {
       background: #1e88ff;
       color: #fff;
@@ -679,12 +1115,18 @@ padding-bottom: 10px;
         font-size: 20px;
         font-weight: 700;
         letter-spacing: 1.2px;
+        @include w599{
+          font-size: 18px;
+        }
       }
       p {
         text-align: center;
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 1.2px;
+        @include w599{
+          font-size: 12px;
+        }
       }
     }
     &_item {
@@ -695,16 +1137,39 @@ padding-bottom: 10px;
       padding: 26px 60px;
       background: #fff;
       font-size: 18px;
+      @include w1440{
+        padding: 25px 40px;
+      }
+      @include w768{
+        flex-direction: column;
+      }
+      @include w599{
+        padding: 20px 20px;
+      }
       &_left {
         width: 50%;
         color: #3a3e40;
         line-height: 1.4;
+        @include w768{
+          width: 80%;
+          margin-bottom: 10px;
+        }
+        @include w599{
+          width: 90%;
+        }
         b {
           font-weight: 700;
+          font-size: 16px;
+          @include w599{
+            font-size: 14px;
+          }
         }
         p {
           font-size: 12px;
           font-weight: 400;
+          @include w599{
+            font-size: 10px;
+          }
         }
       }
       &_right {
@@ -713,6 +1178,13 @@ padding-bottom: 10px;
         display: flex;
         flex-direction: column;
         line-height: 1.4;
+        @include w768{
+          width: 80%;
+        }
+        @include w599{
+          width: 90%;
+          font-size: 16px;
+        }
         b {
           font-weight: 700;
         }
@@ -744,12 +1216,29 @@ padding-bottom: 10px;
       line-height: 1.8;
       font-weight: 700;
       font-size: 18px;
+      @include w768{
+        font-size: 16px;
+      }
       ul {
         color: #3a3e40;
-        width: 50%;
+        width: 55%;
         text-align: left;
         margin: 0 auto;
         padding-left: 40px;
+        @include w1700{
+          width: 70%;
+        }
+        @include w1440{
+          width: 80%;
+        }
+        @include w768{
+          width: 90%;
+          padding-left: 0;
+        }
+        @include w599{
+          width: 100%;
+          font-size: 14px;
+        }
       }
     }
     .option-function {
@@ -760,12 +1249,30 @@ padding-bottom: 10px;
       padding: 26px 60px;
       font-size: 18px;
       background: #fff;
+      @include w768{
+        flex-direction: column;
+      }
+      @include w599{
+        padding: 20px 20px;
+      }
       &__left {
         width: 50%;
         color: #3a3e40;
         line-height: 1.4;
         padding-left: 40px;
         font-weight: 700;
+        @include w1440{
+          padding-left: 0;
+        }
+        @include w768{
+          width: 80%;
+          margin-bottom: 10px;
+          font-size: 16px;
+        }
+        @include w599{
+          width: 90%;
+          font-size: 14px;
+        }
       }
       &__right {
         width: 50%;
@@ -773,6 +1280,13 @@ padding-bottom: 10px;
         display: flex;
         flex-direction: column;
         line-height: 1.4;
+        @include w768{
+          width: 80%;
+        }
+        @include w599{
+          width: 90%;
+          font-size: 16px;
+        }
         b {
           font-weight: 700;
         }
@@ -786,6 +1300,10 @@ padding-bottom: 10px;
   &__inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w599{
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
   }
   &__title {
     text-align: center;
@@ -794,16 +1312,34 @@ padding-bottom: 10px;
       font-size: 18px;
       font-weight: 700;
       color: #1e88ff;
+      @include w599{
+        font-size: 16px;
+      }
     }
     b {
       font-size: 48px;
       font-weight: 900;
       color: #3a3e40;
+      @include w768{
+        font-size: 42px;
+      }
+      @include w599{
+        font-size: 34px;
+      }
     }
   }
   &__content {
     width: 60%;
     margin: 0 auto;
+    @include w1024 {
+      width: 75%;
+    }
+    @include w768 {
+      width: 85%;
+    }
+    @include w599 {
+      width: 90%;
+    }
     .border-dotted {
       border-top: 1px dashed #7e8387;
       border-style: dashed;
@@ -819,6 +1355,10 @@ padding-bottom: 10px;
         padding-top: 40px;
         padding-left: 70px;
         position: relative;
+        @include w599{
+          font-size: 18px;
+          padding-left: 40px;
+        }
         &::after {
           content: "Q";
           color: #1e88ff;
@@ -827,12 +1367,20 @@ padding-bottom: 10px;
           position: absolute;
           top: 26px;
           left: 0;
+          @include w599{
+            font-size: 32px;
+            top: 30px
+          }
         }
       }
       &_p {
         padding: 20px 0 40px 70px;
         font-weight: 400;
         line-height: 1.2;
+        @include w599{
+          padding: 20px 0 40px 40px;
+          font-size: 14px;
+        }
       }
     }
   }
@@ -842,18 +1390,33 @@ padding-bottom: 10px;
   background: #1e88ff;
   padding-top: 140px;
   padding-bottom: 120px;
+  @include w768 {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  @include w599 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   &__inner {
     padding: 80px 40px;
     background: #fff;
     width: 80%;
     margin: 0 auto;
     border-radius: 30px;
+    @include w599 {
+      width: 90%;
+      padding: 40px 20px;
+    }
   }
   &__title {
     text-align: center;
     line-height: 1.6;
     font-size: 32px;
     color: #3a3e40;
+    @include w768{
+      font-size: 28px;
+    }
     b {
       font-weight: 900;
     }
@@ -865,6 +1428,10 @@ padding-bottom: 10px;
     background: #f9f9f9;
     margin-top: 40px;
     border-radius: 30px;
+    @include w599{
+      width: 100%;
+      margin-top: 24px;
+    }
 
     &_inner {
       padding: 40px 40px 20px 40px;
@@ -878,6 +1445,12 @@ padding-bottom: 10px;
       .tel {
         font-size: 48px;
         font-weight: 700;
+        @include w599{
+          font-size: 32px;
+        }
+        @include w375{
+          font-size: 28px;
+        }
       }
     }
   }
@@ -889,14 +1462,29 @@ padding-bottom: 10px;
     font-size: 16px;
     font-weight: 400;
     color: #333;
+    @include w768{
+      width: 80%;
+    }
+    @include w599{
+      width: 90%;
+      margin-top: 40px;
+      font-size: 14px;
+    }
   }
   &__wrapper {
     width: 60%;
     margin: 0 auto;
     margin-top: 60px;
+    @include w599{
+      width: 90%;
+      margin-top: 40px;
+    }
     label {
       font-weight: bold;
       color: #3a3e40;
+      @include w599{
+        font-size: 14px;
+      }
     }
     .required {
       color: red;
@@ -965,6 +1553,9 @@ padding-bottom: 10px;
       margin: 0 auto;
       margin-top: 24px;
       width: 210px;
+      @include w599{
+        margin-top: 0;
+      }
       &:hover {
         opacity: 0.9;
       }
@@ -994,17 +1585,27 @@ padding-bottom: 10px;
       &__item {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         padding-left: 16px;
         p {
           color: #3a3e40;
           font-family: "Lato";
           font-size: 16px;
+          width: 75px;
+          @include w599{
+            width: 50px;
+          }
         }
         input {
           margin: 0;
           width: 350px;
           margin-left: auto;
+          @include w900{
+            width: 250px;
+          }
+          @include w599{
+            width: 160px;
+          }
         }
       }
     }

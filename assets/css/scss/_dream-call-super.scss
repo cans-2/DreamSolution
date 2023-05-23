@@ -6,6 +6,9 @@
   height: 90vh;
   margin-top: 90px;
   position: relative;
+  @include w599{
+    height: 80vh;
+  }
   &__mask {
     position: absolute;
     top: 0;
@@ -29,13 +32,41 @@
     color: #3a3e40;
     line-height: 1.4;
     text-shadow: 2px 2px 0 rgb(0, 0, 0, 0.2);
+    @include w900{
+      bottom: 20px;
+    }
+    @include w768{
+      left: 40px;
+    }
+    @include w599{
+      left: 20px;
+      bottom: 40px;
+    }
     p {
       font-weight: 700;
       font-size: 28px;
+      @include w900{
+        font-size: 24px;
+      }
+      @include w768{
+        font-size: 20px;
+      }
+      @include w599{
+        font-size: 18px;
+      }
     }
     h4 {
       font-weight: 900;
       font-size: 42px;
+      @include w900{
+        font-size: 36px;
+      }
+      @include w768{
+        font-size: 32px;
+      }
+      @include w599{
+        font-size: 28px;
+      }
       span {
         color: #f65252;
       }
@@ -44,6 +75,15 @@
       font-weight: 900;
       color: #f65252;
       font-size: 72px;
+      @include w900{
+        font-size: 58px;
+      }
+      @include w768{
+        font-size: 48px;
+      }
+      @include w599{
+        font-size: 42px;
+      }
     }
   }
 }
@@ -52,6 +92,10 @@
   &__inner {
     padding-top: 120px;
     padding-bottom: 120px;
+    @include w768{
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
   }
   &__content {
     width: 80%;
@@ -59,12 +103,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include w1024{
+      width: 90%;
+    }
+    @include w768{
+      flex-direction: column;
+      align-items: flex-start;
+    }
     &_left {
       margin-right: auto;
       color: #3a3e40;
       font-size: 48px;
       font-weight: 500;
       width: 40%;
+      @include w900{
+        font-size: 42px;
+      }
+      @include w768{
+        margin-bottom: 20px;
+        width: 90%;
+        margin-left: auto;
+      }
+      @include w599{
+        font-size: 38px;
+      }
       span {
         color: #ff0000;
         font-weight: 700;
@@ -76,6 +138,16 @@
       font-weight: 700;
       font-size: 18px;
       line-height: 1.6;
+      @include w900{
+        font-size: 16px;
+      }
+      @include w768{
+        width: 90%;
+        margin: 0 auto;
+      }
+      @include w599{
+        font-size: 14px;
+      }
     }
   }
 }
@@ -85,6 +157,10 @@
   &__inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w599{
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
   }
   &__title {
     font-weight: 900;
@@ -92,6 +168,9 @@
     color: #3a3e40;
     text-align: center;
     margin-bottom: 40px;
+    @include w599{
+      font-size: 28px;
+    }
     span {
       color: #f65252;
       font-weight: 900;
@@ -100,14 +179,29 @@
   &__items {
     width: 70%;
     margin: 0 auto;
+    @include w1024{
+      width: 80%;
+    }
+    @include w768{
+      width: 90%;
+    }
   }
   &__item {
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
+    @include w599{
+      flex-direction: column;
+    }
     &_left {
       width: 50%;
       margin-left: 30px;
+      @include w599{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+      }
     }
     &_right {
       width: 45%;
@@ -116,10 +210,24 @@
       justify-content: center;
       margin-left: 60px;
       color: #3a3e40;
+      @include w768{
+        margin-left: 30px;
+      }
+      @include w599{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
       p {
         line-height: 1.6;
         font-weight: 400;
         font-size: 18px;
+        @include w1024{
+          font-size: 16px;
+        }
+        @include w599{
+          font-size: 14px;
+        }
       }
       &_badge {
         background: #f65252;
@@ -131,11 +239,20 @@
           font-size: 12px;
           padding: 4px 10px;
         }
+        @include w599{
+          font-size: 10px;
+        }
       }
       b {
         font-weight: 900;
         font-size: 32px;
         margin-bottom: 20px;
+        @include w768{
+          font-size: 24px;
+        }
+        @include w599{
+          margin-bottom: 15px;
+        }
       }
     }
   }
@@ -146,12 +263,20 @@
   &__inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w599{
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
     h3 {
       font-weight: 900;
       color: #3a3e40;
       font-size: 36px;
       text-align: center;
       margin-bottom: 60px;
+      @include w599{
+        font-size: 28px;
+        margin-bottom: 40px;
+      }
     }
   }
   &__cards {
@@ -161,14 +286,28 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @include w1024{
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__card {
     width: 31%;
     position: relative;
+    @include w1024{
+      width: 65%;
+      margin-bottom: 40px;
+    }
+    @include w768{
+      width: 80%;
+    }
+    @include w599{
+      width: 100%;
+    }
     &_reduce {
       position: absolute;
       top: 84%;
-      left: 65%;
+      left: 70%;
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -183,11 +322,24 @@
       color: #fff;
       font-weight: 900;
       line-height: 1.2;
+      @include w1024{
+        top: 87%;
+      }
+      @include w599{
+        left: 78%;
+        top: 85%;
+      }
+      @include w450{
+        top: 82%;
+      }
       b {
         font-size: 24px;
       }
       p {
         font-size: 16px;
+        @include w599{
+          font-size: 14px;
+        }
       }
     }
     .card {
@@ -251,12 +403,19 @@
   &__inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w599{
+      padding-top: 60px;
+      padding-bottom: 80px;
+    }
     h3 {
       font-weight: 900;
       font-size: 36px;
       color: #3a3e40;
       text-align: center;
       margin-bottom: 40px;
+      @include w599{
+        font-size: 28px;
+      }
     }
   }
   &__items {
@@ -271,12 +430,23 @@
       transform: rotate(180deg);
       margin-top: 24px;
       margin-bottom: 24px;
+      @include w599{
+        font-size: 60px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
     }
   }
   &__item {
     width: 1000px;
     height: 200px;
     display: flex;
+    @include w1200{
+      width: 90%;
+    }
+    @include w768{
+      flex-direction: column;
+    }
     &_left {
       width: 40%;
       height: 100%;
@@ -288,15 +458,42 @@
       justify-content: center;
       font-weight: 900;
       line-height: 1.4;
+      @include w768{
+        width: 100%;
+      }
       p {
         font-size: 18px;
         padding-bottom: 8px;
+        @include w768{
+          padding-bottom: 0;
+        }
+        @include w599{
+          font-size: 14px;
+        }
       }
       b {
         font-size: 36px;
+        @include w900{
+          font-size: 28px;
+        }
+        @include w599{
+          font-size: 24px;
+        }
       }
       .b34{
         font-size: 28px;
+        @include w900{
+          font-size: 24px;
+        }
+        @include w599{
+          font-size: 20px;
+        }
+      }
+      .super-step-br{
+        display: none;
+        @include w1024{
+          display: block;
+        }
       }
     }
     &_right {
@@ -310,6 +507,12 @@
       flex-direction: column;
       justify-content: center;
       padding: 10px 20px;
+      @include w768{
+        width: 100%;
+      }
+      @include w599{
+        font-size: 14px;
+      }
     }
   }
 }

@@ -504,6 +504,9 @@
         font-weight: bold;
         color: #3a3e40;
         margin-bottom: 20px;
+        @include w1440{
+          font-size: 26px;
+        }
         @include w599 {
           font-size: 24px;
         }
@@ -739,6 +742,10 @@
     @include w768 {
       background: #f9f9f9;
     }
+    @include w599{
+      height: auto;
+      padding-bottom: 60px;
+    }
   }
   &__content {
     padding-top: 90px;
@@ -772,6 +779,9 @@
         display: inline;
         font-size: 24px;
         border-bottom: 2px solid #7e8387;
+        @include w599{
+          font-size: 18px;
+        }
         &:hover {
           opacity: 0.8;
         }
@@ -809,11 +819,19 @@
   @include w768 {
     margin-top: 64px;
   }
+  @include w599{
+    margin-top: 40px;
+    padding-top: 60px;
+  }
   &__wrapper {
     padding-top: 120px;
     @include w768 {
       padding-top: 80px;
       padding-bottom: 60px;
+    }
+    @include w599{
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
   }
   &__video {
@@ -845,6 +863,10 @@
   @include w768 {
     padding-top: 72px;
     padding-bottom: 72px;
+  }
+  @include w599{
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   &__wrapper {
     padding-left: 32px;
@@ -880,7 +902,7 @@
       width: 80%;
     }
     @include w599 {
-      width: 92%;
+      width: 90%;
       padding-left: 0;
     }
     &_inner {
@@ -899,6 +921,9 @@
       }
       @include w768{
         text-align-last: left;
+      }
+      @include w599{
+        font-size: 16px;
       }
     }
     .detail {

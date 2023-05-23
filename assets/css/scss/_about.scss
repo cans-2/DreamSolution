@@ -157,6 +157,9 @@
       @include w768{
         padding-bottom: 56px;
       }
+      @include w599{
+        width: 48%;
+      }
     }
   }
 }

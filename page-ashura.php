@@ -2,7 +2,7 @@
 <main>
     <div class="ashura__title">
         <div class="ashura__title_inner">
-            <div class="ashura__title_left">
+            <div class="ashura__title_left wow fade-up2">
                 <h3>こんな企業様に必見！</h3>
                 <ul>
                     <li><span class="material-symbols-outlined">
@@ -23,7 +23,7 @@
     </div>
 
     <div class="ashura__banner">
-        <div class="ashura__banner_inner">
+        <div class="ashura__banner_inner wow fade-up2">
             <p>アウトバウンド型簡易CTI</p>
             <h2>阿修羅ダイヤラー</h2>
             <div class="ashura__banner_badge">
@@ -33,7 +33,7 @@
     </div>
     <p class="banner__under">阿修羅ダイヤラーはファイルメーカーと連動し、ファイルメーカーの顧客管理画面上に「発信ボタンと「録音ボタン」を追加するだけでClick to Callと通話録音がご利用できます。</p>
     <!-- ---------------------------------------------------- -->
-    <section class="ashura__point">
+    <section class="ashura__point wow fade-up2">
         <div class="ashura__sec_title">
 
             <h3>阿修羅ダイヤラーのポイント</h3>
@@ -58,7 +58,7 @@
             </div>
         </div>
     </section>
-    <section class="ashura__function">
+    <section class="ashura__function wow fade-up2">
         <div class="ashura__sec_title">
 
             <h3>阿修羅ダイヤラーの機能</h3>
@@ -116,7 +116,7 @@
     </section>
     <!-- ----------------- -->
     <section class="ashura__system">
-        <div class="ashura__system_inner">
+        <div class="ashura__system_inner wow fade-up2">
             <div class="ashura__sec_title">
                 <h3>システム構成</h3>
             </div>
@@ -148,7 +148,7 @@
         </div>
     </section>
     <section class="ashura__operating">
-        <div class="ashura__operating_inner">
+        <div class="ashura__operating_inner wow fade-up2">
 
             <div class="ashura__sec_title">
                 <h3>動作環境</h3>
@@ -173,7 +173,7 @@
             </div>
         </div>
     </section>
-    <section class="ashura__plan">
+    <section class="ashura__plan wow fade-up2">
         <div class="ashura__plan_item">
             <div class="ashura__plan_item_left">
                 <p>ご購入</p>
@@ -215,7 +215,7 @@
             <p>※「阿修羅ダイヤラー」は株式会社オプトエスピーの登録商標となります。</p>
         </div>
     </section>
-    <div class="trial ashura-trial">
+    <div class="trial ashura-trial wow fade-up2">
         <p>詳しくは<br>お問い合わせください。</p>
         <span class="material-symbols-outlined">
             fast_rewind

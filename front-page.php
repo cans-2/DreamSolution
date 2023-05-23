@@ -51,7 +51,7 @@
         <p>SOLUTION</p>
       </div>
     </div>
-    <div class="mission__inner">
+    <div class="mission__inner fade-up">
       <p class="sec-title__p">MISSION</p>
       <h2 class="sec-title__h2">通信費最適化のご提案</h2>
       <div class="mission__inner_content">
@@ -65,7 +65,7 @@
   <!--  -->
   <section id="service" class="service">
     <div class="diamond"></div>
-    <div class="service__title">
+    <div class="service__title wow fade-in">
       <p class="sec-title__p">SERVICE</p>
       <h2 class="sec-title__h2">電話回線の<br>コンサルティング</h2>
       <p>
@@ -73,7 +73,7 @@
       </p>
     </div>
     <div class="service__item_wrapper">
-      <div class="service__item">
+      <div class="service__item wow fade-in">
         <div class="service__item_img">
           <img src="<?php echo get_template_directory_uri() ?>/assets/image/service/service-ip.jpeg" alt="service" />
         </div>
@@ -82,13 +82,13 @@
           <p class="service__item_card_p">
             インターネット環境があれば、どこでもご利用いただける電話サービスです。当社から発行するID・パスワード・・ドメインを設定していただくだけで、インターネット経由で工事不要にて電話をご利用いただけます。
           </p>
-          <a href="/dream-call-pbx" class="detail hvr-glow">
+          <a href="/dream-cloud-pbx" class="detail hvr-glow">
             <p>詳細はこちら</p>
             <span class="material-symbols-outlined"> open_in_new </span>
           </a>
         </div>
       </div>
-      <div class="service__item">
+      <div class="service__item wow fade-in">
         <div class="service__item_img">
           <img src="<?php echo get_template_directory_uri() ?>/assets/image/service/service-byokakin.jpeg" alt="service" />
         </div>
@@ -105,7 +105,7 @@
           </a>
         </div>
       </div>
-      <div class="service__item">
+      <div class="service__item wow fade-in">
         <div class="service__item_img">
           <img src="<?php echo get_template_directory_uri() ?>/assets/image/service/service-cti-next.jpeg" alt="service" />
         </div>
@@ -120,7 +120,7 @@
           </a>
         </div>
       </div>
-      <div class="service__item">
+      <div class="service__item wow fade-in">
         <div class="service__item_img">
           <img src="<?php echo get_template_directory_uri() ?>/assets/image/service/service-cti2.jpeg" alt="service" />
         </div>
@@ -136,7 +136,7 @@
           </a>
         </div>
       </div>
-      <div class="service__item">
+      <div class="service__item wow fade-in">
         <div class="service__item_img">
           <img src="<?php echo get_template_directory_uri() ?>/assets/image/service/service-web2.jpeg" alt="service" />
         </div>
@@ -152,7 +152,7 @@
           </a>
         </div>
       </div>
-      <div class="service__item">
+      <div class="service__item wow fade-in">
         <div class="service__item_img">
           <img src="<?php echo get_template_directory_uri() ?>/assets/image/service/img_ashura2.png" alt="service" />
         </div>
@@ -187,7 +187,7 @@
   <!-- ニュース -->
   <section id="news" class="news">
     <div class="news__bg">
-      <div class="news__content">
+      <div class="news__content wow fade-up2">
         <p class="sec-title__p">NEWS</p>
         <h2 class="sec-title__h2">新着情報</h2>
         <div class="news__content_item_wrapper">
@@ -209,13 +209,13 @@
     </div>
   </section>
   <!-- about us -->
-  <section class="about">
+  <section class="about wow fade-up2">
     <div class="about__wrapper">
       <p class="sec-title__p">ABOUT US</p>
       <h2 class="sec-title__h2">インタビュー</h2>
     </div>
     <div class="about__video">
-      <video controls src="<?php echo get_template_directory_uri() ?>/assets/video/simulation-movie.mp4"></video>
+      <video controls src="<?php echo get_template_directory_uri() ?>/assets/video/dream_solution_movie.mp4"></video>
     </div>
   </section>
   <!-- company -->
@@ -224,7 +224,7 @@
       <div class="company__img">
         <img src="<?php echo get_template_directory_uri() ?>/assets/image/top-company.jpg" alt="company" />
       </div>
-      <div class="company__content">
+      <div class="company__content wow fade-up2">
         <div class="company__content_inner">
           <p class="sec-title__p">COMPANY</p>
           <h2 class="sec-title__h2">会社情報</h2>

@@ -2,16 +2,16 @@
 <main>
     <div class="video-bg">
         <div class="video-bg__mask"></div>
-        <video muted autoplay loop src="<?php echo get_template_directory_uri() ?>/assets/video/dream-solution-image.mp4"></video>
+        <video playsinline muted autoplay loop src="<?php echo get_template_directory_uri() ?>/assets/video/dream-solution-image.mp4"></video>
         <div class="video-bg__content">
             <p>通信費を最大90%削減！</p>
             <h4><span>秒課金</span>電話サービス</h4>
-            <h2>ドリームコールスーパー</h2>
+            <h2>ドリームコール<br class="sp-br">スーパー</h2>
         </div>
     </div>
     <!--  -->
     <section class="super-experience">
-        <div class="super-experience__inner">
+        <div class="super-experience__inner wow fade-up2">
             <div class="super-experience__content">
                 <div class="super-experience__content_left">
                     <p>通信費削減の</p>
@@ -29,9 +29,9 @@
     <!--  -->
     <section class="super-feature">
         <div class="super-feature__inner">
-            <p class="super-feature__title">ドリームコールスーパーの<span>特徴</span></p>
+            <p class="super-feature__title">ドリームコールスーパー<br class="sp-br">の<span>特徴</span></p>
             <div class="super-feature__items">
-                <div class="super-feature__item">
+                <div class="super-feature__item wow fade-up2">
                     <div class="super-feature__item_left"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-call-super/dc-super-1.jpeg" alt="feature"></div>
                     <div class="super-feature__item_right">
                         <div class="super-feature__item_right_badge">
@@ -42,7 +42,7 @@
                         <p>※提供回線の種別によって異なります。</p>
                     </div>
                 </div>
-                <div class="super-feature__item">
+                <div class="super-feature__item wow fade-up2">
                     <div class="super-feature__item_left"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-call-super/dc-super-2.jpeg" alt="feature"></div>
                     <div class="super-feature__item_right">
                         <div class="super-feature__item_right_badge">
@@ -53,7 +53,7 @@
                         <p>シミュレーションをもとに1秒課金、1分課金、3分課金など、最もコストメリットのある最適なプランを提供させていただきます</p>
                     </div>
                 </div>
-                <div class="super-feature__item">
+                <div class="super-feature__item wow fade-up2">
                     <div class="super-feature__item_left"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-call-super/dc-super-3.jpeg" alt="feature"></div>
                     <div class="super-feature__item_right">
                         <div class="super-feature__item_right_badge">
@@ -71,7 +71,7 @@
     <section class="super-example">
         <div class="super-example__inner">
             <h3>導入事例</h3>
-            <div class="super-example__cards">
+            <div class="super-example__cards wow fade-up2">
                 <div class="super-example__card">
                     <div class="card__img">
                         <img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-call-super/dc-super-4.jpeg" alt="example">
@@ -143,7 +143,7 @@
         <div class="super-flow__inner">
             <h3>ご利用までの流れ</h3>
             <div class="super-flow__items">
-                <div class="super-flow__item">
+                <div class="super-flow__item wow fade-up2">
                     <div class="super-flow__item_left">
                         <p>STEP.1</p>
                         <b>お問い合わせ</b>
@@ -156,7 +156,7 @@
                 <span class="material-symbols-outlined">
                     change_history
                 </span>
-                <div class="super-flow__item">
+                <div class="super-flow__item wow fade-up2">
                     <div class="super-flow__item_left">
                         <p>STEP.2</p>
                         <b>ご提案・ご案内</b>
@@ -168,7 +168,7 @@
                 <span class="material-symbols-outlined">
                     change_history
                 </span>
-                <div class="super-flow__item">
+                <div class="super-flow__item wow fade-up2">
                     <div class="super-flow__item_left">
                         <p>STEP.3</p>
                         <b class="b34">お申込書等のご記入</b>
@@ -183,10 +183,10 @@
                 <span class="material-symbols-outlined">
                     change_history
                 </span>
-                <div class="super-flow__item">
+                <div class="super-flow__item wow fade-up2">
                     <div class="super-flow__item_left">
                         <p>STEP.4</p>
-                        <b class="b34">ドリームコールスーパー
+                        <b class="b34">ドリームコール<br class="super-step-br">スーパー
                             利用開始</b>
                     </div>
                     <div class="super-flow__item_right">
@@ -198,7 +198,7 @@
             </div>
         </div>
     </section>
-    <div class="trial">
+    <div class="trial wow fade-up2">
         <p>詳しくはお問い合わせください。</p>
         <span class="material-symbols-outlined">
             fast_rewind

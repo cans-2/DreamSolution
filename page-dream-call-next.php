@@ -50,7 +50,7 @@
         <div class="next-analysis__inner">
 
             <div class="next-sec-title">
-                <div class="next-sec-title__content">
+                <div class="next-sec-title__content wow fade-up2">
 
                     <p>ANALYSIS</p>
                     <h2>各種分析機能</h2>
@@ -90,7 +90,7 @@
     <section class="next-outbound">
         <div class="next-outbound__inner">
             <div class="next-sec-title">
-                <div class="next-sec-title__content">
+                <div class="next-sec-title__content wow fade-up2">
 
                     <p>OUTBOUND</p>
                     <h2>アウトバウンド機能</h2>
@@ -130,7 +130,7 @@
     <section class="next-management">
         <div class="next-management__inner">
             <div class="next-sec-title">
-                <div class="next-sec-title__content">
+                <div class="next-sec-title__content wow fade-up2">
 
                     <p>MANAGEMENT</p>
                     <h2>管理機能</h2>
@@ -162,7 +162,7 @@
         </div>
         <section class="others">
             <div class="next-sec-title">
-                <div class="next-sec-title__content">
+                <div class="next-sec-title__content wow fade-up2">
 
                     <p>OTHERS</p>
                     <h2>その他機能</h2>
@@ -177,7 +177,7 @@
     <!--  -->
     <section class="next-faq">
         <div class="next-faq__inner">
-            <div class="next-faq__title">
+            <div class="next-faq__title wow fade-up2">
                 <p>FAQ</p>
                 <b>よくあるご質問</b>
             </div>
@@ -263,7 +263,7 @@
     </section>
     <!--  -->
     <section class="next-form">
-        <div class="next-form__inner">
+        <div class="next-form__inner wow fade-up2">
             <div class="next-form__title">
                 <h4>資料請求・導入</h4>
                 <b>ご検討のお客様</b>

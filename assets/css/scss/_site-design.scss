@@ -1,4 +1,5 @@
 @use "./common" as *;
+@use "./mixin" as *;
 
 .design-mainbg {
   background: rgb(255, 255, 255);
@@ -9,6 +10,12 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  @include w1440{
+    height: 580px;
+  }
+  @include w599{
+    height: 520px;
+  }
   &::before {
     content: "";
     display: block;
@@ -18,20 +25,53 @@
     bottom: 0;
     left: 0;
     background-image: url(/wp-content/themes/DreamSolution/assets/image/site-design/homepage-0.png);
-    background-size: auto;
+    background-size: 45%;
     background-repeat: no-repeat;
     background-position: 85%;
     transform: rotate(5deg) scale(1.3);
     z-index: 1; /* 背景画像を下に配置するためにz-indexを指定 */
+    @include w1440{
+      background-size: 50%;
+    }
+    @include w1024{
+      background-position: 95%;
+      background-size: 54%;
+    }
+    @include w768{
+      background-position: 200%;
+      background-size: 78%;
+    }
+    @include w599{
+      background-position: -180%;
+    background-size: 120%;
+    }
   }
   &__content {
     margin-left: 60px;
     z-index: 2;
+    @include w1440{
+      margin-top: 60px;
+    }
+    @include w768{
+      margin-left: 40px;
+    }
+    @include w599{
+      margin-left: 20px;
+    }
     .marunage {
       font-size: 28px;
       font-weight: 500;
       color: #3a3e40;
       margin-bottom: 28px;
+      @include w900{
+        font-size: 24px;
+      }
+      @include w768{
+        font-size: 18px;
+      }
+      @include w599{
+        font-size: 14px;
+      }
       p {
         display: inline;
         padding-bottom: 12px;
@@ -42,6 +82,15 @@
       font-size: 48px;
       font-weight: 900;
       color: #ff7900;
+      @include w900{
+        font-size: 42px;
+      }
+      @include w768{
+        font-size: 36px;
+      }
+      @include w599{
+        font-size: 20px;
+      }
     }
     h2 {
       font-weight: 900;
@@ -49,6 +98,16 @@
       color: #3a3e40;
       text-shadow: 3px 3px 0 rgb(0, 0, 0, 0.2);
       padding-bottom: 40px;
+      @include w900{
+        font-size: 62px;
+      }
+      @include w768{
+        font-size: 48px;
+      }
+      @include w599{
+        font-size: 30px;
+        padding-bottom: 28px;
+      }
     }
     .tags {
       display: flex;
@@ -57,6 +116,10 @@
       row-gap: 10px;
       column-gap: 20px;
       width: 550px;
+      @include w599{
+        width: 100%;
+        column-gap: 10px;
+      }
     }
     .tag {
       background: #ffaa5e;
@@ -64,14 +127,23 @@
       display: inline-block;
       p {
         padding: 10px 20px;
+      @include w768{
+        font-size: 18px;
+      }
+      @include w599{
+        font-size: 12px;
       }
     }
+  }
     .soudan {
       background: #ff7900;
       border-radius: 60px;
       margin-top: 40px;
       display: inline-block;
       transition: all 0.3s;
+      @include w599{
+        margin-top: 32px;
+      }
 
       p {
         padding: 20px 60px;
@@ -79,6 +151,16 @@
         line-height: 1.6;
         font-size: 32px;
         font-weight: 900;
+        @include w900{
+          font-size: 24px;
+        }
+        @include w768{
+          font-size: 18px;
+        }
+        @include w599{
+          font-size: 16px;
+          padding: 15px 40px;
+        }
       }
       &:hover {
         background-color: #ff6600;
@@ -98,14 +180,29 @@
   color: #3a3e40;
   max-width: 1280px;
   margin: 0 auto;
+  @include w1200{
+    max-width: 100%;
+  }
   &__inner {
     padding: 80px 0;
+    @include w599{
+      padding: 60px 0;
+    }
   }
   &__title {
     text-align: center;
     font-size: 40px;
     font-weight: 900;
     line-height: 1.2;
+    @include w768{
+      font-size: 28px;
+    }
+    @include w599{
+      font-size: 24px;
+    }
+    @include w375{
+      font-size: 22px;
+    }
     h3 {
       padding-bottom: 28px;
     }
@@ -126,6 +223,14 @@
     letter-spacing: 2px;
     color: #333;
     padding-top: 40px;
+    @include w768{
+      width: 80%;
+      font-size: 16px;
+    }
+    @include w599{
+      font-size: 14px;
+      padding-top: 28px;
+    }
   }
 }
 
@@ -133,12 +238,25 @@
   &__inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w599{
+      padding-top: 60px;
+    padding-bottom: 60px;
+    }
   }
   &__title {
     text-align: center;
     font-size: 40px;
     font-weight: 900;
     line-height: 1.2;
+    @include w768{
+      font-size: 28px;
+    }
+    @include w599{
+      font-size: 24px;
+    }
+    @include w375{
+      font-size: 22px;
+    }
     h3 {
       padding-bottom: 28px;
     }
@@ -154,17 +272,39 @@
     max-width: 1280px;
     margin: 0 auto;
     padding-top: 40px;
+    @include w1024{
+      width: 100%;
+    }
+    @include w599{
+      padding-top: 20px;
+    }
   }
   &__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    @include w900{
+      flex-direction: column;
+    }
     &_left {
       width: 50%;
+      @include w900{
+        width: 70%;
+        margin-bottom: 20px;
+      }
+      @include w599{
+        width: 85%;
+      }
     }
     &_right {
       width: 45%;
+      @include w900{
+        width: 70%;
+      }
+      @include w599{
+        width: 85%;
+      }
       &_content {
         color: #3a3e40;
         .point {
@@ -172,15 +312,34 @@
           font-weight: 700;
           color: #ff7900;
           padding-bottom: 10px;
+          @include w768{
+            font-size: 16px;
+            padding-bottom: 0px;
+          }
         }
         h4 {
           font-size: 48px;
           font-weight: 900;
           padding-bottom: 20px;
+          @include w1024{
+            font-size: 42px;
+          }
+          @include w768{
+            font-size: 36px;
+          }
+          @include w599{
+            font-size: 32px;
+          }
         }
         p {
           font-size: 18px;
           line-height: 1.6;
+          @include w1024{
+            font-size: 16px;
+          }
+          @include w599{
+            font-size: 14px;
+          }
         }
       }
     }
@@ -192,6 +351,10 @@
   &__inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w599{
+      padding-top: 60px;
+    padding-bottom: 60px;
+    }
   }
   &__title {
     text-align: center;
@@ -199,6 +362,15 @@
     font-weight: 900;
     line-height: 1.2;
     padding-bottom: 40px;
+    @include w768{
+      font-size: 28px;
+    }
+    @include w599{
+      font-size: 24px;
+    }
+    @include w375{
+      font-size: 22px;
+    }
     h3 {
       padding-bottom: 28px;
     }
@@ -210,13 +382,24 @@
       margin: 0 auto;
     }
   }
-
   &__p {
     text-align: center;
     line-height: 1.6;
     font-weight: 400;
     color: #3a3e40;
     font-size: 18px;
+    @include w1440{
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include w1024{
+      font-size: 16px;
+    }
+    @include w599{
+      font-size: 14px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
   &__content {
     max-width: 1280px;
@@ -224,27 +407,63 @@
     padding-top: 40px;
     display: flex;
     justify-content: space-between;
+    @include w1440{
+      max-width: 90%;
+    }
+    @include w900{
+      flex-direction: column-reverse;
+      align-items: center;
+      padding-top: 24px;
+    }
     &_left {
       width: 45%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @include w900{
+        width: 80%;
+      }
+      @include w599{
+        width: 100%;
+      }
       h3 {
         padding-bottom: 20px;
         font-size: 48px;
         font-weight: 900;
         color: #ff7900;
         text-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+        @include w1200{
+          font-size: 32px;
+        }
+        @include w900{
+          font-size: 42px;
+        }
+        @include w599{
+          font-size: 32px;
+        }
       }
       p {
         font-size: 18px;
         line-height: 1.5;
         color: #3a3e40;
         font-weight: 400;
+        @include w1024{
+          font-size: 16px;
+        }
+        @include w599{
+          font-size: 14px;
+        }
       }
     }
     &_right {
       width: 50%;
+      @include w900{
+        width: 80%;
+        margin-bottom: 24px;
+      }
+      @include w599{
+        width: 100%;
+      }
     }
   }
 }
@@ -254,6 +473,10 @@
   &__inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w599{
+      padding-top: 60px;
+    padding-bottom: 60px;
+    }
   }
   &__title {
     text-align: center;
@@ -261,6 +484,15 @@
     font-weight: 900;
     line-height: 1.2;
     padding-bottom: 40px;
+    @include w768{
+      font-size: 28px;
+    }
+    @include w599{
+      font-size: 24px;
+    }
+    @include w375{
+      font-size: 22px;
+    }
     h3 {
       padding-bottom: 28px;
     }
@@ -278,15 +510,34 @@
     margin: 0 auto;
     border-radius: 30px;
     background: #fff;
+    @include w1440{
+      max-width: 90%;
+    }
     &_inner {
       padding: 60px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      @include w900{
+        padding: 20px 20px;
+      }
+      @include w768{
+        flex-direction: column;
+      }
+      @include w599{
+        padding: 0 20px;
+      }
     }
     &_item {
       width: 45%;
       padding: 0px 10px 40px;
+      @include w768{
+        width: 80%;
+        margin: 0 auto;
+      }
+      @include w599{
+        width: 100%;
+      }
       .item-img {
         border-radius: 20px;
         overflow: hidden;
@@ -298,10 +549,17 @@
         font-size: 24px;
         text-align: center;
         padding-bottom: 16px;
+        @include w599{
+          font-size: 20px;
+          padding-bottom: 10px;
+        }
       }
       p {
         color: #3a3e40;
         line-height: 1.6;
+        @include w599{
+          font-size: 14px;
+        }
       }
     }
   }
@@ -312,6 +570,10 @@
   &__inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w599{
+      padding-top: 60px;
+    padding-bottom: 60px;
+    }
   }
   &__title {
     text-align: center;
@@ -319,6 +581,15 @@
     font-weight: 900;
     line-height: 1.2;
     padding-bottom: 40px;
+    @include w768{
+      font-size: 28px;
+    }
+    @include w599{
+      font-size: 24px;
+    }
+    @include w375{
+      font-size: 22px;
+    }
     h3 {
       padding-bottom: 28px;
     }
@@ -334,6 +605,16 @@
     max-width: 1280px;
     margin: 0 auto;
     padding-left: 100px;
+    @include w1440{
+      max-width: 90%;
+      padding-left: 60px;
+    }
+    @include w768{
+      padding-left: 40px;
+    }
+    @include w599{
+      padding-left: 0px;
+    }
     &_step {
       color: #ff7900;
       font-size: 28px;
@@ -341,6 +622,9 @@
       padding-top: 16px;
       padding-bottom: 16px;
       background: #f9f9f9;
+      @include w599{
+        font-size: 24px;
+      }
     }
 
     dl {
@@ -348,6 +632,9 @@
       border-left: 1px solid #ff7900;
       padding-top: 20px;
       padding-bottom: 20px;
+      @include w768{
+        margin-left: 20px;
+      }
       .step-wrap {
         background: #fff;
         margin-left: 64px;
@@ -355,6 +642,16 @@
         align-items: center;
         padding: 28px 40px 28px 60px;
         position: relative;
+        @include w1440{
+          padding: 28px 28px 28px 30px;
+        }
+        @include w1024{
+          padding: 28px 28px 28px 24px;
+        }
+        @include w599{
+          margin-left: 40px;
+          flex-direction: column;
+        }
         &:before {
           content: "";
           position: absolute;
@@ -381,8 +678,19 @@
         font-size: 18px;
         font-weight: 900;
         color: #3a3e40;
+        @include w599{
+          padding-left: 0;
+        }
         img {
           width: 48px;
+          @include w599{
+            margin-bottom: 10px;
+            width: 56px;
+            padding-left: 0;
+            margin-left: auto;
+            margin-right: auto;  
+            display: block;
+                  }
         }
       }
       dd {
@@ -390,14 +698,24 @@
         padding-left: 4%;
         font-size: 18px;
         line-height: 1.4;
+        @include w599{
+          font-size: 16px;
+          padding-left: 0;
+        }
         b {
           font-weight: 700;
           padding-bottom: 8px;
           display: block;
+          @include w599{
+            text-align: center;
+          }
         }
         p {
           font-weight: 400;
           font-size: 16px;
+          @include w599{
+            font-size: 14px;
+          }
         }
       }
     }
@@ -409,6 +727,10 @@
   &__inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w599{
+      padding-top: 60px;
+    padding-bottom: 60px;
+    }
   }
   &__title {
     text-align: center;
@@ -416,6 +738,15 @@
     font-weight: 900;
     line-height: 1.2;
     padding-bottom: 40px;
+    @include w768{
+      font-size: 28px;
+    }
+    @include w599{
+      font-size: 24px;
+    }
+    @include w375{
+      font-size: 22px;
+    }
     h3 {
       padding-bottom: 28px;
     }
@@ -432,32 +763,111 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    @include w1440{
+      max-width: 90%;
+    }
+    @media screen and (min-width: 769px) and (max-width: 1199px) {
+      max-width: 96%;
+      justify-content: center;
+    }
+    @include w768{
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   &__card {
     width: 380px;
     height: 660px;
     margin-top: 60px;
     background: #fff;
+    @include w1440{
+      width: 31%;
+    }
+    @media screen and (min-width: 769px) and (max-width: 1199px) {
+      width: 228px;
+      height: 580px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    @include w768{
+      width: 380px;
+      height: auto;
+      margin-bottom: 20px;
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include w599{
+      width: 340px;
+    }
+    @include w375{
+      width: 320px;
+    }
     &_inner {
       padding: 60px 40px;
+      @media screen and (min-width: 769px) and (max-width: 1199px) {
+        padding: 40px 20px;
+      }
     }
     &_title {
       color: #333333;
       font-weight: 700;
       padding-bottom: 20px;
       font-size: 24px;
+      @include w1440{
+        padding-bottom: 10px;
+      }
+      @media screen and (min-width: 769px) and (max-width: 1199px) {
+        font-size: 18px;
+        padding-bottom: 4px;
+        margin-left: 12px;
+      }
+      @include w768{
+        margin-left: 28px;
+      }
+      @include w599{
+        margin-left: 8px;
+      }
+      @include w375{
+        margin-left: 0;
+      }
     }
     .getugaku {
       color: #282828;
       font-size: 20px;
       font-weight: 400;
       padding-bottom: 20px;
+      @media screen and (min-width: 769px) and (max-width: 1199px) {
+        font-size: 14px;
+        padding-bottom: 10px;
+        margin-left: 12px;
+      }
+      @include w768{
+        font-size: 16px;
+        padding-bottom: 10px;
+        margin-left: 28px;
+      }
+      @include w599{
+        margin-left: 8px;
+      }
+      @include w375{
+        margin-left: 0;
+      }
       span {
         font-size: 72px;
         font-weight: 700;
         color: #111111;
         margin-left: 10px;
         margin-right: 10px;
+        @include w1440{
+          font-size: 58px;
+        }
+        @media screen and (min-width: 769px) and (max-width: 1199px) {
+          font-size: 38px;
+        }
+        @include w375{
+          font-size: 56px;
+        }
       }
     }
     .bunkatu {
@@ -466,6 +876,23 @@
       font-size: 16px;
       color: #777777;
       padding-bottom: 60px;
+      @include w1440{
+        padding-bottom: 40px;
+      }
+      @media screen and (min-width: 769px) and (max-width: 1199px) {
+        font-size: 14px;
+        padding-bottom: 40px;
+        margin-left: 12px;
+      }
+      @include w768{
+        margin-left: 28px;
+      }
+      @include w599{
+        margin-left: 8px;
+      }
+      @include w375{
+        margin-left: 0;
+      }
     }
     .checks {
       display: flex;
@@ -482,6 +909,9 @@
         font-weight: 900;
         font-size: 18px;
         color: #111111;
+        @media screen and (min-width: 769px) and (max-width: 1199px) {
+          font-size: 14px;
+        }
       }
       p {
         display: flex;
@@ -489,18 +919,40 @@
         font-weight: 400;
         font-size: 18px;
         color: #111111;
+        @media screen and (min-width: 769px) and (max-width: 1199px) {
+          font-size: 14px;
+        }
       }
     }
   }
   .recome-card {
     height: 720px;
     margin-top: 0;
+    @media screen and (min-width: 769px) and (max-width: 1199px) {
+      height: 640px;
+    }
     .design-plan__card_inner {
       padding-top: 30px;
+      @media screen and (min-width: 769px) and (max-width: 1199px) {
+        padding-top: 15px;
+      }
     }
     &__title {
       img {
         width: 80px;
+        @media screen and (min-width: 769px) and (max-width: 1199px) {
+          width: 70px;
+          margin-left: 12px;
+        }
+        @include w768{
+          margin-left: 28px;
+        }
+        @include w599{
+          margin-left: 8px;
+        }
+        @include w375{
+          margin-left: 0;
+        }
       }
       &_badge {
         background: linear-gradient(to right, #ff4500, #ffb649);
@@ -508,12 +960,28 @@
         width: 150px;
         margin-top: 8px;
         margin-bottom: 6px;
+        @media screen and (min-width: 769px) and (max-width: 1199px) {
+          width: 125px;
+          margin-left: 12px;
+        }
+        @include w768{
+          margin-left: 28px;
+        }
+        @include w599{
+          margin-left: 8px;
+        }
+        @include w375{
+          margin-left: 0;
+        }
         p {
           color: #fff;
           padding: 6px 12px;
           font-size: 12px;
           font-weight: 700;
           line-height: 1.2;
+          @media screen and (min-width: 769px) and (max-width: 1199px) {
+            font-size: 10px;
+          }
         }
       }
     }
@@ -527,6 +995,13 @@
     font-weight: 400;
     color: #3a3e40;
     line-height: 1.8;
+    @include w768{
+      width: 90%;
+    }
+    @include w768{
+      font-size: 12px;
+      padding-top: 0;
+    }
   }
 }
 
@@ -535,6 +1010,10 @@
   &__inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w599{
+      padding-top: 60px;
+    padding-bottom: 60px;
+    }
   }
   &__title {
     text-align: center;
@@ -542,6 +1021,15 @@
     font-weight: 900;
     line-height: 1.2;
     padding-bottom: 40px;
+    @include w768{
+      font-size: 28px;
+    }
+    @include w599{
+      font-size: 24px;
+    }
+    @include w375{
+      font-size: 22px;
+    }
     h3 {
       padding-bottom: 28px;
     }
@@ -556,6 +1044,15 @@
   &__content {
     width: 60%;
     margin: 0 auto;
+    @include w1024 {
+      width: 75%;
+    }
+    @include w768 {
+      width: 85%;
+    }
+    @include w599 {
+      width: 90%;
+    }
     .border-dotted {
       border-top: 1px dashed #7e8387;
       border-style: dashed;
@@ -571,6 +1068,10 @@
         padding-top: 40px;
         padding-left: 70px;
         position: relative;
+        @include w599{
+          font-size: 18px;
+          padding-left: 40px;
+        }
         &::after {
           content: "Q";
           color: #ff7900;
@@ -579,12 +1080,21 @@
           position: absolute;
           top: 26px;
           left: 0;
+          @include w599{
+            font-size: 32px;
+            top: 30px
+          }
         }
       }
       &_p {
         padding: 20px 0 40px 70px;
         font-weight: 400;
         line-height: 1.2;
+        word-wrap: break-word;
+        @include w599{
+          padding: 20px 0 40px 40px;
+          font-size: 14px;
+        }
       }
     }
   }

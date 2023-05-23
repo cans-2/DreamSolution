@@ -1,7 +1,7 @@
 <?php get_header() ?>
 <main>
     <div class="design-mainbg">
-        <div class="design-mainbg__content">
+        <div class="design-mainbg__content wow fade-left">
             <div class="marunage">
 
                 <p>丸投げでお任せいただけます！</p>
@@ -28,7 +28,7 @@
                     <p>サービスサイト</p>
                 </div>
             </div>
-            <a href="/page-contact.php">
+            <a href="/contact">
                 <div class="soudan">
                     <p>無料相談する</p>
                 </div>
@@ -38,7 +38,7 @@
     <!--  -->
     <div class="old-wrapper">
         <section class="design-old">
-            <div class="design-old__inner">
+            <div class="design-old__inner wow fade-up2">
                 <div class="design-old__title">
                     <h3>ホームページ、<br>古いままになっていませんか？</h3>
                     <div class="design-old__title_under"></div>
@@ -57,7 +57,7 @@
                 <h3>ドリームソリューションなら、<br>実現できること</h3>
                 <div class="design-realization__title_under"></div>
             </div>
-            <div class="design-realization__items">
+            <div class="design-realization__items wow fade-up2">
                 <div class="design-realization__item">
                     <div class="design-realization__item_left"><img src="<?php echo get_template_directory_uri() ?>/assets/image/site-design/homepage-5.jpeg" alt="イメージ"></div>
                     <div class="design-realization__item_right">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="design-realization__item">
+                <div class="design-realization__item wow fade-up2">
                     <div class="design-realization__item_left"><img src="<?php echo get_template_directory_uri() ?>/assets/image/site-design/homepage-6.jpeg" alt="イメージ"></div>
                     <div class="design-realization__item_right">
                         <div class="design-realization__item_right_content">
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="design-realization__item">
+                <div class="design-realization__item wow fade-up2">
                     <div class="design-realization__item_left"><img src="<?php echo get_template_directory_uri() ?>/assets/image/site-design/homepage-7.jpeg" alt="イメージ"></div>
                     <div class="design-realization__item_right">
                         <div class="design-realization__item_right_content">
@@ -102,7 +102,7 @@
                 <div class="design-realization__title_under"></div>
             </div>
             <div class="design-goodat__content">
-                <div class="design-goodat__content_inner">
+                <div class="design-goodat__content_inner wow fade-up2">
                     <div class="design-goodat__content_item">
                         <div class="item-img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/site-design/homepage-1.jpeg" alt="goodat"></div>
                         <h3 class="item-title">コーポレートサイト</h3>
@@ -137,7 +137,7 @@
             <div class="design-promotion__p">
                 <p>より多くの情報を印象的に伝えることのできる「動画」。約180万語のキーワードを含むと言われています。<br>人間は目で見た映像と感情を一緒に脳に記録するため、クオリティの高い動画を載せる載せることで、お客様の記憶に残りやすくなります。</p>
             </div>
-            <div class="design-promotion__content">
+            <div class="design-promotion__content wow fade-up2">
                 <div class="design-promotion__content_left">
                     <h3>現場の緊張感を伝える</h3>
                     <p>弊社ではプロのクリエイターによるハイセンスな動画を制作させていただきます。<br>
@@ -157,12 +157,12 @@
                 <h3>制作の流れ</h3>
                 <div class="design-realization__title_under"></div>
             </div>
-            <div class="design-flow__content">
+            <div class="design-flow__content wow fade-up2">
                 <p class="design-flow__content_step">STEP.1</p>
                 <dl>
                     <div class="step-wrap">
                         <dt><img src="<?php echo get_template_directory_uri() ?>/assets/image/site-design/homepage-step1.png" alt="step"></dt>
-                        <dd><b>お電話、フォームから無料相談</b>
+                        <dd><b>お電話、フォームから<br class="sp-br">無料相談</b>
                             <p>本サイトの無料相談フォームからお申し込みください。24時間以内に、弊社の担当者からご連絡致します。</p>
                         </dd>
                     </div>
@@ -215,7 +215,7 @@
                 <h3>料金プラン</h3>
                 <div class="design-realization__title_under"></div>
             </div>
-            <div class="design-plan__cards">
+            <div class="design-plan__cards wow fade-up2">
                 <div class="design-plan__card">
                     <div class="design-plan__card_inner">
                         <h6 class="design-plan__card_title">シンプルプラン</h6>
@@ -251,7 +251,7 @@
                                 </span>アニメーション</b>
                             <b><span class="material-symbols-outlined">
                                     done
-                                </span>選べるオプション3つor動画制作</b>
+                                </span>選べるオプション3つ<br class="sp-br">or動画制作</b>
                             <p><span class="material-symbols-outlined">
                                     done
                                 </span>スマホ・タブレット対応</p>
@@ -317,7 +317,7 @@
                 <h3>よくあるご質問</h3>
                 <div class="design-faq__title_under"></div>
             </div>
-            <div class="design-faq__content">
+            <div class="design-faq__content wow fade-up2">
                 <div class="design-faq__content_item border-dotted">
                     <b>制作期間はどのくらいかかるのですか？</b>
                     <div class="design-faq__content_item_p">
@@ -347,7 +347,7 @@
             </div>
         </div>
     </section>
-    <div class="trial">
+    <div class="trial wow fade-up2">
         <p>柔軟に対応させていただきます。<br>お気軽にお問い合わせください。</p>
         <span class="material-symbols-outlined">
             fast_rewind

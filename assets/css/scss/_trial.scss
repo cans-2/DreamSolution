@@ -1,4 +1,6 @@
 @use "./common" as *;
+@use "./mixin" as *;
+
 .trial-wrapper {
   width: 100%;
   height: 100%;
@@ -8,27 +10,50 @@
 .trial-form {
   padding-top: 80px;
   padding-bottom: 120px;
+  @include w599{
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
   &__inner {
     width: 80%;
     margin: 0 auto;
     padding: 80px 40px;
     background: #fff;
     border-radius: 30px;
+    @include w599{
+      width: 90%;
+      padding: 40px 20px;
+    }
   }
   &__title {
     text-align: center;
     line-height: 1.4;
     padding-bottom: 60px;
+    @include w599{
+      padding-bottom: 32px;
+    }
     h3 {
       color: #419438;
       font-weight: 900;
       font-size: 48px;
+      @include w900{
+        font-size: 42px;
+      }
+      @include w599{
+        font-size: 28px;
+      }
     }
     b {
       font-weight: 900;
       font-size: 32px;
       color: #3a3e40;
       letter-spacing: 4px;
+      @include w900{
+        font-size: 28px;
+      }
+      @include w599{
+        font-size: 20px;
+      }
     }
   }
   &__check {
@@ -36,21 +61,43 @@
     margin: 0 auto;
     background: #f9f9f9;
     b {
-      padding-top: 28px;
+      padding-top: 40px;
       font-weight: 900;
       font-size: 24px;
       color: #419438;
       padding-left: 60px;
       display: block;
+      @include w1024{
+        padding-left: 40px;
+      }
+      @include w599{
+        font-size: 20px;
+      }
     }
     ul {
       width: 900px;
       margin: 0 auto;
       padding-top: 12px;
-      padding-bottom: 48px;
+      padding-bottom: 40px;
       font-weight: 700;
       color: #3a3e40;
       line-height: 1.6;
+      list-style-type: disc;
+      @include w1440{
+        width: auto;
+        padding-left: 40px;
+        padding-right: 20px;
+      }
+      @include w599{
+        font-size: 14px;
+      }
+      li::marker {
+        color: #419438;
+        font-size: 18px;
+        @include w599{
+          font-size: 14px;
+        }
+      }
     }
   }
   &__card {
@@ -59,19 +106,38 @@
     background: #f9f9f9;
     margin-top: 40px;
     border-radius: 30px;
+    @include w599{
+      width: 90%;
+      margin-top: 24px;
+    }
 
     &_inner {
       padding: 40px 40px 20px 40px;
       text-align: center;
+      @include w599{
+        padding: 20px 10px 10px 10px;
+      }
       p {
         padding-bottom: 20px;
         font-size: 16px;
         font-weight: 400;
         color: #3a3e40;
+        @include w599{
+          font-size: 12px;
+          padding-bottom: 10px;
+        }
+        @include w375{
+          font-size: 10px;
+        }
       }
       .tel {
+        display: block;
         font-size: 48px;
         font-weight: 700;
+        margin-bottom: 4px;
+        @include w599{
+          font-size: 32px;
+        }
       }
     }
   }
@@ -81,11 +147,22 @@
     font-size: 28px;
     text-align: center;
     padding-top: 56px;
+    @include w599{
+      font-size: 24px;
+    }
   }
   &__wrapper{
     width: 60%;
     margin: 0 auto;
     margin-top: 60px;
+    @include w768{
+      width: 80%;
+    }
+    @include w599{
+      width: 90%;
+      font-size: 14px;
+      margin-top: 32px;
+    }
     label {
       font-weight: bold;
       color: #3a3e40;

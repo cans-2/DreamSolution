@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri() ?>/assets/image/titleLogo.png">
+    <link rel="icon" href="<?php echo get_template_directory_uri() ?>/assets/image/titleLogo.png">
     <link href="<?php echo get_template_directory_uri() ?>/assets/css/hover-min.css" rel="stylesheet">
     <script src="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
@@ -12,10 +14,16 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
     <link href="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 " rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
     <title>株式会社ドリームソリューション</title>
 </head>
 
 <body ontouchstart="">
+<?php wp_head() ?>
     <header>
         <div class="header__inner">
             <a href="<?php echo get_home_url() ?>">
@@ -87,9 +95,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 </div>
             </div>
         </div>
-        <!--  -->
+        <!--TOPへ戻る-->
+        <button class="page_top_btn" id="page__top__btn" onclick="scrollToTop()"></button>
     </header>
-    <?php wp_head() ?>
     <!-- ローディング画面 -->
     <div id="loading">
         <div class="loading-logo">

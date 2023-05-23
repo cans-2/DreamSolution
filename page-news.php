@@ -21,7 +21,7 @@
                             <a href="<?php the_permalink(); ?>">
                                 <div class="column__item_inner">
                                     <div class="datecate">
-                                        <p class="date"><?php the_date('Y/m/d'); ?></p>
+                                        <p class="date"><?php the_time('Y/m/d'); ?></p>
                                         <p class="cate"><?php the_category(', '); ?></p>
                                     </div>
                                     <div class="column__item_title">

@@ -153,6 +153,15 @@ header .header__right .header__btn_contact:hover {
   height: auto;
 }
 
+.sp-br {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .sp-br {
+    display: block;
+  }
+}
+
 .sec-title__p {
   color: #7e8387;
   font-weight: bold;
@@ -200,12 +209,14 @@ img {
 }
 @media screen and (max-width: 768px) {
   .page-title {
-    padding-top: 80px;
+    padding-top: 100px;
   }
 }
 @media screen and (max-width: 450px) {
   .page-title {
     padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 100px;
   }
 }
 .page-title h2 {
@@ -231,6 +242,7 @@ img {
 @media screen and (max-width: 500px) {
   .page-title h2 {
     font-size: 42px;
+    line-height: 1.2;
   }
 }
 .page-title p {
@@ -246,6 +258,7 @@ img {
 @media screen and (max-width: 660px) {
   .page-title p {
     font-size: 18px;
+    margin-top: 8px;
   }
 }
 
@@ -280,6 +293,115 @@ img {
   transform: translate3d(200%, 0, 0) rotate(35deg);
 }
 
+.page_top_btn {
+  position: fixed;
+  right: 3%;
+  bottom: 5%;
+  z-index: 99999;
+  width: 60px;
+  height: 56px;
+  color: transparent;
+  border: none;
+  background: #419438;
+  box-shadow: 2px 2px 2px 1px rgba(57, 56, 56, 0.8), 0 0 0 2px #419438;
+  background-image: url("/wp-content/themes/DreamSolution/assets/image/page_top_btn.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.6s;
+  text-decoration: none;
+  cursor: pointer;
+}
+.page_top_btn:hover {
+  background-color: #419438;
+  box-shadow: none;
+}
+@media screen and (max-width: 599px) {
+  .page_top_btn {
+    width: 40px;
+    height: 38px;
+  }
+}
+
+.scrolled .page_top_btn {
+  display: block;
+  opacity: 1;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up_d {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.fade-in {
+  opacity: 0; /* 最初は透明にする */
+  animation: fadeIn 1s ease-in 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* 開始時は透明 */
+  }
+  to {
+    opacity: 1; /* 終了時は不透明 */
+  }
+}
+.fade-up2 {
+  opacity: 0; /* 最初は透明にする */
+  animation: fadeUp 1s ease-in 0.5s forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0; /* 開始時は透明 */
+    transform: translateY(40px); /* 下方向に20ピクセル移動 */
+  }
+  to {
+    opacity: 1; /* 終了時は不透明 */
+    transform: translateY(0); /* 移動なし */
+  }
+}
+.fade-in-about {
+  opacity: 0; /* 最初は透明にする */
+  animation: fadeIn 1.2s ease-in 1.6s forwards;
+}
+
+.fade-left {
+  opacity: 0; /* 最初は透明にする */
+  animation: fadeLeft 1s ease-in 0.5s forwards;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0; /* 開始時は透明 */
+    transform: translateX(-40px); /* 下方向に20ピクセル移動 */
+  }
+  to {
+    opacity: 1; /* 終了時は不透明 */
+    transform: translateX(0); /* 移動なし */
+  }
+}
+.poyopoyo {
+  animation: poyopoyo 2s ease-out infinite;
+  opacity: 1;
+}
+
+@keyframes poyopoyo {
+  0%, 40%, 60%, 80% {
+    transform: scale(1);
+  }
+  50%, 70% {
+    transform: scale(1.05);
+  }
+}
 @keyframes zoomInOut {
   0% {
     transform: scale(1.4);
@@ -883,6 +1005,11 @@ img {
   color: #3a3e40;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 1440px) {
+  .service__item_card h2 {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 599px) {
   .service__item_card h2 {
     font-size: 24px;
@@ -1150,6 +1277,12 @@ img {
     background: #f9f9f9;
   }
 }
+@media screen and (max-width: 599px) {
+  .news__bg {
+    height: auto;
+    padding-bottom: 60px;
+  }
+}
 .news__content {
   padding-top: 90px;
   display: flex;
@@ -1189,6 +1322,11 @@ img {
   font-size: 24px;
   border-bottom: 2px solid #7e8387;
 }
+@media screen and (max-width: 599px) {
+  .news__content_item .title {
+    font-size: 18px;
+  }
+}
 .news__content_item .title:hover {
   opacity: 0.8;
 }
@@ -1225,6 +1363,12 @@ img {
     margin-top: 64px;
   }
 }
+@media screen and (max-width: 599px) {
+  .about {
+    margin-top: 40px;
+    padding-top: 60px;
+  }
+}
 .about__wrapper {
   padding-top: 120px;
 }
@@ -1232,6 +1376,12 @@ img {
   .about__wrapper {
     padding-top: 80px;
     padding-bottom: 60px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .about__wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 .about__video {
@@ -1268,6 +1418,12 @@ img {
   .company {
     padding-top: 72px;
     padding-bottom: 72px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .company {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 .company__wrapper {
@@ -1314,7 +1470,7 @@ img {
 }
 @media screen and (max-width: 599px) {
   .company__content {
-    width: 92%;
+    width: 90%;
     padding-left: 0;
   }
 }
@@ -1343,6 +1499,11 @@ img {
   .company__content_p {
     -moz-text-align-last: left;
          text-align-last: left;
+  }
+}
+@media screen and (max-width: 599px) {
+  .company__content_p {
+    font-size: 16px;
   }
 }
 .company__content .detail {
@@ -1805,6 +1966,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 14px;
   }
 }
 .footer__contact_content .tel {
@@ -1913,7 +2075,7 @@ footer {
     padding-left: 4px;
   }
   .footer__bottom_left_content p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .footer__bottom_left_content h1 {
@@ -1927,7 +2089,7 @@ footer {
 }
 @media screen and (max-width: 599px) {
   .footer__bottom_left_content h1 {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 .footer__bottom_left_content .tel {
@@ -2222,6 +2384,11 @@ footer {
 @media screen and (max-width: 768px) {
   .message__content .greeting {
     padding-bottom: 56px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .message__content .greeting {
+    width: 48%;
   }
 }
 
@@ -2954,9 +3121,27 @@ footer {
   height: 680px;
   position: relative;
 }
+@media screen and (max-width: 599px) {
+  .dream-call__main-bg {
+    height: 580px;
+  }
+}
 .dream-call__main-bg img {
   -o-object-position: top;
      object-position: top;
+}
+@media screen and (max-width: 1024px) {
+  .dream-call__main-bg img {
+    position: absolute;
+    right: -160px;
+    width: 130%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .dream-call__main-bg img {
+    right: 0;
+    width: 100%;
+  }
 }
 .dream-call__main-bg_content {
   position: absolute;
@@ -2969,6 +3154,16 @@ footer {
   font-weight: 700;
   line-height: 1.4;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 900px) {
+  .dream-call__main-bg_content p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .dream-call__main-bg_content p {
+    font-size: 16px;
+  }
 }
 .dream-call__main-bg_content .banner {
   margin-top: 20px;
@@ -2989,6 +3184,17 @@ footer {
   text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 40px;
 }
+@media screen and (max-width: 900px) {
+  .dream-call__main-bg_content .title {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .dream-call__main-bg_content .title {
+    font-size: 38px;
+    margin-top: 10px;
+  }
+}
 .dream-call__main-bg_content .badge {
   display: flex;
   flex-direction: column;
@@ -3008,6 +3214,11 @@ footer {
   padding: 10px 80px;
   color: #fff;
 }
+@media screen and (max-width: 900px) {
+  .dream-call__main-bg_content .badge-item p {
+    padding: 10px 0px;
+  }
+}
 
 .recommend {
   width: 100%;
@@ -3018,10 +3229,22 @@ footer {
   padding-bottom: 80px;
   text-align: center;
 }
+@media screen and (max-width: 599px) {
+  .recommend__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .recommend__inner p {
   font-weight: 700;
   font-size: 24px;
   color: #3a3e40;
+}
+@media screen and (max-width: 599px) {
+  .recommend__inner p {
+    font-size: 20px;
+    margin: 0 20px;
+  }
 }
 .recommend__card {
   padding-top: 40px;
@@ -3032,12 +3255,27 @@ footer {
   display: inline-block;
   padding: 40px 60px;
 }
+@media screen and (max-width: 768px) {
+  .recommend__card ul {
+    padding: 40px 40px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .recommend__card ul {
+    padding: 40px 15px;
+  }
+}
 .recommend__card ul li {
   display: flex;
   margin-bottom: 16px;
   font-size: 18px;
   font-weight: 700;
   color: #403a3a;
+}
+@media screen and (max-width: 599px) {
+  .recommend__card ul li {
+    font-size: 13px;
+  }
 }
 .recommend__card ul li .red {
   color: #ff0000;
@@ -3059,16 +3297,37 @@ footer {
   margin-top: 80px;
   margin-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .step {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
 .step__title {
   text-align: center;
   font-weight: 900;
   font-size: 36px;
   color: #419438;
 }
+@media screen and (max-width: 768px) {
+  .step__title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .step__title {
+    font-size: 24px;
+  }
+}
 .step__img {
   margin: 0 auto;
   margin-top: 20px;
   width: 60%;
+}
+@media screen and (max-width: 768px) {
+  .step__img {
+    width: 80%;
+  }
 }
 
 .feature {
@@ -3083,17 +3342,38 @@ footer {
   text-align: center;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 599px) {
+  .feature__title {
+    font-size: 24px;
+    padding-top: 60px;
+  }
+}
 .feature__item {
   width: 60%;
   margin: 0 auto;
   color: #3a3e40;
   padding-bottom: 60px;
 }
+@media screen and (max-width: 768px) {
+  .feature__item {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .feature__item {
+    width: 80%;
+  }
+}
 .feature__item_detail {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 28px;
+}
+@media screen and (max-width: 599px) {
+  .feature__item_detail {
+    font-size: 14px;
+  }
 }
 .feature__item_title {
   font-size: 24px;
@@ -3103,11 +3383,21 @@ footer {
   padding-bottom: 6px;
   margin-bottom: 16px;
 }
+@media screen and (max-width: 599px) {
+  .feature__item_title {
+    font-size: 18px;
+  }
+}
 .feature__item ul {
   margin-left: 28px;
   margin-bottom: 28px;
   line-height: 1.4;
   font-weight: 400;
+}
+@media screen and (max-width: 599px) {
+  .feature__item ul {
+    font-size: 14px;
+  }
 }
 .feature__item ul li {
   list-style: disc;
@@ -3124,6 +3414,11 @@ footer {
   font-weight: 400;
   margin-left: 16px;
 }
+@media screen and (max-width: 599px) {
+  .feature__item_change p {
+    font-size: 16px;
+  }
+}
 .feature__item_change span {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
   color: #6bb42d;
@@ -3138,12 +3433,34 @@ footer {
   margin-top: 28px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .feature__item_others {
+    padding-bottom: 0;
+  }
+}
 .feature__item_other {
   width: 30%;
   background: #fff;
   border-radius: 10px;
   padding-left: 20px;
   padding-right: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .feature__item_other {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature__item_other {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .feature__item_other {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .feature__item_other_title {
   font-size: 20px;
@@ -3154,11 +3471,21 @@ footer {
   font-weight: 700;
   border-bottom: 1px solid #419438;
 }
+@media screen and (max-width: 599px) {
+  .feature__item_other_title {
+    font-size: 18px;
+  }
+}
 .feature__item_other_detail {
   font-weight: 400;
   line-height: 1.4;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 599px) {
+  .feature__item_other_detail {
+    font-size: 14px;
+  }
 }
 
 .need {
@@ -3168,12 +3495,23 @@ footer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .need__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .need__title {
   text-align: center;
   color: #3a3e40;
   font-weight: 900;
   font-size: 36px;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 599px) {
+  .need__title {
+    font-size: 24px;
+  }
 }
 .need dl {
   width: 60%;
@@ -3185,11 +3523,39 @@ footer {
   padding: 28px 80px;
   border-bottom: 1px solid #eeeeee;
 }
+@media screen and (max-width: 1024px) {
+  .need dl {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .need dl {
+    width: 80%;
+    padding: 28px 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .need dl {
+    padding: 28px 40px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .need dl {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
 .need dl dt {
   width: 30%;
   color: #7e8387;
   font-weight: 700;
   font-family: "Lato";
+}
+@media screen and (max-width: 599px) {
+  .need dl dt {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 .need dl dd {
   color: #333;
@@ -3197,10 +3563,26 @@ footer {
   width: 70%;
   padding-left: 20px;
 }
+@media screen and (max-width: 768px) {
+  .need dl dd {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .need dl dd {
+    width: 100%;
+    padding-left: 0;
+  }
+}
 
 .trial {
   text-align: center;
   padding-top: 80px;
+}
+@media screen and (max-width: 599px) {
+  .trial {
+    padding-top: 60px;
+  }
 }
 .trial p {
   font-weight: 900;
@@ -3208,12 +3590,27 @@ footer {
   line-height: 1.8;
   color: #3A3E40;
 }
+@media screen and (max-width: 768px) {
+  .trial p {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .trial p {
+    font-size: 18px;
+  }
+}
 .trial span {
   margin-top: 20px;
   color: rgba(107, 180, 45, 0.4);
   font-size: 140px;
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
   transform: rotate(270deg);
+}
+@media screen and (max-width: 599px) {
+  .trial span {
+    font-size: 100px;
+  }
 }
 
 .ashura__title_inner {
@@ -4154,6 +4551,11 @@ footer {
   margin-top: 90px;
   position: relative;
 }
+@media screen and (max-width: 599px) {
+  .video-bg {
+    height: 80vh;
+  }
+}
 .video-bg__mask {
   position: absolute;
   top: 0;
@@ -4179,13 +4581,59 @@ footer {
   line-height: 1.4;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
+@media screen and (max-width: 900px) {
+  .video-bg__content {
+    bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video-bg__content {
+    left: 40px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .video-bg__content {
+    left: 20px;
+    bottom: 40px;
+  }
+}
 .video-bg__content p {
   font-weight: 700;
   font-size: 28px;
 }
+@media screen and (max-width: 900px) {
+  .video-bg__content p {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video-bg__content p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .video-bg__content p {
+    font-size: 18px;
+  }
+}
 .video-bg__content h4 {
   font-weight: 900;
   font-size: 42px;
+}
+@media screen and (max-width: 900px) {
+  .video-bg__content h4 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video-bg__content h4 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .video-bg__content h4 {
+    font-size: 28px;
+  }
 }
 .video-bg__content h4 span {
   color: #f65252;
@@ -4195,10 +4643,31 @@ footer {
   color: #f65252;
   font-size: 72px;
 }
+@media screen and (max-width: 900px) {
+  .video-bg__content h2 {
+    font-size: 58px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video-bg__content h2 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .video-bg__content h2 {
+    font-size: 42px;
+  }
+}
 
 .super-experience__inner {
   padding-top: 120px;
   padding-bottom: 120px;
+}
+@media screen and (max-width: 768px) {
+  .super-experience__inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
 .super-experience__content {
   width: 80%;
@@ -4207,12 +4676,40 @@ footer {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 1024px) {
+  .super-experience__content {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .super-experience__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .super-experience__content_left {
   margin-right: auto;
   color: #3a3e40;
   font-size: 48px;
   font-weight: 500;
   width: 40%;
+}
+@media screen and (max-width: 900px) {
+  .super-experience__content_left {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .super-experience__content_left {
+    margin-bottom: 20px;
+    width: 90%;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .super-experience__content_left {
+    font-size: 38px;
+  }
 }
 .super-experience__content_left span {
   color: #ff0000;
@@ -4225,6 +4722,22 @@ footer {
   font-size: 18px;
   line-height: 1.6;
 }
+@media screen and (max-width: 900px) {
+  .super-experience__content_right {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .super-experience__content_right {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .super-experience__content_right {
+    font-size: 14px;
+  }
+}
 
 .super-feature {
   background: #f9f9f9;
@@ -4233,12 +4746,23 @@ footer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .super-feature__inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
 .super-feature__title {
   font-weight: 900;
   font-size: 36px;
   color: #3a3e40;
   text-align: center;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 599px) {
+  .super-feature__title {
+    font-size: 28px;
+  }
 }
 .super-feature__title span {
   color: #f65252;
@@ -4248,14 +4772,37 @@ footer {
   width: 70%;
   margin: 0 auto;
 }
+@media screen and (max-width: 1024px) {
+  .super-feature__items {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .super-feature__items {
+    width: 90%;
+  }
+}
 .super-feature__item {
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+@media screen and (max-width: 599px) {
+  .super-feature__item {
+    flex-direction: column;
+  }
+}
 .super-feature__item_left {
   width: 50%;
   margin-left: 30px;
+}
+@media screen and (max-width: 599px) {
+  .super-feature__item_left {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
 }
 .super-feature__item_right {
   width: 45%;
@@ -4265,10 +4812,32 @@ footer {
   margin-left: 60px;
   color: #3a3e40;
 }
+@media screen and (max-width: 768px) {
+  .super-feature__item_right {
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .super-feature__item_right {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .super-feature__item_right p {
   line-height: 1.6;
   font-weight: 400;
   font-size: 18px;
+}
+@media screen and (max-width: 1024px) {
+  .super-feature__item_right p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .super-feature__item_right p {
+    font-size: 14px;
+  }
 }
 .super-feature__item_right_badge {
   background: #f65252;
@@ -4281,10 +4850,25 @@ footer {
   font-size: 12px;
   padding: 4px 10px;
 }
+@media screen and (max-width: 599px) {
+  .super-feature__item_right_badge {
+    font-size: 10px;
+  }
+}
 .super-feature__item_right b {
   font-weight: 900;
   font-size: 32px;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .super-feature__item_right b {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .super-feature__item_right b {
+    margin-bottom: 15px;
+  }
 }
 
 .super-example {
@@ -4294,12 +4878,24 @@ footer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .super-example__inner {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+}
 .super-example__inner h3 {
   font-weight: 900;
   color: #3a3e40;
   font-size: 36px;
   text-align: center;
   margin-bottom: 60px;
+}
+@media screen and (max-width: 599px) {
+  .super-example__inner h3 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
 }
 .super-example__cards {
   max-width: 1280px;
@@ -4309,14 +4905,36 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 1024px) {
+  .super-example__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .super-example__card {
   width: 31%;
   position: relative;
 }
+@media screen and (max-width: 1024px) {
+  .super-example__card {
+    width: 65%;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .super-example__card {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .super-example__card {
+    width: 100%;
+  }
+}
 .super-example__card_reduce {
   position: absolute;
   top: 84%;
-  left: 65%;
+  left: 70%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -4332,11 +4950,32 @@ footer {
   font-weight: 900;
   line-height: 1.2;
 }
+@media screen and (max-width: 1024px) {
+  .super-example__card_reduce {
+    top: 87%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .super-example__card_reduce {
+    left: 78%;
+    top: 85%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .super-example__card_reduce {
+    top: 82%;
+  }
+}
 .super-example__card_reduce b {
   font-size: 24px;
 }
 .super-example__card_reduce p {
   font-size: 16px;
+}
+@media screen and (max-width: 599px) {
+  .super-example__card_reduce p {
+    font-size: 14px;
+  }
 }
 .super-example__card .card__img {
   width: 100%;
@@ -4390,12 +5029,23 @@ footer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .super-flow__inner {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+}
 .super-flow__inner h3 {
   font-weight: 900;
   font-size: 36px;
   color: #3a3e40;
   text-align: center;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 599px) {
+  .super-flow__inner h3 {
+    font-size: 28px;
+  }
 }
 .super-flow__items {
   display: flex;
@@ -4411,10 +5061,27 @@ footer {
   margin-top: 24px;
   margin-bottom: 24px;
 }
+@media screen and (max-width: 599px) {
+  .super-flow__items .material-symbols-outlined {
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
 .super-flow__item {
   width: 1000px;
   height: 200px;
   display: flex;
+}
+@media screen and (max-width: 1200px) {
+  .super-flow__item {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .super-flow__item {
+    flex-direction: column;
+  }
 }
 .super-flow__item_left {
   width: 40%;
@@ -4428,15 +5095,58 @@ footer {
   font-weight: 900;
   line-height: 1.4;
 }
+@media screen and (max-width: 768px) {
+  .super-flow__item_left {
+    width: 100%;
+  }
+}
 .super-flow__item_left p {
   font-size: 18px;
   padding-bottom: 8px;
 }
+@media screen and (max-width: 768px) {
+  .super-flow__item_left p {
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 599px) {
+  .super-flow__item_left p {
+    font-size: 14px;
+  }
+}
 .super-flow__item_left b {
   font-size: 36px;
 }
+@media screen and (max-width: 900px) {
+  .super-flow__item_left b {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .super-flow__item_left b {
+    font-size: 24px;
+  }
+}
 .super-flow__item_left .b34 {
   font-size: 28px;
+}
+@media screen and (max-width: 900px) {
+  .super-flow__item_left .b34 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .super-flow__item_left .b34 {
+    font-size: 20px;
+  }
+}
+.super-flow__item_left .super-step-br {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .super-flow__item_left .super-step-br {
+    display: block;
+  }
 }
 .super-flow__item_right {
   width: 60%;
@@ -4450,26 +5160,58 @@ footer {
   justify-content: center;
   padding: 10px 20px;
 }
+@media screen and (max-width: 768px) {
+  .super-flow__item_right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .super-flow__item_right {
+    font-size: 14px;
+  }
+}
 
 .pbx-title {
   width: 100%;
-  height: 680px;
+  height: 640px;
   background-image: url(/wp-content/themes/DreamSolution/assets/image/dream-cloud-pbx/pbx-1.png);
   position: relative;
+  background-position: 66%;
+}
+@media screen and (max-width: 1024px) {
+  .pbx-title {
+    background-position: 80%;
+  }
 }
 .pbx-title__content {
   position: absolute;
   top: 50%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
+  left: 5%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   -ms-transform: translate(-50%, -50%);
   text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .pbx-title__content {
+    top: auto;
+    bottom: -40px;
+  }
 }
 .pbx-title__content h1 {
   font-weight: 900;
   font-size: 120px;
   color: #1e88ff;
+}
+@media screen and (max-width: 768px) {
+  .pbx-title__content h1 {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-title__content h1 {
+    font-size: 54px;
+  }
 }
 .pbx-title__content p {
   padding-top: 40px;
@@ -4480,6 +5222,21 @@ footer {
   align-items: flex-end;
   line-height: 1.4;
 }
+@media screen and (max-width: 768px) {
+  .pbx-title__content p {
+    font-size: 24px;
+    padding-top: 20px;
+    color: #fff;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-title__content p {
+    font-size: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .pbx-title__content p span {
   background: #1e88ff;
   padding: 2px 10px;
@@ -4487,6 +5244,17 @@ footer {
   font-weight: 900;
   color: #fff;
   margin-left: 4px;
+}
+@media screen and (max-width: 768px) {
+  .pbx-title__content p span {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-title__content p span {
+    font-size: 28px;
+    margin-top: 6px;
+  }
 }
 
 .pbx-trial {
@@ -4504,12 +5272,62 @@ footer {
   outline: #0078ff solid 8px;
   padding: 40px;
 }
+@media screen and (max-width: 1700px) {
+  .pbx-function__mokuji {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .pbx-function__mokuji {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .pbx-function__mokuji {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .pbx-function__mokuji {
+    width: 700px;
+    padding: 40px 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__mokuji {
+    width: 450px;
+    padding: 40px 50px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__mokuji {
+    width: 380px;
+    padding: 40px 18px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .pbx-function__mokuji {
+    width: 340px;
+    padding: 40px 14px;
+  }
+}
 .pbx-function__mokuji_title {
   width: 70%;
   margin: 0 auto;
   background: #1e88ff;
   border-radius: 30px;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .pbx-function__mokuji_title {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__mokuji_title {
+    text-align: center;
+  }
 }
 .pbx-function__mokuji_title p {
   padding: 5px 24px;
@@ -4518,11 +5336,22 @@ footer {
   font-size: 18px;
   font-weight: 700;
 }
+@media screen and (max-width: 375px) {
+  .pbx-function__mokuji_title p {
+    font-size: 16px;
+  }
+}
 .pbx-function__mokuji_items {
   display: flex;
   flex-wrap: wrap;
   padding-left: 24px;
   padding-right: 24px;
+}
+@media screen and (max-width: 900px) {
+  .pbx-function__mokuji_items {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .pbx-function__mokuji_item {
   width: 33%;
@@ -4530,6 +5359,27 @@ footer {
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .pbx-function__mokuji_item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__mokuji_item {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__mokuji_item {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .pbx-function__mokuji_item {
+    padding-left: 0px;
+  }
 }
 .pbx-function__mokuji_item p {
   font-size: 14px;
@@ -4540,6 +5390,7 @@ footer {
   background: #1e88ff;
   border-radius: 50%;
   margin-right: 10px;
+  padding-bottom: 2px;
 }
 .pbx-function__mokuji_item .num p {
   padding: 6px;
@@ -4559,14 +5410,31 @@ footer {
   max-width: 1280px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1440px) {
+  .pbx-point__items {
+    max-width: 100%;
+  }
+}
 .pbx-point__item {
   padding-top: 60px;
   padding-bottom: 60px;
   width: 100%;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .pbx-point__item {
+    flex-direction: column-reverse;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
 .pbx-point__item:nth-child(2) {
   flex-direction: row-reverse;
+}
+@media screen and (max-width: 768px) {
+  .pbx-point__item:nth-child(2) {
+    flex-direction: column-reverse;
+  }
 }
 .pbx-point__item_left {
   width: 50%;
@@ -4577,29 +5445,90 @@ footer {
   padding-right: 60px;
   padding-left: 30px;
 }
+@media screen and (max-width: 1024px) {
+  .pbx-point__item_left {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-point__item_left {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-point__item_left {
+    width: 100%;
+  }
+}
 .pbx-point__item_left span {
   font-weight: 700;
   font-size: 18px;
   color: #1e88ff;
+}
+@media screen and (max-width: 599px) {
+  .pbx-point__item_left span {
+    font-size: 16px;
+  }
 }
 .pbx-point__item_left b {
   font-weight: 900;
   font-size: 48px;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 1440px) {
+  .pbx-point__item_left b {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .pbx-point__item_left b {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-point__item_left b {
+    font-size: 32px;
+  }
+}
 .pbx-point__item_left p {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
 }
+@media screen and (max-width: 599px) {
+  .pbx-point__item_left p {
+    font-size: 16px;
+  }
+}
 .pbx-point__item_right {
   width: 50%;
   padding-right: 30px;
+  padding-left: 30px;
+}
+@media screen and (max-width: 768px) {
+  .pbx-point__item_right {
+    width: 85%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-point__item_right {
+    width: 100%;
+  }
 }
 
 .pbx-merit__inner {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+@media screen and (max-width: 599px) {
+  .pbx-merit__inner {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
 }
 .pbx-merit__inner span {
   display: block;
@@ -4609,12 +5538,27 @@ footer {
   color: #1e88ff;
   margin-bottom: 6px;
 }
+@media screen and (max-width: 599px) {
+  .pbx-merit__inner span {
+    font-size: 16px;
+  }
+}
 .pbx-merit__inner h3 {
   text-align: center;
   font-weight: 900;
   font-size: 48px;
   color: #3a3e40;
   margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  .pbx-merit__inner h3 {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-merit__inner h3 {
+    font-size: 34px;
+  }
 }
 .pbx-merit__items {
   max-width: 1280px;
@@ -4624,14 +5568,55 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .pbx-merit__items {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .pbx-merit__item {
   width: 31%;
   padding: 0 10px 40px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
+@media screen and (max-width: 768px) {
+  .pbx-merit__item {
+    width: 60%;
+    margin-bottom: 40px;
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-merit__item {
+    width: 90%;
+    padding: 24px;
+  }
+}
 .pbx-merit__item_img {
   height: 250px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .pbx-merit__item_img {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .pbx-merit__item_img {
+    height: 140px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-merit__item_img {
+    height: auto;
+    padding: 10px 20px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-merit__item_img {
+    padding: 10px;
+  }
 }
 .pbx-merit__item_img img {
   -o-object-fit: contain;
@@ -4645,9 +5630,25 @@ footer {
   font-size: 24px;
   margin-bottom: 16px;
 }
+@media screen and (max-width: 768px) {
+  .pbx-merit__item_content h4 {
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-merit__item_content h4 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+}
 .pbx-merit__item_content p {
   font-size: 16px;
   line-height: 1.6;
+}
+@media screen and (max-width: 599px) {
+  .pbx-merit__item_content p {
+    font-size: 14px;
+  }
 }
 
 .right-title {
@@ -4683,12 +5684,27 @@ footer {
   font-size: 18px;
   font-weight: 700;
 }
+@media screen and (max-width: 599px) {
+  .pbx-function__title p {
+    font-size: 16px;
+  }
+}
 .pbx-function__title p:last-child {
   padding-top: 20px;
 }
 .pbx-function__title b {
   font-weight: 900;
   font-size: 48px;
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__title b {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__title b {
+    font-size: 34px;
+  }
 }
 .pbx-function__items {
   max-width: 900px;
@@ -4699,11 +5715,22 @@ footer {
   row-gap: 40px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1024px) {
+  .pbx-function__items {
+    max-width: 90%;
+  }
+}
 .pbx-function__item {
   width: 100%;
   height: auto;
   border-radius: 30px;
   background: #fff;
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
 }
 .pbx-function__item_title {
   padding-top: 40px;
@@ -4716,9 +5743,20 @@ footer {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 599px) {
+  .pbx-function__item_title {
+    font-size: 18px;
+  }
+}
 .pbx-function__item_title img {
   width: 36px;
   margin-right: 12px;
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item_title img {
+    width: 24px;
+    margin-right: 8px;
+  }
 }
 .pbx-function__item .item1__flex {
   display: flex;
@@ -4726,17 +5764,43 @@ footer {
   align-items: center;
   padding: 50px 60px 20px;
 }
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item1__flex {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item1__flex {
+    padding: 40px 40px;
+  }
+}
 .pbx-function__item .item1__flex:last-child {
   flex-direction: row-reverse;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item1__flex:last-child {
+    flex-direction: column-reverse;
+  }
 }
 .pbx-function__item .item1__flex:last-child .item1__flex_right {
   width: 43%;
   padding-left: 0;
   padding-right: 40px;
 }
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item1__flex:last-child .item1__flex_right {
+    width: 100%;
+  }
+}
 .pbx-function__item .item1__flex_left {
   width: 40%;
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item1__flex_left {
+    width: 100%;
+    margin-top: 40px;
+  }
 }
 .pbx-function__item .item1__flex_right {
   width: 55%;
@@ -4744,6 +5808,12 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item1__flex_right {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 .pbx-function__item .item1__flex_right h5 {
   color: #1e88ff;
@@ -4759,6 +5829,11 @@ footer {
   font-size: 16px;
   letter-spacing: 1.1px;
   font-family: "Lato";
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item1__flex_right_content {
+    font-size: 14px;
+  }
 }
 .pbx-function__item .item1__flex_right .bg-01 {
   z-index: 1;
@@ -4780,26 +5855,115 @@ footer {
   display: flex;
   align-items: start;
 }
+@media screen and (max-width: 900px) {
+  .pbx-function__item .item2-flex {
+    padding: 40px 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item2-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item2-flex {
+    padding: 40px 30px 20px 30px;
+  }
+}
 .pbx-function__item .item2-flex__left {
   width: 40%;
+}
+@media screen and (max-width: 900px) {
+  .pbx-function__item .item2-flex__left {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item2-flex__left {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item2-flex__left {
+    width: 100%;
+  }
 }
 .pbx-function__item .item2-flex__right {
   width: 50%;
   color: #333;
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item2-flex__right {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item2-flex__right {
+    width: 100%;
+  }
 }
 .pbx-function__item .item2-flex__right02 {
   display: flex;
   align-items: center;
   padding-bottom: 30px;
 }
+@media screen and (max-width: 1024px) {
+  .pbx-function__item .item2-flex__right02 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .pbx-function__item .item2-flex__right02_left {
   width: 45%;
+}
+@media screen and (max-width: 1024px) {
+  .pbx-function__item .item2-flex__right02_left {
+    width: 50%;
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .pbx-function__item .item2-flex__right02_left {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item2-flex__right02_left {
+    width: 60%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item2-flex__right02_left {
+    width: 60%;
+  }
 }
 .pbx-function__item .item2-flex__right02_right {
   padding-left: 40px;
   width: 55%;
   position: relative;
   z-index: 1;
+}
+@media screen and (max-width: 900px) {
+  .pbx-function__item .item2-flex__right02_right {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item2-flex__right02_right {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item2-flex__right02_right {
+    width: 65%;
+  }
 }
 .pbx-function__item .item2-flex__right02_right::after {
   z-index: -1;
@@ -4811,11 +5975,21 @@ footer {
   top: -32px;
   right: 4px;
 }
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item2-flex__right02_right::after {
+    top: 0;
+  }
+}
 .pbx-function__item .item2-flex__right02_right ul {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 1.1px;
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item2-flex__right02_right ul {
+    font-size: 14px;
+  }
 }
 .pbx-function__item .item2-flex__right03 {
   width: 80%;
@@ -4827,6 +6001,11 @@ footer {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item2-flex__right03 {
+    font-size: 14px;
+  }
+}
 .pbx-function__item .item2-flex__right03::after {
   z-index: -1;
   content: "03";
@@ -4836,6 +6015,11 @@ footer {
   position: absolute;
   top: 8px;
   right: 4px;
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item2-flex__right03::after {
+    top: 46px;
+  }
 }
 .pbx-function__item .item2-flex__right04 {
   display: flex;
@@ -4853,6 +6037,16 @@ footer {
   position: relative;
   z-index: 1;
 }
+@media screen and (max-width: 900px) {
+  .pbx-function__item .item2-flex__right04_right {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item2-flex__right04_right {
+    font-size: 14px;
+  }
+}
 .pbx-function__item .item2-flex__right04_right::after {
   z-index: -1;
   content: "04";
@@ -4863,9 +6057,19 @@ footer {
   top: -16px;
   right: 4px;
 }
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item2-flex__right04_right::after {
+    top: 0;
+  }
+}
 .pbx-function__item .item3-content {
   width: 80%;
   margin: 0 auto;
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item3-content {
+    width: 90%;
+  }
 }
 .pbx-function__item .item3-content p {
   padding: 40px;
@@ -4875,6 +6079,17 @@ footer {
   line-height: 1.4;
   position: relative;
   z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item3-content p {
+    padding: 10px 40px 40px 40px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item3-content p {
+    font-size: 14px;
+    padding: 10px 20px 40px;
+  }
 }
 .pbx-function__item .item3-content p::after {
   z-index: -1;
@@ -4891,12 +6106,23 @@ footer {
   margin: 0 auto;
   padding-bottom: 60px;
 }
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item3-content__image {
+    padding-bottom: 40px;
+  }
+}
 .pbx-function__item .item4-p {
   font-size: 20px;
   font-weight: 900;
   color: #1e88ff;
   padding: 20px 0;
   text-align: center;
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item4-p {
+    font-size: 18px;
+    padding: 10px 0 20px;
+  }
 }
 .pbx-function__item .item4-content {
   width: 70%;
@@ -4907,6 +6133,18 @@ footer {
   position: relative;
   z-index: 1;
   color: #333;
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item4-content {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item4-content {
+    width: 90%;
+    font-size: 14px;
+    padding-bottom: 40px;
+  }
 }
 .pbx-function__item .item4-content::after {
   z-index: -1;
@@ -4926,6 +6164,20 @@ footer {
   color: #333;
   position: relative;
   z-index: 1;
+  text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .pbx-function__item .item5-p {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item5-p {
+    width: 80%;
+    font-size: 14px;
+    text-align: left;
+    padding-bottom: 30px;
+  }
 }
 .pbx-function__item .item5-p::after {
   z-index: -1;
@@ -4947,6 +6199,18 @@ footer {
   position: relative;
   z-index: 1;
 }
+@media screen and (max-width: 900px) {
+  .pbx-function__item .item6-p {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item6-p {
+    width: 85%;
+    font-size: 14px;
+    padding-bottom: 30px;
+  }
+}
 .pbx-function__item .item6-p::after {
   z-index: -1;
   content: "08";
@@ -4956,6 +6220,9 @@ footer {
   position: absolute;
   top: -32px;
   right: 16px;
+}
+.pbx-function__item .item6-h6 {
+  text-align: left;
 }
 .pbx-function__item .item7-p {
   width: 70%;
@@ -4968,6 +6235,19 @@ footer {
   position: relative;
   z-index: 1;
 }
+@media screen and (max-width: 900px) {
+  .pbx-function__item .item7-p {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item7-p {
+    width: 85%;
+    font-size: 14px;
+    padding-bottom: 30px;
+    padding-top: 0;
+  }
+}
 .pbx-function__item .item7-p::after {
   z-index: -1;
   content: "09";
@@ -4979,8 +6259,13 @@ footer {
   right: 16px;
 }
 .pbx-function__item .item7-img {
-  padding: 40px;
+  padding: 0 40px 60px;
   width: 100%;
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item7-img {
+    padding: 0 20px 30px;
+  }
 }
 .pbx-function__item .item8-content {
   width: 75%;
@@ -4990,6 +6275,18 @@ footer {
   color: #333;
   line-height: 1.4;
 }
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item8-content {
+    width: 92%;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item8-content {
+    width: 90%;
+    font-size: 14px;
+  }
+}
 .pbx-function__item .item8-content p {
   display: flex;
   align-items: center;
@@ -4998,12 +6295,41 @@ footer {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+.pbx-function__item .item8-content ul li {
+  position: relative;
+  z-index: 1;
+}
+.pbx-function__item .item8-content ul li:first-of-type {
+  display: flex;
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item8-content ul li:first-of-type {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item8-content ul {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item8-content .item8-span {
+    display: flex;
+    width: 100%;
+  }
+}
 .pbx-function__item .item8-content span {
   padding-left: 36px;
 }
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item8-content span {
+    padding-left: 10px;
+  }
+}
 .pbx-function__item .item8-content .bg-10 {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 .pbx-function__item .item8-content .bg-10::after {
   z-index: -1;
@@ -5035,6 +6361,25 @@ footer {
   padding-left: 64px;
   padding-right: 64px;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 900px) {
+  .pbx-function__item .item9__content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item9__content {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-function__item .item9__content {
+    font-size: 14px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 .pbx-function__item .item9__content .bg-11 {
   position: relative;
@@ -5071,13 +6416,24 @@ footer {
   line-height: 1.4;
   letter-spacing: 1.2px;
 }
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item9__content_item {
+    width: 100%;
+  }
+}
 .pbx-function__item .item9__content_item_img {
   margin-top: 20px;
+  margin-bottom: 60px;
 }
 .pbx-function__item .item9__content_item .option {
   text-align: right;
   padding-top: 16px;
   font-size: 12px;
+}
+@media screen and (max-width: 768px) {
+  .pbx-function__item .item9__content_item .option {
+    padding-top: 0;
+  }
 }
 .pbx-function__item .item9__content_item .option p {
   display: inline-block;
@@ -5090,6 +6446,12 @@ footer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .pbx-price__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .pbx-price__title {
   text-align: center;
   padding-bottom: 40px;
@@ -5099,14 +6461,44 @@ footer {
   font-weight: 700;
   color: #1e88ff;
 }
+@media screen and (max-width: 599px) {
+  .pbx-price__title p {
+    font-size: 16px;
+  }
+}
 .pbx-price__title b {
   font-size: 48px;
   font-weight: 900;
   color: #3a3e40;
 }
+@media screen and (max-width: 768px) {
+  .pbx-price__title b {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-price__title b {
+    font-size: 34px;
+  }
+}
 .pbx-price__content {
   width: 56%;
   margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+  .pbx-price__content {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .pbx-price__content {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-price__content {
+    width: 90%;
+  }
 }
 .pbx-price__content_title {
   background: #1e88ff;
@@ -5120,11 +6512,21 @@ footer {
   font-weight: 700;
   letter-spacing: 1.2px;
 }
+@media screen and (max-width: 599px) {
+  .pbx-price__content_title h5 {
+    font-size: 18px;
+  }
+}
 .pbx-price__content_title p {
   text-align: center;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1.2px;
+}
+@media screen and (max-width: 599px) {
+  .pbx-price__content_title p {
+    font-size: 12px;
+  }
 }
 .pbx-price__content_item {
   width: 100%;
@@ -5135,17 +6537,54 @@ footer {
   background: #fff;
   font-size: 18px;
 }
+@media screen and (max-width: 1440px) {
+  .pbx-price__content_item {
+    padding: 25px 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-price__content_item {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-price__content_item {
+    padding: 20px 20px;
+  }
+}
 .pbx-price__content_item_left {
   width: 50%;
   color: #3a3e40;
   line-height: 1.4;
 }
+@media screen and (max-width: 768px) {
+  .pbx-price__content_item_left {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-price__content_item_left {
+    width: 90%;
+  }
+}
 .pbx-price__content_item_left b {
   font-weight: 700;
+  font-size: 16px;
+}
+@media screen and (max-width: 599px) {
+  .pbx-price__content_item_left b {
+    font-size: 14px;
+  }
 }
 .pbx-price__content_item_left p {
   font-size: 12px;
   font-weight: 400;
+}
+@media screen and (max-width: 599px) {
+  .pbx-price__content_item_left p {
+    font-size: 10px;
+  }
 }
 .pbx-price__content_item_right {
   width: 50%;
@@ -5153,6 +6592,17 @@ footer {
   display: flex;
   flex-direction: column;
   line-height: 1.4;
+}
+@media screen and (max-width: 768px) {
+  .pbx-price__content_item_right {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-price__content_item_right {
+    width: 90%;
+    font-size: 16px;
+  }
 }
 .pbx-price__content_item_right b {
   font-weight: 700;
@@ -5184,12 +6634,39 @@ footer {
   font-weight: 700;
   font-size: 18px;
 }
+@media screen and (max-width: 768px) {
+  .pbx-price__content .basic-function__content {
+    font-size: 16px;
+  }
+}
 .pbx-price__content .basic-function__content ul {
   color: #3a3e40;
-  width: 50%;
+  width: 55%;
   text-align: left;
   margin: 0 auto;
   padding-left: 40px;
+}
+@media screen and (max-width: 1700px) {
+  .pbx-price__content .basic-function__content ul {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .pbx-price__content .basic-function__content ul {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-price__content .basic-function__content ul {
+    width: 90%;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-price__content .basic-function__content ul {
+    width: 100%;
+    font-size: 14px;
+  }
 }
 .pbx-price__content .option-function {
   width: 100%;
@@ -5200,6 +6677,16 @@ footer {
   font-size: 18px;
   background: #fff;
 }
+@media screen and (max-width: 768px) {
+  .pbx-price__content .option-function {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-price__content .option-function {
+    padding: 20px 20px;
+  }
+}
 .pbx-price__content .option-function__left {
   width: 50%;
   color: #3a3e40;
@@ -5207,12 +6694,41 @@ footer {
   padding-left: 40px;
   font-weight: 700;
 }
+@media screen and (max-width: 1440px) {
+  .pbx-price__content .option-function__left {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-price__content .option-function__left {
+    width: 80%;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-price__content .option-function__left {
+    width: 90%;
+    font-size: 14px;
+  }
+}
 .pbx-price__content .option-function__right {
   width: 50%;
   color: #1e88ff;
   display: flex;
   flex-direction: column;
   line-height: 1.4;
+}
+@media screen and (max-width: 768px) {
+  .pbx-price__content .option-function__right {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-price__content .option-function__right {
+    width: 90%;
+    font-size: 16px;
+  }
 }
 .pbx-price__content .option-function__right b {
   font-weight: 700;
@@ -5225,6 +6741,12 @@ footer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .pbx-faq__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .pbx-faq__title {
   text-align: center;
   padding-bottom: 40px;
@@ -5234,14 +6756,44 @@ footer {
   font-weight: 700;
   color: #1e88ff;
 }
+@media screen and (max-width: 599px) {
+  .pbx-faq__title p {
+    font-size: 16px;
+  }
+}
 .pbx-faq__title b {
   font-size: 48px;
   font-weight: 900;
   color: #3a3e40;
 }
+@media screen and (max-width: 768px) {
+  .pbx-faq__title b {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-faq__title b {
+    font-size: 34px;
+  }
+}
 .pbx-faq__content {
   width: 60%;
   margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .pbx-faq__content {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pbx-faq__content {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-faq__content {
+    width: 90%;
+  }
 }
 .pbx-faq__content .border-dotted {
   border-top: 1px dashed #7e8387;
@@ -5260,6 +6812,12 @@ footer {
   padding-left: 70px;
   position: relative;
 }
+@media screen and (max-width: 599px) {
+  .pbx-faq__content_item b {
+    font-size: 18px;
+    padding-left: 40px;
+  }
+}
 .pbx-faq__content_item b::after {
   content: "Q";
   color: #1e88ff;
@@ -5269,16 +6827,40 @@ footer {
   top: 26px;
   left: 0;
 }
+@media screen and (max-width: 599px) {
+  .pbx-faq__content_item b::after {
+    font-size: 32px;
+    top: 30px;
+  }
+}
 .pbx-faq__content_item_p {
   padding: 20px 0 40px 70px;
   font-weight: 400;
   line-height: 1.2;
+}
+@media screen and (max-width: 599px) {
+  .pbx-faq__content_item_p {
+    padding: 20px 0 40px 40px;
+    font-size: 14px;
+  }
 }
 
 .pbx-form {
   background: #1e88ff;
   padding-top: 140px;
   padding-bottom: 120px;
+}
+@media screen and (max-width: 768px) {
+  .pbx-form {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-form {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .pbx-form__inner {
   padding: 80px 40px;
@@ -5287,11 +6869,22 @@ footer {
   margin: 0 auto;
   border-radius: 30px;
 }
+@media screen and (max-width: 599px) {
+  .pbx-form__inner {
+    width: 90%;
+    padding: 40px 20px;
+  }
+}
 .pbx-form__title {
   text-align: center;
   line-height: 1.6;
   font-size: 32px;
   color: #3a3e40;
+}
+@media screen and (max-width: 768px) {
+  .pbx-form__title {
+    font-size: 28px;
+  }
 }
 .pbx-form__title b {
   font-weight: 900;
@@ -5302,6 +6895,12 @@ footer {
   background: #f9f9f9;
   margin-top: 40px;
   border-radius: 30px;
+}
+@media screen and (max-width: 599px) {
+  .pbx-form__card {
+    width: 100%;
+    margin-top: 24px;
+  }
 }
 .pbx-form__card_inner {
   padding: 40px 40px 20px 40px;
@@ -5317,6 +6916,16 @@ footer {
   font-size: 48px;
   font-weight: 700;
 }
+@media screen and (max-width: 599px) {
+  .pbx-form__card_inner .tel {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .pbx-form__card_inner .tel {
+    font-size: 28px;
+  }
+}
 .pbx-form__content {
   margin: 0 auto;
   width: 75%;
@@ -5326,14 +6935,37 @@ footer {
   font-weight: 400;
   color: #333;
 }
+@media screen and (max-width: 768px) {
+  .pbx-form__content {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-form__content {
+    width: 90%;
+    margin-top: 40px;
+    font-size: 14px;
+  }
+}
 .pbx-form__wrapper {
   width: 60%;
   margin: 0 auto;
   margin-top: 60px;
 }
+@media screen and (max-width: 599px) {
+  .pbx-form__wrapper {
+    width: 90%;
+    margin-top: 40px;
+  }
+}
 .pbx-form__wrapper label {
   font-weight: bold;
   color: #3a3e40;
+}
+@media screen and (max-width: 599px) {
+  .pbx-form__wrapper label {
+    font-size: 14px;
+  }
 }
 .pbx-form__wrapper .required {
   color: red;
@@ -5409,6 +7041,11 @@ footer {
   margin-top: 24px;
   width: 210px;
 }
+@media screen and (max-width: 599px) {
+  .pbx-form__wrapper .submit {
+    margin-top: 0;
+  }
+}
 .pbx-form__wrapper .submit:hover {
   opacity: 0.9;
 }
@@ -5437,18 +7074,34 @@ footer {
 .pbx-form__wrapper .use__item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-left: 16px;
 }
 .pbx-form__wrapper .use__item p {
   color: #3a3e40;
   font-family: "Lato";
   font-size: 16px;
+  width: 75px;
+}
+@media screen and (max-width: 599px) {
+  .pbx-form__wrapper .use__item p {
+    width: 50px;
+  }
 }
 .pbx-form__wrapper .use__item input {
   margin: 0;
   width: 350px;
   margin-left: auto;
+}
+@media screen and (max-width: 900px) {
+  .pbx-form__wrapper .use__item input {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .pbx-form__wrapper .use__item input {
+    width: 160px;
+  }
 }
 .pbx-form__wrapper input[type=submit] {
   font-size: 14px;
@@ -5714,6 +7367,11 @@ footer {
 .next-analysis__inner {
   padding: 80px 0;
 }
+@media screen and (max-width: 599px) {
+  .next-analysis__inner {
+    padding: 40px 0;
+  }
+}
 .next-analysis__content {
   max-width: 1280px;
   margin: 0 auto;
@@ -5736,6 +7394,11 @@ footer {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 599px) {
+  .next-analysis__content_inner {
+    padding: 40px 20px 10px 20px;
+  }
+}
 .next-analysis__content_item {
   width: 45%;
   padding: 0 10px 40px;
@@ -5744,6 +7407,11 @@ footer {
   .next-analysis__content_item {
     width: 80%;
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .next-analysis__content_item {
+    width: 100%;
   }
 }
 .next-analysis__content_item .img {
@@ -5755,6 +7423,11 @@ footer {
 @media screen and (max-width: 1024px) {
   .next-analysis__content_item .img {
     height: 200px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .next-analysis__content_item .img {
+    height: 160px;
   }
 }
 .next-analysis__content_item h4 {
@@ -5770,10 +7443,21 @@ footer {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 599px) {
+  .next-analysis__content_item h4 {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+}
 .next-analysis__content_item p {
   line-height: 1.6;
   font-weight: 400;
   color: #3a3e40;
+}
+@media screen and (max-width: 599px) {
+  .next-analysis__content_item p {
+    font-size: 14px;
+  }
 }
 
 .next-outbound {
@@ -5781,6 +7465,11 @@ footer {
 }
 .next-outbound__inner {
   padding: 80px 0px;
+}
+@media screen and (max-width: 599px) {
+  .next-outbound__inner {
+    padding: 40px 0px;
+  }
 }
 .next-outbound__item {
   max-width: 900px;
@@ -5804,11 +7493,22 @@ footer {
     padding: 40px 60px;
   }
 }
+@media screen and (max-width: 599px) {
+  .next-outbound__item {
+    padding: 40px 28px;
+    max-width: 90%;
+  }
+}
 .next-outbound__item h4 {
   font-size: 36px;
   font-weight: 900;
   color: #419438;
   padding-bottom: 20px;
+}
+@media screen and (max-width: 599px) {
+  .next-outbound__item h4 {
+    font-size: 24px;
+  }
 }
 .next-outbound__item p {
   font-family: "Lato";
@@ -5818,8 +7518,23 @@ footer {
   letter-spacing: 1.3px;
   line-height: 1.4;
 }
+@media screen and (max-width: 599px) {
+  .next-outbound__item p {
+    font-size: 14px;
+  }
+}
 .next-outbound__item_video {
   width: 70%;
+}
+@media screen and (max-width: 768px) {
+  .next-outbound__item_video {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .next-outbound__item_video {
+    width: 100%;
+  }
 }
 .next-outbound__item_video video {
   width: 100%;
@@ -5834,6 +7549,11 @@ footer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .next-management__inner {
+    padding-bottom: 40px;
+  }
+}
 .next-management__item {
   max-width: 900px;
   margin: 0 auto;
@@ -5846,11 +7566,32 @@ footer {
   border-radius: 30px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 1024px) {
+  .next-management__item {
+    max-width: 85%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .next-management__item {
+    padding: 40px 60px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .next-management__item {
+    padding: 40px 28px;
+    max-width: 90%;
+  }
+}
 .next-management__item h4 {
   font-size: 36px;
   font-weight: 900;
   color: #419438;
   padding-bottom: 20px;
+}
+@media screen and (max-width: 599px) {
+  .next-management__item h4 {
+    font-size: 24px;
+  }
 }
 .next-management__item p {
   font-family: "Lato";
@@ -5860,8 +7601,23 @@ footer {
   letter-spacing: 1.3px;
   line-height: 1.4;
 }
+@media screen and (max-width: 599px) {
+  .next-management__item p {
+    font-size: 14px;
+  }
+}
 .next-management__item_video {
   width: 70%;
+}
+@media screen and (max-width: 768px) {
+  .next-management__item_video {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .next-management__item_video {
+    width: 100%;
+  }
 }
 .next-management__item_video video {
   width: 100%;
@@ -5879,6 +7635,20 @@ footer {
   line-height: 1.4;
   font-family: "Lato";
   color: #333;
+}
+@media screen and (max-width: 768px) {
+  .next-management .others__content {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .next-management .others__content {
+    font-size: 14px;
+  }
 }
 
 .next-faq {
@@ -5898,14 +7668,49 @@ footer {
   color: #419438;
   letter-spacing: 11px;
 }
+@media screen and (max-width: 768px) {
+  .next-faq__title p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .next-faq__title p {
+    font-size: 12px;
+  }
+}
 .next-faq__title b {
   font-size: 48px;
   font-weight: 900;
   color: #3a3e40;
 }
+@media screen and (max-width: 768px) {
+  .next-faq__title b {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .next-faq__title b {
+    font-size: 32px;
+  }
+}
 .next-faq__content {
   width: 60%;
   margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .next-faq__content {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .next-faq__content {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .next-faq__content {
+    width: 90%;
+  }
 }
 .next-faq__content .border-dotted {
   border-top: 1px dashed #7e8387;
@@ -5924,6 +7729,12 @@ footer {
   padding-left: 70px;
   position: relative;
 }
+@media screen and (max-width: 599px) {
+  .next-faq__content_item b {
+    font-size: 18px;
+    padding-left: 40px;
+  }
+}
 .next-faq__content_item b::after {
   content: "Q";
   color: #419438;
@@ -5933,10 +7744,23 @@ footer {
   top: 26px;
   left: 0;
 }
+@media screen and (max-width: 599px) {
+  .next-faq__content_item b::after {
+    font-size: 32px;
+    top: 30px;
+  }
+}
 .next-faq__content_item_p {
   padding: 20px 0 40px 70px;
   font-weight: 400;
   line-height: 1.2;
+  word-wrap: break-word;
+}
+@media screen and (max-width: 599px) {
+  .next-faq__content_item_p {
+    padding: 20px 0 40px 40px;
+    font-size: 14px;
+  }
 }
 .next-faq__content_item_p .item_p_bold {
   font-weight: 700;
@@ -6389,6 +8213,12 @@ footer {
   padding-top: 80px;
   padding-bottom: 120px;
 }
+@media screen and (max-width: 599px) {
+  .trial-form {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
 .trial-form__inner {
   width: 80%;
   margin: 0 auto;
@@ -6396,15 +8226,36 @@ footer {
   background: #fff;
   border-radius: 30px;
 }
+@media screen and (max-width: 599px) {
+  .trial-form__inner {
+    width: 90%;
+    padding: 40px 20px;
+  }
+}
 .trial-form__title {
   text-align: center;
   line-height: 1.4;
   padding-bottom: 60px;
 }
+@media screen and (max-width: 599px) {
+  .trial-form__title {
+    padding-bottom: 32px;
+  }
+}
 .trial-form__title h3 {
   color: #419438;
   font-weight: 900;
   font-size: 48px;
+}
+@media screen and (max-width: 900px) {
+  .trial-form__title h3 {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .trial-form__title h3 {
+    font-size: 28px;
+  }
 }
 .trial-form__title b {
   font-weight: 900;
@@ -6412,27 +8263,69 @@ footer {
   color: #3a3e40;
   letter-spacing: 4px;
 }
+@media screen and (max-width: 900px) {
+  .trial-form__title b {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .trial-form__title b {
+    font-size: 20px;
+  }
+}
 .trial-form__check {
   width: 92%;
   margin: 0 auto;
   background: #f9f9f9;
 }
 .trial-form__check b {
-  padding-top: 28px;
+  padding-top: 40px;
   font-weight: 900;
   font-size: 24px;
   color: #419438;
   padding-left: 60px;
   display: block;
 }
+@media screen and (max-width: 1024px) {
+  .trial-form__check b {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .trial-form__check b {
+    font-size: 20px;
+  }
+}
 .trial-form__check ul {
   width: 900px;
   margin: 0 auto;
   padding-top: 12px;
-  padding-bottom: 48px;
+  padding-bottom: 40px;
   font-weight: 700;
   color: #3a3e40;
   line-height: 1.6;
+  list-style-type: disc;
+}
+@media screen and (max-width: 1440px) {
+  .trial-form__check ul {
+    width: auto;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .trial-form__check ul {
+    font-size: 14px;
+  }
+}
+.trial-form__check ul li::marker {
+  color: #419438;
+  font-size: 18px;
+}
+@media screen and (max-width: 599px) {
+  .trial-form__check ul li::marker {
+    font-size: 14px;
+  }
 }
 .trial-form__card {
   width: 400px;
@@ -6441,9 +8334,20 @@ footer {
   margin-top: 40px;
   border-radius: 30px;
 }
+@media screen and (max-width: 599px) {
+  .trial-form__card {
+    width: 90%;
+    margin-top: 24px;
+  }
+}
 .trial-form__card_inner {
   padding: 40px 40px 20px 40px;
   text-align: center;
+}
+@media screen and (max-width: 599px) {
+  .trial-form__card_inner {
+    padding: 20px 10px 10px 10px;
+  }
 }
 .trial-form__card_inner p {
   padding-bottom: 20px;
@@ -6451,9 +8355,27 @@ footer {
   font-weight: 400;
   color: #3a3e40;
 }
+@media screen and (max-width: 599px) {
+  .trial-form__card_inner p {
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .trial-form__card_inner p {
+    font-size: 10px;
+  }
+}
 .trial-form__card_inner .tel {
+  display: block;
   font-size: 48px;
   font-weight: 700;
+  margin-bottom: 4px;
+}
+@media screen and (max-width: 599px) {
+  .trial-form__card_inner .tel {
+    font-size: 32px;
+  }
 }
 .trial-form__contact {
   color: #6bb42d;
@@ -6462,10 +8384,27 @@ footer {
   text-align: center;
   padding-top: 56px;
 }
+@media screen and (max-width: 599px) {
+  .trial-form__contact {
+    font-size: 24px;
+  }
+}
 .trial-form__wrapper {
   width: 60%;
   margin: 0 auto;
   margin-top: 60px;
+}
+@media screen and (max-width: 768px) {
+  .trial-form__wrapper {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .trial-form__wrapper {
+    width: 90%;
+    font-size: 14px;
+    margin-top: 32px;
+  }
 }
 .trial-form__wrapper label {
   font-weight: bold;
@@ -6630,6 +8569,16 @@ footer {
   position: relative;
   overflow: hidden;
 }
+@media screen and (max-width: 1440px) {
+  .design-mainbg {
+    height: 580px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-mainbg {
+    height: 520px;
+  }
+}
 .design-mainbg::before {
   content: "";
   display: block;
@@ -6639,21 +8588,74 @@ footer {
   bottom: 0;
   left: 0;
   background-image: url(/wp-content/themes/DreamSolution/assets/image/site-design/homepage-0.png);
-  background-size: auto;
+  background-size: 45%;
   background-repeat: no-repeat;
   background-position: 85%;
   transform: rotate(5deg) scale(1.3);
   z-index: 1; /* 背景画像を下に配置するためにz-indexを指定 */
 }
+@media screen and (max-width: 1440px) {
+  .design-mainbg::before {
+    background-size: 50%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .design-mainbg::before {
+    background-position: 95%;
+    background-size: 54%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-mainbg::before {
+    background-position: 200%;
+    background-size: 78%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-mainbg::before {
+    background-position: -180%;
+    background-size: 120%;
+  }
+}
 .design-mainbg__content {
   margin-left: 60px;
   z-index: 2;
+}
+@media screen and (max-width: 1440px) {
+  .design-mainbg__content {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-mainbg__content {
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-mainbg__content {
+    margin-left: 20px;
+  }
 }
 .design-mainbg__content .marunage {
   font-size: 28px;
   font-weight: 500;
   color: #3a3e40;
   margin-bottom: 28px;
+}
+@media screen and (max-width: 900px) {
+  .design-mainbg__content .marunage {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-mainbg__content .marunage {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-mainbg__content .marunage {
+    font-size: 14px;
+  }
 }
 .design-mainbg__content .marunage p {
   display: inline;
@@ -6665,12 +8667,43 @@ footer {
   font-weight: 900;
   color: #ff7900;
 }
+@media screen and (max-width: 900px) {
+  .design-mainbg__content h1 {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-mainbg__content h1 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-mainbg__content h1 {
+    font-size: 20px;
+  }
+}
 .design-mainbg__content h2 {
   font-weight: 900;
   font-size: 72px;
   color: #3a3e40;
   text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
   padding-bottom: 40px;
+}
+@media screen and (max-width: 900px) {
+  .design-mainbg__content h2 {
+    font-size: 62px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-mainbg__content h2 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-mainbg__content h2 {
+    font-size: 30px;
+    padding-bottom: 28px;
+  }
 }
 .design-mainbg__content .tags {
   display: flex;
@@ -6681,6 +8714,13 @@ footer {
        column-gap: 20px;
   width: 550px;
 }
+@media screen and (max-width: 599px) {
+  .design-mainbg__content .tags {
+    width: 100%;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+}
 .design-mainbg__content .tag {
   background: #ffaa5e;
   color: #fff;
@@ -6689,6 +8729,16 @@ footer {
 .design-mainbg__content .tag p {
   padding: 10px 20px;
 }
+@media screen and (max-width: 768px) {
+  .design-mainbg__content .tag p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-mainbg__content .tag p {
+    font-size: 12px;
+  }
+}
 .design-mainbg__content .soudan {
   background: #ff7900;
   border-radius: 60px;
@@ -6696,12 +8746,33 @@ footer {
   display: inline-block;
   transition: all 0.3s;
 }
+@media screen and (max-width: 599px) {
+  .design-mainbg__content .soudan {
+    margin-top: 32px;
+  }
+}
 .design-mainbg__content .soudan p {
   padding: 20px 60px;
   color: #fff;
   line-height: 1.6;
   font-size: 32px;
   font-weight: 900;
+}
+@media screen and (max-width: 900px) {
+  .design-mainbg__content .soudan p {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-mainbg__content .soudan p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-mainbg__content .soudan p {
+    font-size: 16px;
+    padding: 15px 40px;
+  }
 }
 .design-mainbg__content .soudan:hover {
   background-color: #ff6600;
@@ -6719,14 +8790,39 @@ footer {
   max-width: 1280px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1200px) {
+  .design-old {
+    max-width: 100%;
+  }
+}
 .design-old__inner {
   padding: 80px 0;
+}
+@media screen and (max-width: 599px) {
+  .design-old__inner {
+    padding: 60px 0;
+  }
 }
 .design-old__title {
   text-align: center;
   font-size: 40px;
   font-weight: 900;
   line-height: 1.2;
+}
+@media screen and (max-width: 768px) {
+  .design-old__title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-old__title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-old__title {
+    font-size: 22px;
+  }
 }
 .design-old__title h3 {
   padding-bottom: 28px;
@@ -6748,16 +8844,49 @@ footer {
   color: #333;
   padding-top: 40px;
 }
+@media screen and (max-width: 768px) {
+  .design-old__content {
+    width: 80%;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-old__content {
+    font-size: 14px;
+    padding-top: 28px;
+  }
+}
 
 .design-realization__inner {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+@media screen and (max-width: 599px) {
+  .design-realization__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .design-realization__title {
   text-align: center;
   font-size: 40px;
   font-weight: 900;
   line-height: 1.2;
+}
+@media screen and (max-width: 768px) {
+  .design-realization__title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-realization__title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-realization__title {
+    font-size: 22px;
+  }
 }
 .design-realization__title h3 {
   padding-bottom: 28px;
@@ -6774,17 +8903,53 @@ footer {
   margin: 0 auto;
   padding-top: 40px;
 }
+@media screen and (max-width: 1024px) {
+  .design-realization__items {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-realization__items {
+    padding-top: 20px;
+  }
+}
 .design-realization__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
+@media screen and (max-width: 900px) {
+  .design-realization__item {
+    flex-direction: column;
+  }
+}
 .design-realization__item_left {
   width: 50%;
 }
+@media screen and (max-width: 900px) {
+  .design-realization__item_left {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-realization__item_left {
+    width: 85%;
+  }
+}
 .design-realization__item_right {
   width: 45%;
+}
+@media screen and (max-width: 900px) {
+  .design-realization__item_right {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-realization__item_right {
+    width: 85%;
+  }
 }
 .design-realization__item_right_content {
   color: #3a3e40;
@@ -6795,14 +8960,45 @@ footer {
   color: #ff7900;
   padding-bottom: 10px;
 }
+@media screen and (max-width: 768px) {
+  .design-realization__item_right_content .point {
+    font-size: 16px;
+    padding-bottom: 0px;
+  }
+}
 .design-realization__item_right_content h4 {
   font-size: 48px;
   font-weight: 900;
   padding-bottom: 20px;
 }
+@media screen and (max-width: 1024px) {
+  .design-realization__item_right_content h4 {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-realization__item_right_content h4 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-realization__item_right_content h4 {
+    font-size: 32px;
+  }
+}
 .design-realization__item_right_content p {
   font-size: 18px;
   line-height: 1.6;
+}
+@media screen and (max-width: 1024px) {
+  .design-realization__item_right_content p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-realization__item_right_content p {
+    font-size: 14px;
+  }
 }
 
 .design-promotion {
@@ -6812,12 +9008,33 @@ footer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .design-promotion__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .design-promotion__title {
   text-align: center;
   font-size: 40px;
   font-weight: 900;
   line-height: 1.2;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .design-promotion__title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-promotion__title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-promotion__title {
+    font-size: 22px;
+  }
 }
 .design-promotion__title h3 {
   padding-bottom: 28px;
@@ -6836,6 +9053,24 @@ footer {
   color: #3a3e40;
   font-size: 18px;
 }
+@media screen and (max-width: 1440px) {
+  .design-promotion__p {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .design-promotion__p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-promotion__p {
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .design-promotion__content {
   max-width: 1280px;
   margin: 0 auto;
@@ -6843,11 +9078,33 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 1440px) {
+  .design-promotion__content {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .design-promotion__content {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 24px;
+  }
+}
 .design-promotion__content_left {
   width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .design-promotion__content_left {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-promotion__content_left {
+    width: 100%;
+  }
 }
 .design-promotion__content_left h3 {
   padding-bottom: 20px;
@@ -6856,14 +9113,50 @@ footer {
   color: #ff7900;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+@media screen and (max-width: 1200px) {
+  .design-promotion__content_left h3 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .design-promotion__content_left h3 {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-promotion__content_left h3 {
+    font-size: 32px;
+  }
+}
 .design-promotion__content_left p {
   font-size: 18px;
   line-height: 1.5;
   color: #3a3e40;
   font-weight: 400;
 }
+@media screen and (max-width: 1024px) {
+  .design-promotion__content_left p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-promotion__content_left p {
+    font-size: 14px;
+  }
+}
 .design-promotion__content_right {
   width: 50%;
+}
+@media screen and (max-width: 900px) {
+  .design-promotion__content_right {
+    width: 80%;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-promotion__content_right {
+    width: 100%;
+  }
 }
 
 .design-goodat {
@@ -6873,12 +9166,33 @@ footer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .design-goodat__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .design-goodat__title {
   text-align: center;
   font-size: 40px;
   font-weight: 900;
   line-height: 1.2;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .design-goodat__title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-goodat__title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-goodat__title {
+    font-size: 22px;
+  }
 }
 .design-goodat__title h3 {
   padding-bottom: 28px;
@@ -6897,15 +9211,46 @@ footer {
   border-radius: 30px;
   background: #fff;
 }
+@media screen and (max-width: 1440px) {
+  .design-goodat__content {
+    max-width: 90%;
+  }
+}
 .design-goodat__content_inner {
   padding: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+@media screen and (max-width: 900px) {
+  .design-goodat__content_inner {
+    padding: 20px 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-goodat__content_inner {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-goodat__content_inner {
+    padding: 0 20px;
+  }
+}
 .design-goodat__content_item {
   width: 45%;
   padding: 0px 10px 40px;
+}
+@media screen and (max-width: 768px) {
+  .design-goodat__content_item {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-goodat__content_item {
+    width: 100%;
+  }
 }
 .design-goodat__content_item .item-img {
   border-radius: 20px;
@@ -6919,9 +9264,20 @@ footer {
   text-align: center;
   padding-bottom: 16px;
 }
+@media screen and (max-width: 599px) {
+  .design-goodat__content_item .item-title {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+}
 .design-goodat__content_item p {
   color: #3a3e40;
   line-height: 1.6;
+}
+@media screen and (max-width: 599px) {
+  .design-goodat__content_item p {
+    font-size: 14px;
+  }
 }
 
 .design-flow {
@@ -6931,12 +9287,33 @@ footer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .design-flow__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .design-flow__title {
   text-align: center;
   font-size: 40px;
   font-weight: 900;
   line-height: 1.2;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .design-flow__title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-flow__title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-flow__title {
+    font-size: 22px;
+  }
 }
 .design-flow__title h3 {
   padding-bottom: 28px;
@@ -6953,6 +9330,22 @@ footer {
   margin: 0 auto;
   padding-left: 100px;
 }
+@media screen and (max-width: 1440px) {
+  .design-flow__content {
+    max-width: 90%;
+    padding-left: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-flow__content {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-flow__content {
+    padding-left: 0px;
+  }
+}
 .design-flow__content_step {
   color: #ff7900;
   font-size: 28px;
@@ -6961,11 +9354,21 @@ footer {
   padding-bottom: 16px;
   background: #f9f9f9;
 }
+@media screen and (max-width: 599px) {
+  .design-flow__content_step {
+    font-size: 24px;
+  }
+}
 .design-flow__content dl {
   margin-left: 40px;
   border-left: 1px solid #ff7900;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .design-flow__content dl {
+    margin-left: 20px;
+  }
 }
 .design-flow__content dl .step-wrap {
   background: #fff;
@@ -6974,6 +9377,22 @@ footer {
   align-items: center;
   padding: 28px 40px 28px 60px;
   position: relative;
+}
+@media screen and (max-width: 1440px) {
+  .design-flow__content dl .step-wrap {
+    padding: 28px 28px 28px 30px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .design-flow__content dl .step-wrap {
+    padding: 28px 28px 28px 24px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-flow__content dl .step-wrap {
+    margin-left: 40px;
+    flex-direction: column;
+  }
 }
 .design-flow__content dl .step-wrap:before {
   content: "";
@@ -7001,8 +9420,23 @@ footer {
   font-weight: 900;
   color: #3a3e40;
 }
+@media screen and (max-width: 599px) {
+  .design-flow__content dl dt {
+    padding-left: 0;
+  }
+}
 .design-flow__content dl dt img {
   width: 48px;
+}
+@media screen and (max-width: 599px) {
+  .design-flow__content dl dt img {
+    margin-bottom: 10px;
+    width: 56px;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
 .design-flow__content dl dd {
   color: #333;
@@ -7010,14 +9444,30 @@ footer {
   font-size: 18px;
   line-height: 1.4;
 }
+@media screen and (max-width: 599px) {
+  .design-flow__content dl dd {
+    font-size: 16px;
+    padding-left: 0;
+  }
+}
 .design-flow__content dl dd b {
   font-weight: 700;
   padding-bottom: 8px;
   display: block;
 }
+@media screen and (max-width: 599px) {
+  .design-flow__content dl dd b {
+    text-align: center;
+  }
+}
 .design-flow__content dl dd p {
   font-weight: 400;
   font-size: 16px;
+}
+@media screen and (max-width: 599px) {
+  .design-flow__content dl dd p {
+    font-size: 14px;
+  }
 }
 
 .design-plan {
@@ -7027,12 +9477,33 @@ footer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .design-plan__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .design-plan__title {
   text-align: center;
   font-size: 40px;
   font-weight: 900;
   line-height: 1.2;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .design-plan__title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-plan__title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-plan__title {
+    font-size: 22px;
+  }
 }
 .design-plan__title h3 {
   padding-bottom: 28px;
@@ -7050,14 +9521,69 @@ footer {
   display: flex;
   justify-content: space-around;
 }
+@media screen and (max-width: 1440px) {
+  .design-plan__cards {
+    max-width: 90%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan__cards {
+    max-width: 96%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-plan__cards {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .design-plan__card {
   width: 380px;
   height: 660px;
   margin-top: 60px;
   background: #fff;
 }
+@media screen and (max-width: 1440px) {
+  .design-plan__card {
+    width: 31%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan__card {
+    width: 228px;
+    height: 580px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-plan__card {
+    width: 380px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-plan__card {
+    width: 340px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-plan__card {
+    width: 320px;
+  }
+}
 .design-plan__card_inner {
   padding: 60px 40px;
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan__card_inner {
+    padding: 40px 20px;
+  }
 }
 .design-plan__card_title {
   color: #333333;
@@ -7065,11 +9591,62 @@ footer {
   padding-bottom: 20px;
   font-size: 24px;
 }
+@media screen and (max-width: 1440px) {
+  .design-plan__card_title {
+    padding-bottom: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan__card_title {
+    font-size: 18px;
+    padding-bottom: 4px;
+    margin-left: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-plan__card_title {
+    margin-left: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-plan__card_title {
+    margin-left: 8px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-plan__card_title {
+    margin-left: 0;
+  }
+}
 .design-plan__card .getugaku {
   color: #282828;
   font-size: 20px;
   font-weight: 400;
   padding-bottom: 20px;
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan__card .getugaku {
+    font-size: 14px;
+    padding-bottom: 10px;
+    margin-left: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-plan__card .getugaku {
+    font-size: 16px;
+    padding-bottom: 10px;
+    margin-left: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-plan__card .getugaku {
+    margin-left: 8px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-plan__card .getugaku {
+    margin-left: 0;
+  }
 }
 .design-plan__card .getugaku span {
   font-size: 72px;
@@ -7078,12 +9655,54 @@ footer {
   margin-left: 10px;
   margin-right: 10px;
 }
+@media screen and (max-width: 1440px) {
+  .design-plan__card .getugaku span {
+    font-size: 58px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan__card .getugaku span {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-plan__card .getugaku span {
+    font-size: 56px;
+  }
+}
 .design-plan__card .bunkatu {
   line-height: 1.2;
   font-weight: 400;
   font-size: 16px;
   color: #777777;
   padding-bottom: 60px;
+}
+@media screen and (max-width: 1440px) {
+  .design-plan__card .bunkatu {
+    padding-bottom: 40px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan__card .bunkatu {
+    font-size: 14px;
+    padding-bottom: 40px;
+    margin-left: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-plan__card .bunkatu {
+    margin-left: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-plan__card .bunkatu {
+    margin-left: 8px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-plan__card .bunkatu {
+    margin-left: 0;
+  }
 }
 .design-plan__card .checks {
   display: flex;
@@ -7102,6 +9721,11 @@ footer {
   font-size: 18px;
   color: #111111;
 }
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan__card .checks b {
+    font-size: 14px;
+  }
+}
 .design-plan__card .checks p {
   display: flex;
   align-items: center;
@@ -7109,15 +9733,51 @@ footer {
   font-size: 18px;
   color: #111111;
 }
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan__card .checks p {
+    font-size: 14px;
+  }
+}
 .design-plan .recome-card {
   height: 720px;
   margin-top: 0;
 }
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan .recome-card {
+    height: 640px;
+  }
+}
 .design-plan .recome-card .design-plan__card_inner {
   padding-top: 30px;
 }
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan .recome-card .design-plan__card_inner {
+    padding-top: 15px;
+  }
+}
 .design-plan .recome-card__title img {
   width: 80px;
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan .recome-card__title img {
+    width: 70px;
+    margin-left: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-plan .recome-card__title img {
+    margin-left: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-plan .recome-card__title img {
+    margin-left: 8px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-plan .recome-card__title img {
+    margin-left: 0;
+  }
 }
 .design-plan .recome-card__title_badge {
   background: linear-gradient(to right, #ff4500, #ffb649);
@@ -7126,12 +9786,38 @@ footer {
   margin-top: 8px;
   margin-bottom: 6px;
 }
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan .recome-card__title_badge {
+    width: 125px;
+    margin-left: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-plan .recome-card__title_badge {
+    margin-left: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-plan .recome-card__title_badge {
+    margin-left: 8px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-plan .recome-card__title_badge {
+    margin-left: 0;
+  }
+}
 .design-plan .recome-card__title_badge p {
   color: #fff;
   padding: 6px 12px;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.2;
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .design-plan .recome-card__title_badge p {
+    font-size: 10px;
+  }
 }
 .design-plan__care {
   padding-top: 20px;
@@ -7143,6 +9829,17 @@ footer {
   color: #3a3e40;
   line-height: 1.8;
 }
+@media screen and (max-width: 768px) {
+  .design-plan__care {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-plan__care {
+    font-size: 12px;
+    padding-top: 0;
+  }
+}
 
 .design-faq {
   background: #F9F9F9;
@@ -7151,12 +9848,33 @@ footer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 599px) {
+  .design-faq__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .design-faq__title {
   text-align: center;
   font-size: 40px;
   font-weight: 900;
   line-height: 1.2;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .design-faq__title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-faq__title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .design-faq__title {
+    font-size: 22px;
+  }
 }
 .design-faq__title h3 {
   padding-bottom: 28px;
@@ -7171,6 +9889,21 @@ footer {
 .design-faq__content {
   width: 60%;
   margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .design-faq__content {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-faq__content {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .design-faq__content {
+    width: 90%;
+  }
 }
 .design-faq__content .border-dotted {
   border-top: 1px dashed #7e8387;
@@ -7189,6 +9922,12 @@ footer {
   padding-left: 70px;
   position: relative;
 }
+@media screen and (max-width: 599px) {
+  .design-faq__content_item b {
+    font-size: 18px;
+    padding-left: 40px;
+  }
+}
 .design-faq__content_item b::after {
   content: "Q";
   color: #ff7900;
@@ -7198,10 +9937,23 @@ footer {
   top: 26px;
   left: 0;
 }
+@media screen and (max-width: 599px) {
+  .design-faq__content_item b::after {
+    font-size: 32px;
+    top: 30px;
+  }
+}
 .design-faq__content_item_p {
   padding: 20px 0 40px 70px;
   font-weight: 400;
   line-height: 1.2;
+  word-wrap: break-word;
+}
+@media screen and (max-width: 599px) {
+  .design-faq__content_item_p {
+    padding: 20px 0 40px 40px;
+    font-size: 14px;
+  }
 }
 
 .single {
@@ -7316,7 +10068,7 @@ footer {
 }
 .single__text {
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.8;
   color: #333;
 }
 @media screen and (max-width: 1440px) {

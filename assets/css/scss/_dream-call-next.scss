@@ -5,7 +5,7 @@
   text-align: center;
   position: relative;
   padding-bottom: 60px;
-  @include w599{
+  @include w599 {
     padding-bottom: 40px;
   }
   &__content {
@@ -18,10 +18,10 @@
       color: #6bb42d;
       font-weight: 900;
       letter-spacing: 11px;
-      @include w768{
+      @include w768 {
         font-size: 16px;
       }
-      @include w599{
+      @include w599 {
         font-size: 12px;
       }
     }
@@ -29,10 +29,10 @@
       font-weight: 900;
       font-size: 48px;
       color: #3a3e40;
-      @include w768{
+      @include w768 {
         font-size: 42px;
       }
-      @include w599{
+      @include w599 {
         font-size: 32px;
       }
     }
@@ -43,12 +43,12 @@
     top: -50px;
     right: 32%;
     width: 200px;
-    @include w768{
+    @include w768 {
       right: auto;
       left: 50%;
       transform: translateX(-50%);
     }
-    @include w599{
+    @include w599 {
       width: 150px;
     }
   }
@@ -164,7 +164,7 @@
       @include w768 {
         width: 85%;
       }
-      @include w599{
+      @include w599 {
         width: 100%;
       }
       video {
@@ -179,13 +179,16 @@
   background: #f9f9f9;
   &__inner {
     padding: 80px 0;
+    @include w599 {
+      padding: 40px 0;
+    }
   }
   &__content {
     max-width: 1280px;
     margin: 0 auto;
     background: #fff;
     border-radius: 30px;
-    @include w1440{
+    @include w1440 {
       max-width: 90%;
     }
     &_inner {
@@ -193,16 +196,22 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      @include w768{
+      @include w768 {
         flex-direction: column;
+      }
+      @include w599 {
+        padding: 40px 20px 10px 20px;
       }
     }
     &_item {
       width: 45%;
       padding: 0 10px 40px;
-      @include w768{
+      @include w768 {
         width: 80%;
-        margin: 0 auto
+        margin: 0 auto;
+      }
+      @include w599 {
+        width: 100%;
       }
 
       .img {
@@ -210,8 +219,11 @@
         border-radius: 20px;
         height: 250px;
         overflow: hidden;
-        @include w1024{
+        @include w1024 {
           height: 200px;
+        }
+        @include w599 {
+          height: 160px;
         }
       }
       h4 {
@@ -221,14 +233,21 @@
         color: #419438;
         padding-top: 20px;
         padding-bottom: 20px;
-        @include w768{
-          font-size: 20px
+        @include w768 {
+          font-size: 20px;
+        }
+        @include w599 {
+          padding-top: 15px;
+          padding-bottom: 10px;
         }
       }
       p {
         line-height: 1.6;
         font-weight: 400;
         color: #3a3e40;
+        @include w599 {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -238,6 +257,9 @@
   background: #eeeeee;
   &__inner {
     padding: 80px 0px;
+    @include w599 {
+      padding: 40px 0px;
+    }
   }
   &__item {
     max-width: 900px;
@@ -250,17 +272,24 @@
     justify-content: center;
     border-radius: 30px;
     margin-bottom: 40px;
-    @include w1024{
+    @include w1024 {
       max-width: 85%;
     }
-    @include w768{
+    @include w768 {
       padding: 40px 60px;
+    }
+    @include w599 {
+      padding: 40px 28px;
+      max-width: 90%;
     }
     h4 {
       font-size: 36px;
       font-weight: 900;
       color: #419438;
       padding-bottom: 20px;
+      @include w599 {
+        font-size: 24px;
+      }
     }
     p {
       font-family: "Lato";
@@ -269,9 +298,18 @@
       padding-bottom: 20px;
       letter-spacing: 1.3px;
       line-height: 1.4;
+      @include w599 {
+        font-size: 14px;
+      }
     }
     &_video {
       width: 70%;
+      @include w768 {
+        width: 80%;
+      }
+      @include w599 {
+        width: 100%;
+      }
       video {
         width: 100%;
         object-fit: cover;
@@ -285,6 +323,9 @@
   &__inner {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include w599 {
+      padding-bottom: 40px;
+    }
   }
   &__item {
     max-width: 900px;
@@ -297,11 +338,24 @@
     justify-content: center;
     border-radius: 30px;
     margin-bottom: 40px;
+    @include w1024 {
+      max-width: 85%;
+    }
+    @include w768 {
+      padding: 40px 60px;
+    }
+    @include w599 {
+      padding: 40px 28px;
+      max-width: 90%;
+    }
     h4 {
       font-size: 36px;
       font-weight: 900;
       color: #419438;
       padding-bottom: 20px;
+      @include w599 {
+        font-size: 24px;
+      }
     }
     p {
       font-family: "Lato";
@@ -310,9 +364,18 @@
       padding-bottom: 20px;
       letter-spacing: 1.3px;
       line-height: 1.4;
+      @include w599 {
+        font-size: 14px;
+      }
     }
     &_video {
       width: 70%;
+      @include w768 {
+        width: 80%;
+      }
+      @include w599 {
+        width: 100%;
+      }
       video {
         width: 100%;
         object-fit: cover;
@@ -329,6 +392,15 @@
       line-height: 1.4;
       font-family: "Lato";
       color: #333;
+      @include w768 {
+        width: fit-content;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 16px;
+      }
+      @include w599 {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -347,16 +419,37 @@
       font-weight: 700;
       color: #419438;
       letter-spacing: 11px;
+      @include w768 {
+        font-size: 16px;
+      }
+      @include w599 {
+        font-size: 12px;
+      }
     }
     b {
       font-size: 48px;
       font-weight: 900;
       color: #3a3e40;
+      @include w768 {
+        font-size: 42px;
+      }
+      @include w599 {
+        font-size: 32px;
+      }
     }
   }
   &__content {
     width: 60%;
     margin: 0 auto;
+    @include w1024 {
+      width: 75%;
+    }
+    @include w768 {
+      width: 85%;
+    }
+    @include w599 {
+      width: 90%;
+    }
     .border-dotted {
       border-top: 1px dashed #7e8387;
       border-style: dashed;
@@ -372,6 +465,10 @@
         padding-top: 40px;
         padding-left: 70px;
         position: relative;
+        @include w599{
+          font-size: 18px;
+          padding-left: 40px;
+        }
         &::after {
           content: "Q";
           color: #419438;
@@ -380,12 +477,21 @@
           position: absolute;
           top: 26px;
           left: 0;
+          @include w599{
+            font-size: 32px;
+            top: 30px
+          }
         }
       }
       &_p {
         padding: 20px 0 40px 70px;
         font-weight: 400;
         line-height: 1.2;
+        word-wrap: break-word;
+        @include w599{
+          padding: 20px 0 40px 40px;
+          font-size: 14px;
+        }
         .item_p_bold {
           font-weight: 700;
           padding-top: 12px;

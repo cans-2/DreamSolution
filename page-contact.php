@@ -8,7 +8,7 @@
             <div class="calc">
               <img src="<?php echo get_template_directory_uri() ?>/assets/image/contact_mail_icon.png" alt="mail">
             </div>
-            <div class="contact-form__wrapper">
+            <div class="contact-form__wrapper wow fade-up2">
                 <div class="contact-form__inner">
                   <div class="contact-form__title">
                     <p>株式会社ドリームソリューションにお問い合わせいただき、誠にありがとうございます。</p>

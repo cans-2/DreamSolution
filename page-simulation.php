@@ -8,7 +8,7 @@
         <div class="calc">
           <img src="<?php echo get_template_directory_uri() ?>/assets/image/simu_calc_icon.png" alt="calc" />
         </div>
-        <div class="simu-form__wrapper">
+        <div class="simu-form__wrapper wow fade-up2">
           <div class="simu-form__inner">
             <div class="simu-form__title">
               <p>

@@ -3,9 +3,9 @@
 <main>
     <div class="dream-call__main-bg">
         <img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-call/dream-call-6.jpeg" alt="">
-        <div class="dream-call__main-bg_content">
+        <div class="dream-call__main-bg_content wow fade-in">
             <p>低コストでシンプルな、</p>
-            <p>業務効率UPを目指したコールシステム！</p>
+            <p>業務効率UPを目指した<br class="sp-br">コールシステム！</p>
             <div class="banner">
                 <p>クラウド型テレアポシステム</p>
             </div>
@@ -25,8 +25,8 @@
         </div>
     </div>
     <section class="recommend">
-        <div class="recommend__inner">
-            <p>ドリームコールはこんな企業様にお勧めです！！</p>
+        <div class="recommend__inner wow fade-up2">
+            <p>ドリームコールは<br class="sp-br">こんな企業様にお勧めです！！</p>
             <div class="recommend__card">
                 <ul>
                     <li><span class="material-symbols-outlined">
@@ -37,7 +37,7 @@
                         </span>コストはかけずに<span class="red">業務の効率化を図りたい</span></li>
                     <li><span class="material-symbols-outlined">
                             check_circle
-                        </span><span class="red">パソコンに不慣れ、または年配</span>のオペレーターが多い</li>
+                        </span><span class="red">パソコンに不慣れ、年配</span>のオペレーターが多い</li>
                     <li><span class="material-symbols-outlined">
                             check_circle
                         </span>テレアポにかかる<span class="red">電話料金を下げたい</span></li>
@@ -46,7 +46,7 @@
         </div>
     </section>
     <section class="step">
-        <p class="step__title">＼ 簡単！３ステップ！ ／</p>
+        <p class="step__title poyopoyo">＼ 簡単！３ステップ！ ／</p>
         <div class="step__img"><img src="<?php echo get_template_directory_uri() ?>/assets/image/dream-call/dream-call1.png" alt=""></div>
     </section>
     <section class="feature">
@@ -112,38 +112,40 @@
         <div class="need__inner">
 
             <p class="need__title">必要な機材・動作環境</p>
-            <dl>
-                <dt>パソコン</dt>
-                <dd>
-                    <p>OS：Windows Vista,7,8,10</p>
-                    <p>メモリ：2GB以上</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt>インターネット</dt>
-                <dd>
-                    <p>ブラウザ：Google Chrome</p>
-                    <p>回線速度：100Mbps以上（上り・下り共に）</p>
-                    <p>※光ファイバー回線推奨</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt>ヘッドセット</dt>
-                <dd>
-                    <p>UBS、AUX端子可</p>
-                    <p>※両耳対応のヘッドセット推奨</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt>ルータ</dt>
-                <dd>
-                    <p>YAMAHA製ルータ推奨</p>
-                </dd>
-            </dl>
+            <div class="wow fade-up2">
+                <dl>
+                    <dt>パソコン</dt>
+                    <dd>
+                        <p>OS：Windows Vista,7,8,10</p>
+                        <p>メモリ：2GB以上</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>インターネット</dt>
+                    <dd>
+                        <p>ブラウザ：Google Chrome</p>
+                        <p>回線速度：100Mbps以上（上り・下り共に）</p>
+                        <p>※光ファイバー回線推奨</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>ヘッドセット</dt>
+                    <dd>
+                        <p>UBS、AUX端子可</p>
+                        <p>※両耳対応のヘッドセット推奨</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>ルータ</dt>
+                    <dd>
+                        <p>YAMAHA製ルータ推奨</p>
+                    </dd>
+                </dl>
+            </div>
         </div>
 
     </section>
-    <div class="trial">
+    <div class="trial wow fade-up2">
         <p>無料トライアルでお試しいただけます！</p>
         <p>詳しくはお問い合わせください。</p>
         <span class="material-symbols-outlined">
@@ -152,5 +154,3 @@
     </div>
 </main>
 <?php get_footer() ?>
-
-
